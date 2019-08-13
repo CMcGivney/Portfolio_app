@@ -16,73 +16,245 @@ import Sqlectron from '../images/sqlectron.png'
 import BootStrap from '../images/BootStrap.png'
 import BootsReact from '../images/BootstrapReact.png'
 import Semantic from '../images/Semantic.png'
+import '../App.css'
+
+
 
 
 const Skills = () => (
-  <>
-  <Header as="h1" textAlign="center">Skills</Header>
+
+
+      <>
+  <Header as="h1" textAlign="center">My Tools & Skills</Header>
   <Header as="p" textAlign="center">"That One Day Will Pay The Bills"</Header>
-  <hr/>
-  <Grid padding="5px" margintop="25px">
-    <Grid.Row columns={4}>
+
+  <Grid style={{padding: "25px", margintop: "50px"}}>
+    <Grid.Row columns={4} style={{padding: "20px"}}>
       <Grid.Column>
-        
-        <Image src={HTML5} alt="HTML5" size="small" />
+      <div className="panel">
+         <div className="front">
+          <div>
+          <Image src={HTML5} alt="HTML5" width="150px" height="150px"/>
+          </div>
+         </div>
+         <div className="back"> 
+          <div  className="pad">Feel Confident</div> 
+          <div  className="pad">"4 out of 5"</div> 
+         </div>
+        </div>
       </Grid.Column>
       <Grid.Column>
-        <Image src={CSS3} alt="CSS3" size="small" />
+      <div className="panel">
+         <div className="front">
+          <div>
+           <Image src={CSS3} alt="CSS3" width="150px" height="150px" /> 
+          </div>
+         </div>
+         <div className="back"> 
+          <div  className="pad">Need a Designers Eye</div> 
+          <div  className="pad">"3.5 out of 5"</div> 
+         </div>
+        </div>
       </Grid.Column>
       <Grid.Column>
-        <Image src={JS} alt="JavaScript" size="small" />
+      <div className="panel">
+         <div className="front">
+          <div>
+           <Image src={JS} alt="JavaScript" width="150px" height="150px" />
+          </div>
+         </div>
+         <div className="back"> 
+          <div  className="pad">Some Good Days Some Bad</div> 
+          <div  className="pad">"2 out of 5"</div> 
+         </div>
+        </div>
       </Grid.Column>
       <Grid.Column>
-        <Image src={jquery} alt="JQuery" size="small" />
-      </Grid.Column>
-    </Grid.Row>
-    <Grid.Row columns={4}>
-      <Grid.Column>
-        <Image src={Ruby} alt="Ruby" size="small" />
-      </Grid.Column>
-      <Grid.Column>
-        <Image src={Rails} alt="Rails" size="small" />
-      </Grid.Column>
-      <Grid.Column>
-        <Image src={Postgresql} alt="Postgresql" size="small" />
-      </Grid.Column>
-      <Grid.Column>
-        <Image src={ES6} alt="ES6" size="small" />
-      </Grid.Column>
-    </Grid.Row>
-    <Grid.Row columns={4}>
-      <Grid.Column>
-        <Image src={ReactIcon} alt="React Icon" size="small" />
-      </Grid.Column>
-      <Grid.Column>
-        <Image src={SemanticR} alt="Semantic-ui-react" size="small" />
-      </Grid.Column>
-      <Grid.Column>
-        <Image src={Sqlectron} alt="Sqlectron" size="small" />
-      </Grid.Column>
-      <Grid.Column>
-        <Image src={SQL} alt="SQL" size="small" />
-      </Grid.Column>
-    </Grid.Row>
-    <Grid.Row columns={4}>
-      <Grid.Column>
-        <Image src={BootStrap} alt="Bootstrap" size="small" />
-      </Grid.Column>
-      <Grid.Column>
-        <Image src={BootsReact} alt="" size="small" />
-      </Grid.Column>
-      <Grid.Column>
-        <Image src={Semantic} alt="" size="small" />
-      </Grid.Column>
-      <Grid.Column>
-        <Image src={GitHub} alt="GitHub" size="small" />
+      <div className="panel">
+         <div className="front">
+          <div>
+           <Image src={ReactIcon} alt="ReactIcon" width="150px" height="150px" />
+          </div>
+         </div>
+         <div className="back"> 
+          <div  className="pad">Work On It Daily</div> 
+          <div  className="pad">"4 out of 5"</div> 
+         </div>
+        </div>
       </Grid.Column>
     </Grid.Row>
+    <Grid.Row columns={4} style={{padding: "20px"}}>
+      <Grid.Column>
+      <div className="panel">
+         <div className="front">
+          <div>
+          <Image src={Ruby} alt="Ruby" width="150px" height="150px" />
+          </div>
+         </div>
+         <div className="back"> 
+          <div  className="pad">Basic Knowledge</div> 
+          <div  className="pad">"3.5 out of 5"</div> 
+         </div>
+        </div>
+      </Grid.Column>
+      <Grid.Column>
+      <div className="panel">
+         <div className="front">
+          <div>
+           <Image src={Rails} alt="Rails" width="150px" height="150px" /> 
+          </div>
+         </div>
+         <div className="back"> 
+         <div  className="pad">Pretty, Pretty Good</div> 
+          <div  className="pad">"3.5 out of 5"</div> 
+         </div>
+        </div>
+      </Grid.Column>
+      <Grid.Column>
+      <div className="panel">
+         <div className="front">
+          <div>
+           <Image src={jquery} alt="jquery" width="150px" height="150px" />
+          </div>
+         </div>
+         <div className="back"> 
+         <div  className="pad">I Know It Exists</div> 
+         <div  className="pad">Don't Use It Much</div> 
+          <div  className="pad">"1 out of 5"</div> 
+         </div>
+        </div>
+      </Grid.Column>
+      <Grid.Column>
+      <div className="panel">
+         <div className="front">
+          <div>
+           <Image src={Postgresql} alt="Postgresql" width="150px" height="150px" />
+          </div>
+         </div>
+         <div className="back"> 
+         <div  className="pad">Basic Database Knowledge</div> 
+          <div  className="pad">"3 out of 5"</div> 
+         </div>
+        </div>
+      </Grid.Column>
+    </Grid.Row>
+    <Grid.Row columns={4} style={{padding: "20px"}}>
+      <Grid.Column>
+      <div className="panel">
+         <div className="front">
+          <div>
+          <Image src={SQL} alt="SQL" width="150px" height="150px" />
+          </div>
+         </div>
+         <div className="back"> 
+         <div  className="pad">I Love SQL</div> 
+         <div  className="pad">Practice Daily</div> 
+          <div  className="pad">"3 out of 5"</div> 
+         </div>
+        </div>
+      </Grid.Column>
+      <Grid.Column>
+      <div className="panel">
+         <div className="front">
+          <div>
+           <Image src={SemanticR} alt="SemanticR" width="150px" height="150px" /> 
+          </div>
+         </div>
+         <div className="back"> 
+         <div  className="pad">When Styling A Quick App...</div> 
+         <div  className="pad">like this One</div> 
+        <div  className="pad">"4 out of 5"</div> 
+         </div>
+        </div>
+      </Grid.Column>
+      <Grid.Column>
+      <div className="panel">
+         <div className="front">
+          <div>
+           <Image src={Semantic} alt="Semantic" width="150px" height="150px"/>
+          </div>
+         </div>
+         <div className="back"> 
+         <div  className="pad">Framework Tool Library</div> 
+        <div  className="pad">"3 out of 5"</div>  
+         </div>
+        </div>
+      </Grid.Column>
+      <Grid.Column>
+      <div className="panel">
+         <div className="front">
+          <div>
+           <Image src={BootsReact} alt="BootstrapReact" width="150px" height="150px" />
+          </div>
+         </div>
+         <div className="back"> 
+         <div  className="pad">Framework Tool Library</div> 
+        <div  className="pad">"3 out of 5"</div>  
+         </div>
+        </div>
+      </Grid.Column>
+    </Grid.Row>
+    <Grid.Row columns={4} style={{padding: "20px"}}>
+      <Grid.Column>
+      <div className="panel">
+         <div className="front">
+          <div>
+          <Image src={ES6} alt="ES6" width="150px" height="150px" />
+          </div>
+         </div>
+         <div className="back"> 
+         <div  className="pad">ECMAScript 6</div> 
+         <div  className="pad">To Arrow Function or Not...</div> 
+        <div  className="pad">"2 out of 5"</div>  
+         </div>
+        </div>
+      </Grid.Column>
+      <Grid.Column>
+      <div className="panel">
+         <div className="front">
+          <div>
+           <Image src={Sqlectron} alt="Sqlectron" width="150px" height="150px" /> 
+          </div>
+         </div>
+         <div className="back"> 
+         <div  className="pad">When You Need To See Those Databases You Made In Action</div> 
+        <div  className="pad">"2 out of 5"</div>  
+         </div>
+        </div>
+      </Grid.Column>
+      <Grid.Column>
+      <div className="panel">
+         <div className="front">
+          <div>
+           <Image src={BootStrap} alt="BootStrap" width="150px" height="150px" />
+          </div>
+         </div>
+         <div className="back"> 
+         <div  className="pad">Framework Tool Library</div> 
+        <div  className="pad">"3 out of 5"</div>  
+         </div>
+        </div>
+      </Grid.Column>
+      <Grid.Column>
+      <div className="panel">
+         <div className="front">
+          <div>
+           <Image src={GitHub} alt="GitHub" width="150px" height="150px" />
+          </div>
+         </div>
+         <div className="back"> 
+         <div className="pad">Feel Confident</div> 
+         <div className="pad">Learn A New Trick Daily</div> 
+         <div className="pad">"3 out of 5"</div>   
+         </div>
+        </div>
+      </Grid.Column>
+    </Grid.Row>
+ 
     </Grid>
 </>
-)
+  )
+ 
+
 
 export default Skills;
