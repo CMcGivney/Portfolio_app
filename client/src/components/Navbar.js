@@ -35,17 +35,17 @@ const Navbar = ({location, }) => (
       active={location.pathname === '/contact'}
       />
       </NavLink>
-      <NavLink to='/blog'>
+      {/* <NavLink to='/blog'>
       <Menu.Item
       name="blog"
       id="blog"
       active={location.pathname === '/blog'}
       />
-      </NavLink>
+      </NavLink> */}
       </Menu>
     </Segment>
   
 )
-
+// add blog function next version along with admin control
 
 export default withRouter(Navbar)

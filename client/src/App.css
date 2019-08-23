@@ -1,3 +1,8 @@
+body {
+  background-color: teal;
+}
+
+/* this is the styles and animation for the tile flip */
 .panel  {
   margin: 0 auto;
   width: 130px;
@@ -5,6 +10,15 @@
   position: relative;
   font-size: 1em;
   perspective: 600px;
+  border-radius: 50px;
+}
+
+.footerBox {
+  padding: 25px;
+  background: lightcyan;
+  margin: 40px;
+  box-shadow: 10px 10px 5px grey;
+  text-align: center;
 }
 
 .pad {
@@ -23,11 +37,13 @@
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transition: all .4s ease-in-out;
+  border-radius: 50px;
 }
 
 .panel:hover .front {
   z-index: 900;
   transform: rotateY(180deg);
+  cursor: pointer;
 }
 
 .panel .back {
@@ -50,6 +66,70 @@
 
   z-index: 1000;
   transform: rotateX(0deg);
-  
+  cursor: pointer;
 }
 
+/* styles for the social media icons */
+.headerBox {
+  padding: 50px;
+  position: absolute;
+  border: 1px solid grey;
+  background-color: lightcyan;
+  text-align: center;
+  color: black;
+  box-shadow: 10px 10px 5px grey;
+}
+
+.emailBox {
+  background-color:lightcyan;
+  text-align: center;
+  padding: 55px;
+  border: 1px solid grey;
+  box-shadow: 10px 10px 5px grey;
+}
+
+.imgBox {
+  border: 1px solid grey;
+  border-radius: 100px;
+  box-shadow: 10px 10px 5px grey;
+}
+
+
+.socialBox {
+  background-color: lightcyan;
+  padding: 55px 50px;
+  text-align: center;
+  border: 1px solid grey;
+  box-shadow: 10px 10px 5px grey;
+}
+
+a.social {
+  margin: 0 1rem;
+  transition: tranform 250ms;
+  display: inline-block;
+}
+
+a.social:hover {
+  transform: translateY(-2px); 
+}
+
+a.linkedin {
+  color: #4968ad;
+}
+
+a.twitter {
+  color: #49a1eb;
+}
+
+a.instagram {
+  color: black;
+}
+
+a.github {
+  color: black;
+}
+/*style for PostIts */
+.corkboard {
+  background-color: tan;
+  box-shadow: 10px 10px 5px grey;
+}

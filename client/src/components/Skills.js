@@ -1,11 +1,12 @@
-import React from 'react';
-import { Header, Grid, Image } from 'semantic-ui-react';
+import React from 'react'
+import { Header, Grid, Image, Icon,  } from 'semantic-ui-react'
+import styled from 'styled-components'
 import CSS3 from '../images/CSS3.png'
 import ES6 from '../images/ES6.png'
 import GitHub from '../images/GitHub.png'
 import HTML5 from '../images/HTML5.png'
 import jquery from '../images/jquery.png'
-import JS from '../images/JS.png'
+import JS from '../images/Javascript.png'
 import Postgresql from '../images/Postgresql.jpeg'
 import Rails from '../images/Rails.png'
 import ReactIcon from '../images/React.png'
@@ -23,13 +24,14 @@ import '../App.css'
 
 const Skills = () => (
 
-
-      <>
-  <Header as="h1" textAlign="center">My Tools & Skills</Header>
-  <Header as="p" textAlign="center">"That One Day Will Pay The Bills"</Header>
-
-  <Grid style={{padding: "25px", margintop: "50px"}}>
-    <Grid.Row columns={4} style={{padding: "20px"}}>
+<Grid style={{padding: "25px", margintop: "50px"}}>
+   <Grid.Row columns={1}>
+     <Grid.Column className="headerBox">
+      <Header as="h1" textAlign="center">My Tools & Skills</Header>
+      <Header as="p" textAlign="center">"That Will Pay The Bills"</Header>
+     </Grid.Column>
+   </Grid.Row>
+   <Grid.Row columns={4} style={{padding: "20px"}}>
       <Grid.Column>
       <div className="panel">
          <div className="front">
@@ -39,7 +41,13 @@ const Skills = () => (
          </div>
          <div className="back"> 
           <div  className="pad">Feel Confident</div> 
-          <div  className="pad">"4 out of 5"</div> 
+          <Star>
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          <Icon name="star" />
+          </Star>
+          <span><Icon name="star" /></span>
          </div>
         </div>
       </Grid.Column>
@@ -52,7 +60,13 @@ const Skills = () => (
          </div>
          <div className="back"> 
           <div  className="pad">Need a Designers Eye</div> 
-          <div  className="pad">"3.5 out of 5"</div> 
+          <Star>
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          </Star>
+          <span><Icon name="star" /></span>
+          <span><Icon name="star" /></span>
          </div>
         </div>
       </Grid.Column>
@@ -65,7 +79,13 @@ const Skills = () => (
          </div>
          <div className="back"> 
           <div  className="pad">Some Good Days Some Bad</div> 
-          <div  className="pad">"2 out of 5"</div> 
+          <Star>
+          <Icon name="star" /> 
+          <Icon name="star" />  
+          </Star>
+          <span><Icon name="star" /></span>
+          <span><Icon name="star" /></span>
+          <span><Icon name="star" /></span>
          </div>
         </div>
       </Grid.Column>
@@ -78,7 +98,13 @@ const Skills = () => (
          </div>
          <div className="back"> 
           <div  className="pad">Work On It Daily</div> 
-          <div  className="pad">"4 out of 5"</div> 
+          <Star>
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          </Star>
+          <span><Icon name="star" /></span>
          </div>
         </div>
       </Grid.Column>
@@ -93,7 +119,13 @@ const Skills = () => (
          </div>
          <div className="back"> 
           <div  className="pad">Basic Knowledge</div> 
-          <div  className="pad">"3.5 out of 5"</div> 
+          <Star>
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          </Star>
+          <span><Icon name="star" /></span>
+          <span><Icon name="star" /></span>
          </div>
         </div>
       </Grid.Column>
@@ -106,7 +138,13 @@ const Skills = () => (
          </div>
          <div className="back"> 
          <div  className="pad">Pretty, Pretty Good</div> 
-          <div  className="pad">"3.5 out of 5"</div> 
+         <Star>
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          </Star>
+          <span><Icon name="star" /></span>
+          <span><Icon name="star" /></span>
          </div>
         </div>
       </Grid.Column>
@@ -120,7 +158,13 @@ const Skills = () => (
          <div className="back"> 
          <div  className="pad">I Know It Exists</div> 
          <div  className="pad">Don't Use It Much</div> 
-          <div  className="pad">"1 out of 5"</div> 
+         <Star>
+          <Icon name="star" /> 
+          </Star>
+          <span><Icon name="star" /></span>
+          <span><Icon name="star" /></span>
+          <span><Icon name="star" /></span>
+          <span><Icon name="star" /></span>
          </div>
         </div>
       </Grid.Column>
@@ -133,7 +177,13 @@ const Skills = () => (
          </div>
          <div className="back"> 
          <div  className="pad">Basic Database Knowledge</div> 
-          <div  className="pad">"3 out of 5"</div> 
+         <Star>
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          </Star>
+          <span><Icon name="star" /></span>
+          <span><Icon name="star" /></span>
          </div>
         </div>
       </Grid.Column>
@@ -149,7 +199,13 @@ const Skills = () => (
          <div className="back"> 
          <div  className="pad">I Love SQL</div> 
          <div  className="pad">Practice Daily</div> 
-          <div  className="pad">"3 out of 5"</div> 
+         <Star>
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          </Star>
+          <span><Icon name="star" /></span>
+          <span><Icon name="star" /></span>
          </div>
         </div>
       </Grid.Column>
@@ -163,7 +219,13 @@ const Skills = () => (
          <div className="back"> 
          <div  className="pad">When Styling A Quick App...</div> 
          <div  className="pad">like this One</div> 
-        <div  className="pad">"4 out of 5"</div> 
+         <Star>
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          </Star>
+          <span><Icon name="star" /></span> 
          </div>
         </div>
       </Grid.Column>
@@ -176,7 +238,13 @@ const Skills = () => (
          </div>
          <div className="back"> 
          <div  className="pad">Framework Tool Library</div> 
-        <div  className="pad">"3 out of 5"</div>  
+         <Star>
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          </Star>
+          <span><Icon name="star" /></span>
+          <span><Icon name="star" /></span>  
          </div>
         </div>
       </Grid.Column>
@@ -189,7 +257,13 @@ const Skills = () => (
          </div>
          <div className="back"> 
          <div  className="pad">Framework Tool Library</div> 
-        <div  className="pad">"3 out of 5"</div>  
+         <Star>
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          </Star>
+          <span><Icon name="star" /></span>
+          <span><Icon name="star" /></span>  
          </div>
         </div>
       </Grid.Column>
@@ -205,7 +279,13 @@ const Skills = () => (
          <div className="back"> 
          <div  className="pad">ECMAScript 6</div> 
          <div  className="pad">To Arrow Function or Not...</div> 
-        <div  className="pad">"2 out of 5"</div>  
+         <Star>
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          </Star>
+          <span><Icon name="star" /></span>
+          <span><Icon name="star" /></span> 
+          <span><Icon name="star" /></span> 
          </div>
         </div>
       </Grid.Column>
@@ -218,7 +298,13 @@ const Skills = () => (
          </div>
          <div className="back"> 
          <div  className="pad">When You Need To See Those Databases You Made In Action</div> 
-        <div  className="pad">"2 out of 5"</div>  
+         <Star>
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          </Star>
+          <span><Icon name="star" /></span>
+          <span><Icon name="star" /></span> 
+          <span><Icon name="star" /></span>  
          </div>
         </div>
       </Grid.Column>
@@ -231,7 +317,13 @@ const Skills = () => (
          </div>
          <div className="back"> 
          <div  className="pad">Framework Tool Library</div> 
-        <div  className="pad">"3 out of 5"</div>  
+         <Star>
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          </Star>
+          <span><Icon name="star" /></span>
+          <span><Icon name="star" /></span>
          </div>
         </div>
       </Grid.Column>
@@ -245,16 +337,30 @@ const Skills = () => (
          <div className="back"> 
          <div className="pad">Feel Confident</div> 
          <div className="pad">Learn A New Trick Daily</div> 
-         <div className="pad">"3 out of 5"</div>   
+         <Star>
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          <Icon name="star" /> 
+          </Star>
+          <span><Icon name="star" /></span>
+          <span><Icon name="star" /></span>   
          </div>
         </div>
       </Grid.Column>
     </Grid.Row>
- 
-    </Grid>
-</>
+    <Grid.Row column={1} className="footerBox">
+      <Grid.Column>
+       <p>Checkout my skills to see where I think I'm at.</p>
+      </Grid.Column>
+   </Grid.Row>    
+</Grid>
   )
- 
+
+  const Star = styled.div`
+  display: inline-block;
+  color: yellow;
+  text-shadow: 1px 1px 1px black;
+`;
 
 
 export default Skills;
