@@ -30,6 +30,7 @@ const Projects = () => (
       </Grid.Column>
       <Grid.Column width={8}>
       <Image 
+          className="imgBoxHome"
           src={dashboard} 
           alt="Dev Point Labs DashBoard Project"
           width="600px"

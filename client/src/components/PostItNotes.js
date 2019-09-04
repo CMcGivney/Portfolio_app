@@ -18,7 +18,7 @@ state = { notes: [],   }
   }
 
 
-  allnotes = () => {
+  allNotes = () => {
     const {notes} = this.state
     if (notes.length <= 0)
     return <h2>No Notes Yet...</h2>
@@ -43,7 +43,7 @@ state = { notes: [],   }
           <Button 
            color='red' 
            icon basic 
-           onClick={() => this.destroynote(note.id)}
+           onClick={() => this.destroyNote(note.id)}
            >
            <Icon name='trash' /> 
           </Button>
@@ -67,7 +67,7 @@ state = { notes: [],   }
 
   
     
-    destroynote = (id) => {
+    destroyNote = (id) => {
       axios.delete(`/api/notes/${id}`)
       .then(res => {
         const {notes, } = this.state
@@ -81,12 +81,12 @@ state = { notes: [],   }
         
         <Container style={{marginTop: "25px"}}>
           <Link to="/notes/new">
-           <Button inverted color="green">
+           <Button inverted color="black">
             <Icon name="add" />
               Leave me a Note!
             </Button>
           </Link>
-        {this.allnotes()}
+        {this.allNotes()}
       </Container>
       
       )

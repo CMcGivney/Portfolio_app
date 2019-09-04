@@ -6,13 +6,14 @@ const Home = () => (
   <Grid>
     <Grid.Row column={1}>
        <Grid.Column className="headerBox">
-        <Header as="h1" textAlign="center">Welcome</Header>
-        <p>I'm Chris McGivney, you have reached my portfolio page</p>
+        <Header as="h1" textAlign="center">Chris McGivney</Header>
+        <p> Full Stack Web Developer | Ruby on Rails & React | Outdoor Fanatic</p>
        </Grid.Column>
      </Grid.Row>
      <Grid.Row column={2}>
        <Grid.Column width={8}>
          <Image 
+          className="imgBoxHome"
           src={Alaska} 
           alt="Alaska"
           size="large"
@@ -32,12 +33,13 @@ const Home = () => (
           <li>Currently mine is GraphQL</li> 
          </ul>
        <li>Run through whiteboard problems daily.</li>
-       <li>Spend 30 minutes on a coding problem, solve by using each languages I know.</li>
+       <li>Spend 30 minutes on a coding problem, solve by using each language I know.</li>
        <li>Research and contact companies I'm interested in.</li>
        <li>Go to meetups and become a part of the Utah community.</li>
        <li>Contact local leaders and recruiters for a quick chat on what they look for in new hires.</li>
        <li>Read, study and adapt to changes in the skills and tools I use. </li>
-       <li>Stay positive, its a long road, stay focused on my goals.</li>
+       <li>Stay positive, its a long road, I will get there.</li>
+       <li>Stay true and focused on my goals.</li>
        </ul>
        </Grid.Column>
     </Grid.Row> 

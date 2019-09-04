@@ -1,5 +1,5 @@
 body {
-  background-color: white; 
+  background-color: rgb(163, 160, 160); 
 }
 /* NavBar Style */
 .navbar {
@@ -79,7 +79,7 @@ body {
   background-color: lightcyan;
   text-align: center;
   color: black;
-  box-shadow: 2px 2px grey;
+  box-shadow: 2px 2px black;
 }
 .contact-headerBox {
   padding: 70px;
@@ -89,7 +89,7 @@ body {
   border-radius: 25px;
   text-align: center;
   color: black;
-  box-shadow: 2px 2px grey;
+  box-shadow: 2px 2px black;
 }
 
 .footerBox {
@@ -98,7 +98,7 @@ body {
   margin: 40px;
   border: 1px solid grey;
   border-radius: 25px;
-  box-shadow: 2px 2px grey;
+  box-shadow: 2px 2px black;
   text-align: center;
 }
 
@@ -107,13 +107,20 @@ body {
   text-align: center;
   padding: 55px;
   border: 1px solid grey;
-  box-shadow: 2px 2px grey;
+  box-shadow: 2px 2px black;
 }
 
 .imgBox {
   border: 1px solid grey;
   border-radius: 300px;
-  box-shadow: 2px 2px 5px grey;
+  box-shadow: 2px 2px 5px black;
+}
+
+.imgBoxHome {
+  border: 1px solid grey;
+  box-shadow: 2px 2px 5px black;
+  justify-content: center;
+  padding: 1px;
 }
 
 
@@ -151,6 +158,7 @@ a.github {
 /*style for PostIts */
 .corkboard {
   background-color: tan;
-  border: solid;
-  border-color: grey;
+  border: 10px solid  rgba(75, 47, 47, 0.911);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px black;
 }
