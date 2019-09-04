@@ -24,9 +24,10 @@ state = { notes: [],   }
     return <h2>No Notes Yet...</h2>
     return (
       
-      <Grid style={{marginTop: "25px"}}>
-       <Grid.Column>
-        <Card.Group  itemsPerRow={4} className="corkboard">
+      <Grid container style={{marginTop: "25px"}}>
+      <Grid.Row>
+       <Grid.Column stackable= "true">
+        <Card.Group className="corkboard">
          { notes.map( note => 
            <Card className="postIts" key={note.id} >
             <Card.Content >
@@ -60,7 +61,8 @@ state = { notes: [],   }
           )}
         </Card.Group>
         </Grid.Column>
-      </Grid>
+      </Grid.Row>
+    </Grid>
     )}
 
   
@@ -81,7 +83,7 @@ state = { notes: [],   }
           <Link to="/notes/new">
            <Button inverted color="green">
             <Icon name="add" />
-              Leave a Note!
+              Leave me a Note!
             </Button>
           </Link>
         {this.allnotes()}

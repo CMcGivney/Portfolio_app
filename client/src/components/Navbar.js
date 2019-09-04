@@ -6,7 +6,7 @@ const Navbar = ({location, }) => (
   
   
     <Segment inverted>
-      <Menu>
+      <Menu inverted pointing secondary>
         <NavLink to='/'>
         <Menu.Item 
         name="Home"
@@ -14,33 +14,33 @@ const Navbar = ({location, }) => (
         active={location.pathname === '/'}
         />
         </NavLink>
-      <NavLink to='/projects'>
-      <Menu.Item
-      name="Projects"
-      id="projects"
-      active={location.pathname === '/projects'}
-      />
-      </NavLink>
       <NavLink to='/skills'>
-      <Menu.Item
-      name="Skills"
-      id="skills"
-      active={location.pathname === '/skills'}
-      />
+       <Menu.Item
+        name="Skills"
+        id="skills"
+        active={location.pathname === '/skills'}
+       />
+      </NavLink>
+      <NavLink to='/projects'>
+       <Menu.Item
+        name="Projects"
+        id="projects"
+        active={location.pathname === '/projects'}
+        />
       </NavLink>
       <NavLink to='/contact'>
-      <Menu.Item
-      name="contact"
-      id="contact"
-      active={location.pathname === '/contact'}
-      />
+       <Menu.Item
+        name="contact"
+        id="contact"
+        active={location.pathname === '/contact'}
+        />
       </NavLink>
       {/* <NavLink to='/blog'>
-      <Menu.Item
-      name="blog"
-      id="blog"
-      active={location.pathname === '/blog'}
-      />
+       <Menu.Item
+        name="blog"
+        id="blog"
+        active={location.pathname === '/blog'}
+        />
       </NavLink> */}
       </Menu>
     </Segment>

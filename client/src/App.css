@@ -1,5 +1,14 @@
 body {
-  background-color: teal;
+  background-color: white; 
+}
+/* NavBar Style */
+.navbar {
+  background: blue;
+}
+
+.menu {
+  padding: 0px;
+  background-color: #4968ad;
 }
 
 /* this is the styles and animation for the tile flip */
@@ -11,14 +20,6 @@ body {
   font-size: 1em;
   perspective: 600px;
   border-radius: 50px;
-}
-
-.footerBox {
-  padding: 25px;
-  background: lightcyan;
-  margin: 40px;
-  box-shadow: 10px 10px 5px grey;
-  text-align: center;
 }
 
 .pad {
@@ -74,10 +75,31 @@ body {
   padding: 50px;
   position: absolute;
   border: 1px solid grey;
+  border-radius: 25px;
   background-color: lightcyan;
   text-align: center;
   color: black;
-  box-shadow: 10px 10px 5px grey;
+  box-shadow: 2px 2px grey;
+}
+.contact-headerBox {
+  padding: 70px;
+  background: lightcyan;
+  position: absolute;
+  border: 1px solid grey;
+  border-radius: 25px;
+  text-align: center;
+  color: black;
+  box-shadow: 2px 2px grey;
+}
+
+.footerBox {
+  padding: 25px;
+  background: lightcyan;
+  margin: 40px;
+  border: 1px solid grey;
+  border-radius: 25px;
+  box-shadow: 2px 2px grey;
+  text-align: center;
 }
 
 .emailBox {
@@ -85,22 +107,20 @@ body {
   text-align: center;
   padding: 55px;
   border: 1px solid grey;
-  box-shadow: 10px 10px 5px grey;
+  box-shadow: 2px 2px grey;
 }
 
 .imgBox {
   border: 1px solid grey;
-  border-radius: 100px;
-  box-shadow: 10px 10px 5px grey;
+  border-radius: 300px;
+  box-shadow: 2px 2px 5px grey;
 }
 
 
 .socialBox {
-  background-color: lightcyan;
   padding: 55px 50px;
   text-align: center;
-  border: 1px solid grey;
-  box-shadow: 10px 10px 5px grey;
+ 
 }
 
 a.social {
@@ -131,5 +151,6 @@ a.github {
 /*style for PostIts */
 .corkboard {
   background-color: tan;
-  box-shadow: 10px 10px 5px grey;
+  border: solid;
+  border-color: grey;
 }

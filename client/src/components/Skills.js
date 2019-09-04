@@ -28,7 +28,7 @@ const Skills = () => (
    <Grid.Row columns={1}>
      <Grid.Column className="headerBox">
       <Header as="h1" textAlign="center">My Tools & Skills</Header>
-      <Header as="p" textAlign="center">"That Will Pay The Bills"</Header>
+      <p>"That Will Pay My Bills"</p>
      </Grid.Column>
    </Grid.Row>
    <Grid.Row columns={4} style={{padding: "20px"}}>
@@ -350,7 +350,7 @@ const Skills = () => (
     </Grid.Row>
     <Grid.Row column={1} className="footerBox">
       <Grid.Column>
-       <p>Checkout my skills to see where I think I'm at.</p>
+       <p>Checkout my skills to see where, I think, I'm at.</p>
       </Grid.Column>
    </Grid.Row>    
 </Grid>
