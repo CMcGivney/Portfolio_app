@@ -1,7 +1,7 @@
 import React from 'react'
 import { Header, Grid, Image} from 'semantic-ui-react'
 import SocialFollow from './SocialFollow'
-import headShot1 from '../images/headShot1.jpg'
+import headShot2 from '../images/headShot2.jpeg'
 import Notes from './PostItNotes'
 
 
@@ -19,7 +19,7 @@ const Contact = () => (
       <Grid.Column>
       <Image 
            className="imgBox"
-           src={headShot1} 
+           src={headShot2} 
            alt="MyHeadShot"
            height="300px"
            width="300px"

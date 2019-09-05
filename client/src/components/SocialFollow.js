@@ -22,6 +22,12 @@ export default function SocialFollow() {
       >
         <FontAwesomeIcon icon={faInstagram} size="2x" />
       </a>
+      {/* <a
+        href="https://www.instagram.com/nomadic_boots/"
+        className="google social"
+      >
+        <FontAwesomeIcon icon={faGoogle} size="2x" />
+      </a> */}
     </div>
   )
 }

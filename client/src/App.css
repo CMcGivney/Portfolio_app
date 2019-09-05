@@ -86,7 +86,7 @@ body {
   background: lightcyan;
   position: absolute;
   border: 1px solid grey;
-  border-radius: 25px;
+  border-radius: 10px;
   text-align: center;
   color: black;
   box-shadow: 2px 2px black;
@@ -116,11 +116,22 @@ body {
   box-shadow: 2px 2px 5px black;
 }
 
+.imageFlex{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .imgBoxHome {
   border: 1px solid grey;
   box-shadow: 2px 2px 5px black;
   justify-content: center;
   padding: 1px;
+}
+.aboutMe {
+  justify-content: center;
+  padding: 10px;
 }
 
 
@@ -154,6 +165,9 @@ a.instagram {
 
 a.github {
   color: black;
+}
+a.google {
+  color: green;
 }
 /*style for PostIts */
 .corkboard {
