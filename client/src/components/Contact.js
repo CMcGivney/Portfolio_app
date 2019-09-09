@@ -7,17 +7,19 @@ import Notes from './PostItNotes'
 
 const Contact = () => (
 
-  <Grid>
+  <Grid stackable>
     <Grid.Row columns={2}>
       <Grid.Column className="contact-headerBox">
-        <Header as="h3" textAlign="center">Drop Me A Email</Header>
-        <a href="mailto:cmmcgivney84@gmail.com">CmMcGivney84@gmail.com</a>
-        <Header as="h3">
-        <SocialFollow/>
-        </Header>
-      </Grid.Column>
-      <Grid.Column>
-      <Image 
+        <div className="aboutMe">
+          <Header as="h3" textAlign="center">Drop Me A Email</Header>
+           <a href="mailto:cmmcgivney84@gmail.com">CmMcGivney84@gmail.com</a>
+          <Header as="h3">
+            <SocialFollow/>
+          </Header>
+        </div>
+       </Grid.Column>
+       <Grid.Column>
+        <Image 
            className="imgBox"
            src={headShot2} 
            alt="MyHeadShot"
@@ -25,11 +27,11 @@ const Contact = () => (
            width="300px"
            centered
            />
-      </Grid.Column>
+       </Grid.Column>
      </Grid.Row>
     <Grid.Row columns={1}>
       <Grid.Column className="noteBox">
-      <Notes/> 
+       <Notes/> 
       </Grid.Column>
     </Grid.Row>
   </Grid>

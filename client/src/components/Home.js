@@ -3,8 +3,8 @@ import { Header, Image, Grid } from 'semantic-ui-react'
 import Alaska from '../images/Alaska.jpg'
 
 const Home = () => (
-  <Grid>
-    <Grid.Row column={1}>
+  <Grid stackable >
+    <Grid.Row>
        <Grid.Column className="headerBox">
         <Header as="h1" textAlign="center">Chris McGivney</Header>
         <p> Full Stack Web Developer | Ruby on Rails & React | Outdoor Adventure Fanatic</p>
