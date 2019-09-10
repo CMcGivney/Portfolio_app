@@ -4,7 +4,7 @@ import Alaska from '../images/Alaska.jpg'
 import buckskinGultch from '../images/buckskinGultch.jpg'
 
 const Home = () => (
-  <Grid stackable columns="equal">
+  <Grid stackable columns="equal" style={{padding: "25px", marginTop: "25px"}}>
     <Grid.Row>
        <Grid.Column className="headerBox">
         <Header as="h1" textAlign="center">Chris McGivney</Header>
@@ -40,7 +40,7 @@ const Home = () => (
           </p>
         </div>
        <div className="aboutMeHome">
-        <Header as="h3">Goals For A Dream Job:</Header>
+        <Header as="h3">"The Dream Job":</Header>
          <ul>
           <li>Work at a company that I believe in the product, culture and community impact.</li>
           <li>A position that challenges and teaches me everyday.</li>

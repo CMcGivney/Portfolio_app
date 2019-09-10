@@ -1,7 +1,6 @@
 import React from 'react'
 import { Header, Grid, Image} from 'semantic-ui-react'
 import SocialFollow from './SocialFollow'
-import headShot2 from '../images/headShot2.jpeg'
 import pcPano from '../images/pcPano.jpg'
 import distantStare from '../images/distantStare.jpg'
 import Notes from './PostItNotes'
@@ -9,17 +8,25 @@ import Notes from './PostItNotes'
 
 const Contact = () => (
 
-  <Grid stackable columns= 'equal'>
+  <Grid stackable columns= 'equal' style={{padding: "25px", marginTop: "25px"}}>
     <Grid.Row>
       <Grid.Column>
-        <Image 
+        <Image   
+           className="imgBoxContact"
            src={pcPano} 
            alt="Panoramic View of Park City, Utah"
+           width="100%"
+           height="100%"
            centered
            />
        </Grid.Column>
      </Grid.Row>
     <Grid.Row className="contact-headerBox">
+        <Grid.Column className="aboutMe">
+         <div>
+          <p>When Im not glued to my keyboard studying. I'm outdoors, running, mtn. biking, snowboarding, or just walking the dog and kiddo. Come join me!</p>
+         </div>
+       </Grid.Column>
       <Grid.Column className="aboutMe">
           <Header as="h3">
               <SocialFollow/>

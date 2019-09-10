@@ -24,7 +24,7 @@ import '../App.css'
 
 const Skills = () => (
 
-<Grid stackable columns='equal' style={{padding: "25px", marginTop: "50px"}}>
+<Grid stackable columns='equal' style={{padding: "25px", marginTop: "25px"}}>
    <Grid.Row>
      <Grid.Column className="headerBox">
       <Header as="h1" textAlign="center">My Tools & Skills</Header>

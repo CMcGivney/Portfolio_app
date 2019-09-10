@@ -4,8 +4,8 @@ import dashboard from '../images/dashboard.png'
 import dashboard2 from '../images/dashboard2.png'
 
 const Projects = () => (
-  <Grid stackable>
-    <Grid.Row column={2}>
+  <Grid stackable columns= 'equal' style={{padding: "25px", marginTop: "25px"}}>
+    <Grid.Row>
       <Grid.Column width={8} className="headerBox">
        <Header as="h3" textAlign="center">Dev Point Labs Dash Board</Header>
        <p> 
