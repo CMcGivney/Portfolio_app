@@ -24,14 +24,14 @@ import '../App.css'
 
 const Skills = () => (
 
-<Grid stackable style={{padding: "25px", margintop: "50px"}}>
-   <Grid.Row columns={1}>
+<Grid stackable columns='equal' style={{padding: "25px", marginTop: "50px"}}>
+   <Grid.Row>
      <Grid.Column className="headerBox">
       <Header as="h1" textAlign="center">My Tools & Skills</Header>
       <p>"That Will Pay My Bills"</p>
      </Grid.Column>
    </Grid.Row>
-   <Grid.Row columns={4} style={{padding: "20px"}}>
+   <Grid.Row style={{padding: "20px"}}>
       <Grid.Column>
       <div className="panel">
          <div className="front">
@@ -109,7 +109,7 @@ const Skills = () => (
         </div>
       </Grid.Column>
     </Grid.Row>
-    <Grid.Row columns={4} style={{padding: "20px"}}>
+    <Grid.Row style={{padding: "20px"}}>
       <Grid.Column>
       <div className="panel">
          <div className="front">
@@ -188,7 +188,7 @@ const Skills = () => (
         </div>
       </Grid.Column>
     </Grid.Row>
-    <Grid.Row columns={4} style={{padding: "20px"}}>
+    <Grid.Row style={{padding: "20px"}}>
       <Grid.Column>
       <div className="panel">
          <div className="front">
@@ -268,7 +268,7 @@ const Skills = () => (
         </div>
       </Grid.Column>
     </Grid.Row>
-    <Grid.Row columns={4} style={{padding: "20px"}}>
+    <Grid.Row style={{padding: "20px"}}>
       <Grid.Column>
       <div className="panel">
          <div className="front">
@@ -347,12 +347,7 @@ const Skills = () => (
          </div>
         </div>
       </Grid.Column>
-    </Grid.Row>
-    <Grid.Row column={1} className="footerBox">
-      <Grid.Column>
-       <p>Checkout my skills to see where, I think, I'm at.</p>
-      </Grid.Column>
-   </Grid.Row>    
+    </Grid.Row>   
 </Grid>
   )
 

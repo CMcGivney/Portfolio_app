@@ -10,7 +10,7 @@ const Home = () => (
         <p> Full Stack Web Developer | Ruby on Rails & React | Outdoor Adventure Fanatic</p>
        </Grid.Column>
      </Grid.Row>
-     <Grid.Row column={2}>
+      <Grid.Row column={2}>
        <Grid.Column width={8}>
          <Image 
           className="imgBoxHome"

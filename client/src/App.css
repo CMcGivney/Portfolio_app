@@ -5,7 +5,7 @@ body {
 .navbar {
   background: blue;
 }
-
+/* I dont think either menu or navbar are doing anything*/
 .menu {
   padding: 0px;
   background-color: #4968ad;
@@ -69,8 +69,7 @@ body {
   transform: rotateX(0deg);
   cursor: pointer;
 }
-
-/* styles for the social media icons */
+/* styles for element boxes(containers)*/
 .headerBox {
   padding: 50px;
   position: absolute;
@@ -82,14 +81,10 @@ body {
   box-shadow: 2px 2px black;
 }
 .contact-headerBox {
-  padding: 70px;
-  background: lightcyan;
   position: absolute;
-  border: 1px solid grey;
-  border-radius: 10px;
   text-align: center;
   color: black;
-  box-shadow: 2px 2px black;
+  
 }
 
 .footerBox {
@@ -131,19 +126,20 @@ body {
 }
 .aboutMe {
   justify-content: center;
-  padding: 10px;
+  padding: 40px;
 }
 
 
 .socialBox {
   padding: 55px 50px;
   text-align: center;
- 
+  
 }
 
+/* styles for the social media icons */
 a.social {
   margin: 0 1rem;
-  transition: tranform 250ms;
+  transition: transform 250ms;
   display: inline-block;
 }
 
@@ -169,7 +165,7 @@ a.github {
 a.google {
   color: green;
 }
-/*style for PostIts */
+/*style for Posted notes */
 .corkboard {
   background-color: tan;
   border: 10px solid  rgba(75, 47, 47, 0.911);
