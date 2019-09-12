@@ -21,7 +21,7 @@ gem 'puma', '~> 3.11'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem "nokogiri", ">= 1.10.4"
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 gem "devise_token_auth", "~> 1.1.2"
