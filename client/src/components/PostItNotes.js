@@ -24,46 +24,46 @@ state = { notes: [],   }
     return <h2>No Notes Yet...</h2>
     return (
       
-      <Grid container style={{marginTop: "25px"}}>
+  <Grid stackable container style={{marginTop: "25px"}}>
       <Grid.Row>
-       <Grid.Column stackable= "true">
-        <Card.Group className="corkboard">
-         { notes.map( note => 
-           <Card className="postIts" key={note.id} >
-            <Card.Content >
-              <Card.Header>
-               {note.body}
-              </Card.Header>
-              <Card.Meta>
-               {note.name}
-              </Card.Meta>
-            </Card.Content>
-
-         <Card.Content extra>
-          <Button 
-           color='red' 
-           icon basic 
-           onClick={() => this.destroyNote(note.id)}
-           >
-           <Icon name='trash' /> 
-          </Button>
-
-          <Link to={`/notes/${note.id}/edit`}>
-          <Button 
-          color='blue' 
-          icon basic 
-          >
-          <Icon name='pencil' />
-          </Button>
-          </Link>
+         <Grid.Column stackable= "true">
+           <Card.Group className="corkboard">
+            { notes.map( note => 
+              <Card className="postIts" key={note.id} >
+                <Card.Content >
+                  <Card.Header>
+                    {note.body}
+                  </Card.Header>
+                   <Card.Meta>
+                    {note.name}
+                   </Card.Meta>
+                </Card.Content>
+            <Card.Content extra>
+              <Button 
+                color='red' 
+                icon basic 
+                onClick={() => this.destroyNote(note.id)}
+                >
+                <Icon name='trash' /> 
+              </Button>
+            <Link to={`/notes/${note.id}/edit`}>
+              <Button 
+               color='blue' 
+               icon basic 
+                >
+                <Icon name='pencil' />
+              </Button>
+            </Link>
          </Card.Content>
-         </Card>
-          )}
-        </Card.Group>
-        </Grid.Column>
-      </Grid.Row>
-    </Grid>
-    )}
+       </Card>
+         )
+        }
+     </Card.Group>
+    </Grid.Column>
+   </Grid.Row>
+  </Grid>
+  )
+}
 
   
     

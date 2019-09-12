@@ -1,51 +1,94 @@
 import React from 'react'
-import { Menu, Segment } from 'semantic-ui-react'
-import { NavLink, withRouter, } from 'react-router-dom'
+import { AuthConsumer, } from "../providers/AuthProvider";
+import { Menu, } from 'semantic-ui-react'
+import { Link, withRouter, } from 'react-router-dom'
 
-const Navbar = ({location, }) => (
+class Navbar extends React.Component {
   
+  rightNavItems = () => {
+    const { auth: { user, handleLogout, }, location, } = this.props;
+    
+    if (user) {
+      return (
+        <Menu.Menu position='right'>
+          <Menu.Item
+            name='logout'
+            onClick={ () => handleLogout(this.props.history) }
+          />
+        </Menu.Menu>
+      )
+    } else {
+      return (
+        <Menu.Menu position='right'>
+          <Link to='/login'>
+            <Menu.Item
+              id='login'
+              name='login'
+              active={location.pathname === '/login'}
+            />
+          </Link>
+          <Link to='/register'>
+            <Menu.Item
+              id='register'
+              name='register'
+              active={location.pathname === '/register'}
+            />
+          </Link>
+        </Menu.Menu>
+      )
+    }
+  }
   
-    <Segment inverted>
-      <Menu inverted pointing secondary>
-        <NavLink to='/'>
-        <Menu.Item 
-        name="Home"
-        id="home"
-        active={location.pathname === '/'}
-        />
-        </NavLink>
-      <NavLink to='/skills'>
-       <Menu.Item
-        name="Skills"
-        id="skills"
-        active={location.pathname === '/skills'}
-       />
-      </NavLink>
-      <NavLink to='/projects'>
-       <Menu.Item
-        name="Projects"
-        id="projects"
-        active={location.pathname === '/projects'}
-        />
-      </NavLink>
-      <NavLink to='/contact'>
-       <Menu.Item
-        name="contact"
-        id="contact"
-        active={location.pathname === '/contact'}
-        />
-      </NavLink>
-      {/* <NavLink to='/blog'>
-       <Menu.Item
-        name="blog"
-        id="blog"
-        active={location.pathname === '/blog'}
-        />
-      </NavLink> */}
-      </Menu>
-    </Segment>
-  
-)
-// add blog function next version along with admin control
+  render() {
+    return (
+      <div>
+        <Menu inverted pointing secondary>
+          <Link to='/'>
+            <Menu.Item
+              name='home'
+              id='home'
+              active={this.props.location.pathname === '/'}
+            />
+            </Link>
+          <Link to='/skills'>
+            <Menu.Item
+              name='Skills'
+              id='skills'
+              active={this.props.location.pathname === '/skills'}
+            />
+            </Link>
+          <Link to='/projects'>
+            <Menu.Item
+              name='Projects'
+              id='projects'
+              active={this.props.location.pathname === '/projects'}
+            />
+            </Link>
+          <Link to='/contact'>
+            <Menu.Item
+              name='Contact'
+              id='contact'
+              active={this.props.location.pathname === '/contact'}
+            />
+          </Link>
+            { this.rightNavItems() }
+        </Menu>
+      </div>
+    )
+  }
+}
 
-export default withRouter(Navbar)
+export class ConnectedNavbar extends React.Component {
+  render() {
+    return (
+      <AuthConsumer> 
+        { auth => 
+          <Navbar { ...this.props } auth={auth} />
+        }
+      </AuthConsumer>
+    )
+  }
+}
+
+export default withRouter(ConnectedNavbar);
+
