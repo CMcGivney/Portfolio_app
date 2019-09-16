@@ -1,8 +1,8 @@
 class Api::NotesController < ApplicationController
-  before_action :set_note, only: [:show, :update, :destroy ]
+  before_action :authenticate_user!, :set_note, only: [:show, :update, :destroy ]
   
   def index
-    render json: Note.all
+    render json: User.note.all
   end
 
   def show
