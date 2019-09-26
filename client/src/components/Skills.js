@@ -1,11 +1,11 @@
-import React, {useState, } from 'react'
-import { Header, Grid, Image, Icon,  } from 'semantic-ui-react'
+import React from 'react'
+import {Grid, Image, Icon, Header} from 'semantic-ui-react'
 import styled from 'styled-components'
 import CSS3 from '../images/CSS3.png'
 import ES6 from '../images/ES6.png'
 import GitHub from '../images/GitHub.png'
 import HTML5 from '../images/HTML5.png'
-import jquery from '../images/jquery.png'
+import styledComp from '../images/styledComp.png'
 import JS from '../images/Javascript.png'
 import Postgresql from '../images/Postgresql.jpeg'
 import Rails from '../images/Rails.png'
@@ -20,342 +20,148 @@ import Semantic from '../images/Semantic.png'
 import '../App.css'
 
 
-
+const skillsArray = [
+  {image: HTML5, 
+    image_alt: "HTML5 Logo",
+    comment: "Feel Confident.",
+    star_count: 3,
+    darkstar_count: 2,
+  },
+  {image: CSS3,
+    image_alt: "CSS3 Logo",
+    comment: "Need to develop a designers eye.",
+    star_count: 2,
+    darkstar_count: 3,
+  },
+  {image: JS,
+    image_alt: "JavaScript Logo",
+    comment: "Some good days, some bad.",
+    star_count: 2,
+    darkstar_count: 3,
+  },
+  {image: ReactIcon,
+    image_alt: "React Logo",
+    comment: "Work with React daily.",
+    star_count: 3,
+    darkstar_count: 2,
+  },
+  {image: Ruby,
+    image_alt: "Ruby Logo",
+    comment: "Sound foundation.",
+    star_count: 2,
+    darkstar_count: 3,
+  },
+  {image: Rails,
+    image_alt: "Rails Logo",
+    comment: "Pretty, pretty good.",
+    star_count: 2,
+    darkstar_count: 3,
+  },
+  {image: styledComp,
+    image_alt: "Styled Component Logo",
+    comment: "A styling tool",
+    star_count: 2,
+    darkstar_count: 3,
+  },
+  {image: Postgresql,
+    image_alt: "Postgresql logo",
+    comment: "Basic Database Foundation",
+    star_count: 3,
+    darkstar_count: 2,
+  },
+  {image: SQL,
+    image_alt: "SQL logo",
+    comment: "I ❤️ SQL",
+    star_count: 2,
+    darkstar_count: 3,
+  },
+  {image: SemanticR,
+    image_alt: "React Semantic Logo",
+    comment: "When you need to style an app quickly...",
+    star_count: 3,
+    darkstar_count: 2,
+  },
+  {image: Semantic,
+    image_alt: "Semantic logo",
+    comment: "Framework tool library",
+    star_count: 3,
+    darkstar_count: 2,
+  },
+  {image: BootsReact,
+    image_alt: "bootstrap React logo",
+    comment: "Framework tool library",
+    star_count: 3,
+    darkstar_count: 2,
+  },
+  {image: ES6,
+    image_alt: "ecmaScript6 logo",
+    comment: "Learning every day, Arrow(), Spread, etc.",
+    star_count: 1,
+    darkstar_count: 4,
+  },
+  {image: Sqlectron,
+    image_alt: "Sqlectron logo",
+    comment: "When you need to see those databases you made in action",
+    star_count: 2,
+    darkstar_count: 3,
+  },
+  {image: BootStrap,
+    image_alt: "bootstrap logo",
+    comment: "Framework tool library",
+    star_count: 3,
+    darkstar_count: 2,
+  },
+  {image: GitHub,
+    image_alt: "github logo",
+    comment: "Confident, Learning tricks daily",
+    star_count: 3,
+    darkstar_count: 2,
+  },
+  ]
+  
 
 const Skills = () => (
-
-<Grid stackable columns='equal' style={{padding: "25px", marginTop: "25px"}}>
-   <Grid.Row>
+ <Grid stackable style={{marginTop: "25px"}}>
+  <Grid.Row>
      <Grid.Column className="headerBox">
       <Header as="h1" textAlign="center">My Tools & Skills</Header>
-      <p>"That Will Pay My Bills"</p>
      </Grid.Column>
    </Grid.Row>
-   <Grid.Row style={{padding: "20px"}}>
-      <Grid.Column>
-      <div className="panel">
-         <div className="front">
-          <div>
-          <Image src={HTML5} alt="HTML5" width="150px" height="150px"/>
+   { skillsArray.map( skill => 
+      <Grid.Column key={skill.id} width={4}>
+         <div className="panel">
+           <div className="front">
+            <Image src={skill.image} alt={skill.image_alt} width="150px" height="150px"/>
+           </div>
+            <div className="back"> 
+             <p className="pad">{skill.comment}</p> 
+              <div>
+                { function() {
+                  let stars = [];
+                  for (let i=0; i < skill.star_count; i++) {
+                    stars.push(<span><Star><Icon name="star" key={i}/></Star></span>);
+                  }
+                  return stars;
+                }()}
+                { function() {
+                  let darkStars = [];
+                  for (let i=0; i < skill.darkstar_count; i++) {
+                    darkStars.push(<span><Icon name="star" key={i}/></span>);
+                  }
+                  return darkStars;
+                }()}
+               </div>
+             </div>
           </div>
-         </div>
-         <div className="back"> 
-          <div  className="pad">Feel Confident</div> 
-          <Star>
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          <Icon name="star" />
-          </Star>
-          <span><Icon name="star" /></span>
-         </div>
-        </div>
-      </Grid.Column>
-      <Grid.Column>
-      <div className="panel">
-         <div className="front">
-          <div>
-           <Image src={CSS3} alt="CSS3" width="150px" height="150px" /> 
-          </div>
-         </div>
-         <div className="back"> 
-          <div  className="pad">Need a Designers Eye</div> 
-          <Star>
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          </Star>
-          <span><Icon name="star" /></span>
-          <span><Icon name="star" /></span>
-         </div>
-        </div>
-      </Grid.Column>
-      <Grid.Column>
-      <div className="panel">
-         <div className="front">
-          <div>
-           <Image src={JS} alt="JavaScript" width="150px" height="150px" />
-          </div>
-         </div>
-         <div className="back"> 
-          <div  className="pad">Some Good Days Some Bad</div> 
-          <Star>
-          <Icon name="star" /> 
-          <Icon name="star" />  
-          </Star>
-          <span><Icon name="star" /></span>
-          <span><Icon name="star" /></span>
-          <span><Icon name="star" /></span>
-         </div>
-        </div>
-      </Grid.Column>
-      <Grid.Column>
-      <div className="panel">
-         <div className="front">
-          <div>
-           <Image src={ReactIcon} alt="ReactIcon" width="150px" height="150px" />
-          </div>
-         </div>
-         <div className="back"> 
-          <div  className="pad">Work On It Daily</div> 
-          <Star>
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          </Star>
-          <span><Icon name="star" /></span>
-         </div>
-        </div>
-      </Grid.Column>
-    </Grid.Row>
-    <Grid.Row style={{padding: "20px"}}>
-      <Grid.Column>
-      <div className="panel">
-         <div className="front">
-          <div>
-          <Image src={Ruby} alt="Ruby" width="150px" height="150px" />
-          </div>
-         </div>
-         <div className="back"> 
-          <div  className="pad">Basic Knowledge</div> 
-          <Star>
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          </Star>
-          <span><Icon name="star" /></span>
-          <span><Icon name="star" /></span>
-         </div>
-        </div>
-      </Grid.Column>
-      <Grid.Column>
-      <div className="panel">
-         <div className="front">
-          <div>
-           <Image src={Rails} alt="Rails" width="150px" height="150px" /> 
-          </div>
-         </div>
-         <div className="back"> 
-         <div  className="pad">Pretty, Pretty Good</div> 
-         <Star>
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          </Star>
-          <span><Icon name="star" /></span>
-          <span><Icon name="star" /></span>
-         </div>
-        </div>
-      </Grid.Column>
-      <Grid.Column>
-      <div className="panel">
-         <div className="front">
-          <div>
-           <Image src={jquery} alt="jquery" width="150px" height="150px" />
-          </div>
-         </div>
-         <div className="back"> 
-         <div  className="pad">I Know It Exists</div> 
-         <div  className="pad">Don't Use It Much</div> 
-         <Star>
-          <Icon name="star" /> 
-          </Star>
-          <span><Icon name="star" /></span>
-          <span><Icon name="star" /></span>
-          <span><Icon name="star" /></span>
-          <span><Icon name="star" /></span>
-         </div>
-        </div>
-      </Grid.Column>
-      <Grid.Column>
-      <div className="panel">
-         <div className="front">
-          <div>
-           <Image src={Postgresql} alt="Postgresql" width="150px" height="150px" />
-          </div>
-         </div>
-         <div className="back"> 
-         <div  className="pad">Basic Database Knowledge</div> 
-         <Star>
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          </Star>
-          <span><Icon name="star" /></span>
-          <span><Icon name="star" /></span>
-         </div>
-        </div>
-      </Grid.Column>
-    </Grid.Row>
-    <Grid.Row style={{padding: "20px"}}>
-      <Grid.Column>
-      <div className="panel">
-         <div className="front">
-          <div>
-          <Image src={SQL} alt="SQL" width="150px" height="150px" />
-          </div>
-         </div>
-         <div className="back"> 
-         <div  className="pad">I Love SQL</div> 
-         <div  className="pad">Practice Daily</div> 
-         <Star>
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          </Star>
-          <span><Icon name="star" /></span>
-          <span><Icon name="star" /></span>
-         </div>
-        </div>
-      </Grid.Column>
-      <Grid.Column>
-      <div className="panel">
-         <div className="front">
-          <div>
-           <Image src={SemanticR} alt="SemanticR" width="150px" height="150px" /> 
-          </div>
-         </div>
-         <div className="back"> 
-         <div  className="pad">When Styling A Quick App...</div> 
-         <div  className="pad">like this One</div> 
-         <Star>
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          </Star>
-          <span><Icon name="star" /></span> 
-         </div>
-        </div>
-      </Grid.Column>
-      <Grid.Column>
-      <div className="panel">
-         <div className="front">
-          <div>
-           <Image src={Semantic} alt="Semantic" width="150px" height="150px"/>
-          </div>
-         </div>
-         <div className="back"> 
-         <div  className="pad">Framework Tool Library</div> 
-         <Star>
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          </Star>
-          <span><Icon name="star" /></span>
-          <span><Icon name="star" /></span>  
-         </div>
-        </div>
-      </Grid.Column>
-      <Grid.Column>
-      <div className="panel">
-         <div className="front">
-          <div>
-           <Image src={BootsReact} alt="BootstrapReact" width="150px" height="150px" />
-          </div>
-         </div>
-         <div className="back"> 
-         <div  className="pad">Framework Tool Library</div> 
-         <Star>
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          </Star>
-          <span><Icon name="star" /></span>
-          <span><Icon name="star" /></span>  
-         </div>
-        </div>
-      </Grid.Column>
-    </Grid.Row>
-    <Grid.Row style={{padding: "20px"}}>
-      <Grid.Column>
-      <div className="panel">
-         <div className="front">
-          <div>
-          <Image src={ES6} alt="ES6" width="150px" height="150px" />
-          </div>
-         </div>
-         <div className="back"> 
-         <div  className="pad">ECMAScript 6</div> 
-         <div  className="pad">To Arrow Function or Not...</div> 
-         <Star>
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          </Star>
-          <span><Icon name="star" /></span>
-          <span><Icon name="star" /></span> 
-          <span><Icon name="star" /></span> 
-         </div>
-        </div>
-      </Grid.Column>
-      <Grid.Column>
-      <div className="panel">
-         <div className="front">
-          <div>
-           <Image src={Sqlectron} alt="Sqlectron" width="150px" height="150px" /> 
-          </div>
-         </div>
-         <div className="back"> 
-         <div  className="pad">When You Need To See Those Databases You Made In Action</div> 
-         <Star>
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          </Star>
-          <span><Icon name="star" /></span>
-          <span><Icon name="star" /></span> 
-          <span><Icon name="star" /></span>  
-         </div>
-        </div>
-      </Grid.Column>
-      <Grid.Column>
-      <div className="panel">
-         <div className="front">
-          <div>
-           <Image src={BootStrap} alt="BootStrap" width="150px" height="150px" />
-          </div>
-         </div>
-         <div className="back"> 
-         <div  className="pad">Framework Tool Library</div> 
-         <Star>
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          </Star>
-          <span><Icon name="star" /></span>
-          <span><Icon name="star" /></span>
-         </div>
-        </div>
-      </Grid.Column>
-      <Grid.Column>
-      <div className="panel">
-         <div className="front">
-          <div>
-           <Image src={GitHub} alt="GitHub" width="150px" height="150px" />
-          </div>
-         </div>
-         <div className="back"> 
-         <div className="pad">Feel Confident</div> 
-         <div className="pad">Learn A New Trick Daily</div> 
-         <Star>
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          <Icon name="star" /> 
-          </Star>
-          <span><Icon name="star" /></span>
-          <span><Icon name="star" /></span>   
-         </div>
-        </div>
-      </Grid.Column>
-    </Grid.Row>   
-</Grid>
-  )
-
-  const Star = styled.div`
-  display: inline-block;
-  color: yellow;
-  text-shadow: 1px 1px 1px black;
+        </Grid.Column>
+       )
+      }
+ </Grid>
+)
+const Star = styled.div`
+display: inline-block;
+color: yellow;
+text-shadow: 1px 1px 1px black;
 `;
 
-
-export default Skills;
+export default Skills

@@ -21,13 +21,13 @@ const App = () => (
     <FetchUser>
      <Container>
       <Switch>
-       <ProtectedRoute exact path='/' component={Home} />
+       <Route exact path='/' component={Home} />
        <Route exact path="/login" component={Login} />
        <Route exact path="/register" component={Register} />
        <Route exact path='/projects' component={Projects} />
        <Route exact path='/skills' component={Skills} />
        <Route exact path='/contact' component={Contact} />
-       <Route exact path="/notes/new" component={NotesForm} />
+       <ProtectedRoute exact path="/notes/new" component={NotesForm} />
        <Route exact path="/notes/:id/edit" component={NotesForm} />
        <Route exact path="/notes/:id/edit" render={props => <NotesForm edit {...props} />} />
        <Route exact path='/blog' component={Blog} />

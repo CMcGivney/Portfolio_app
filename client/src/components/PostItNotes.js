@@ -2,10 +2,11 @@ import React from "react"
 import axios from 'axios'
 import {Link, } from "react-router-dom"
 import {Card, Grid, Button, Icon, Container, } from "semantic-ui-react"
-
+import { AuthContext, } from "../providers/AuthProvider"
 
 class PostItNotes extends React.Component {
-state = { notes: [],   }
+  
+state = { notes: [], user: [], }
 
   componentDidMount() {
     axios.get("/api/notes")
@@ -19,6 +20,7 @@ state = { notes: [],   }
 
 
   allNotes = () => {
+    const user = AuthContext
     const {notes} = this.state
     if (notes.length <= 0)
     return <h2>No Notes Yet...</h2>
@@ -38,7 +40,9 @@ state = { notes: [],   }
                     {note.name}
                    </Card.Meta>
                 </Card.Content>
-            <Card.Content extra>
+                
+            { user ? 
+             <Card.Content extra>
               <Button 
                 color='red' 
                 icon basic 
@@ -46,15 +50,18 @@ state = { notes: [],   }
                 >
                 <Icon name='trash' /> 
               </Button>
-            <Link to={`/notes/${note.id}/edit`}>
-              <Button 
-               color='blue' 
-               icon basic 
-                >
+              <Link to={`/notes/${note.id}/edit`}>
+               <Button 
+                 color='blue' 
+                 icon basic 
+                 >
                 <Icon name='pencil' />
-              </Button>
-            </Link>
-         </Card.Content>
+               </Button>
+              </Link>
+             </Card.Content>
+            :
+            <div></div>
+          }
        </Card>
          )
         }

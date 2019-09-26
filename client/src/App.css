@@ -5,8 +5,8 @@ body {
 /* this is the styles and animation for the tile flip */
 .panel  {
   margin: 0 auto;
-  width: 130px;
-  height: 130px;
+  width: 150px;
+  height: 150px;
   position: relative;
   font-size: 1em;
   perspective: 600px;
