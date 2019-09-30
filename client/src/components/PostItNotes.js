@@ -2,7 +2,7 @@ import React from "react"
 import axios from 'axios'
 import {Link, } from "react-router-dom"
 import {Card, Grid, Button, Icon, Container, } from "semantic-ui-react"
-import { AuthContext, } from "../providers/AuthProvider"
+import { AuthConsumer, } from "../providers/AuthProvider"
 
 class PostItNotes extends React.Component {
   
@@ -20,7 +20,7 @@ state = { notes: [], user: [], }
 
 
   allNotes = () => {
-    const user = AuthContext
+    const user = AuthConsumer
     const {notes} = this.state
     if (notes.length <= 0)
     return <h2>No Notes Yet...</h2>

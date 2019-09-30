@@ -124,7 +124,7 @@ const Skills = () => (
  <Grid stackable style={{marginTop: "25px"}}>
   <Grid.Row>
      <Grid.Column className="headerBox">
-      <Header as="h1" textAlign="center">My Tools & Skills</Header>
+      <Header as="h1" textAlign="center">Tools & Skills</Header>
      </Grid.Column>
    </Grid.Row>
    { skillsArray.map( skill => 
