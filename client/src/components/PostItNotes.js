@@ -6,7 +6,7 @@ import { AuthConsumer, } from "../providers/AuthProvider"
 
 class PostItNotes extends React.Component {
   
-state = { notes: [], user: [], }
+state = { notes: [], }
 
   componentDidMount() {
     axios.get("/api/notes")
@@ -72,7 +72,7 @@ state = { notes: [], user: [], }
   )
 }
 
-  
+
     
     destroyNote = (id) => {
       axios.delete(`/api/notes/${id}`)
