@@ -5,7 +5,7 @@ import CSS3 from '../images/CSS3.png'
 import ES6 from '../images/ES6.png'
 import GitHub from '../images/GitHub.png'
 import HTML5 from '../images/HTML5.png'
-import styledComp from '../images/styledComp.png'
+import StyledComp from '../images/styledComp.png'
 import JS from '../images/Javascript.png'
 import Postgresql from '../images/Postgresql.jpeg'
 import Rails from '../images/Rails.png'
@@ -20,106 +20,50 @@ import Semantic from '../images/Semantic.png'
 import '../App.css'
 
 
-const skillsArray = [
-  {image: HTML5, 
-    image_alt: "HTML5 Logo",
-    comment: "Feel Confident.",
-    star_count: 3,
-    darkstar_count: 2,
-  },
-  {image: CSS3,
-    image_alt: "CSS3 Logo",
-    comment: "Need to develop a designers eye.",
-    star_count: 2,
-    darkstar_count: 3,
-  },
-  {image: JS,
-    image_alt: "JavaScript Logo",
-    comment: "Some good days, some bad.",
-    star_count: 2,
-    darkstar_count: 3,
-  },
-  {image: ReactIcon,
-    image_alt: "React Logo",
-    comment: "Work with React daily.",
-    star_count: 3,
-    darkstar_count: 2,
-  },
-  {image: Ruby,
-    image_alt: "Ruby Logo",
-    comment: "Sound foundation.",
-    star_count: 2,
-    darkstar_count: 3,
-  },
-  {image: Rails,
-    image_alt: "Rails Logo",
-    comment: "Pretty, pretty good.",
-    star_count: 2,
-    darkstar_count: 3,
-  },
-  {image: styledComp,
-    image_alt: "Styled Component Logo",
-    comment: "A styling tool",
-    star_count: 2,
-    darkstar_count: 3,
-  },
-  {image: Postgresql,
-    image_alt: "Postgresql logo",
-    comment: "Basic Database Foundation",
-    star_count: 3,
-    darkstar_count: 2,
-  },
-  {image: SQL,
-    image_alt: "SQL logo",
-    comment: "I ❤️ SQL",
-    star_count: 2,
-    darkstar_count: 3,
-  },
-  {image: SemanticR,
-    image_alt: "React Semantic Logo",
-    comment: "When you need to style an app quickly...",
-    star_count: 3,
-    darkstar_count: 2,
-  },
-  {image: Semantic,
-    image_alt: "Semantic logo",
-    comment: "Framework tool library",
-    star_count: 3,
-    darkstar_count: 2,
-  },
-  {image: BootsReact,
-    image_alt: "bootstrap React logo",
-    comment: "Framework tool library",
-    star_count: 3,
-    darkstar_count: 2,
-  },
-  {image: ES6,
-    image_alt: "ecmaScript6 logo",
-    comment: "Learning every day, Arrow(), Spread, etc.",
-    star_count: 1,
-    darkstar_count: 4,
-  },
-  {image: Sqlectron,
-    image_alt: "Sqlectron logo",
-    comment: "When you need to see those databases you made in action",
-    star_count: 2,
-    darkstar_count: 3,
-  },
-  {image: BootStrap,
-    image_alt: "bootstrap logo",
-    comment: "Framework tool library",
-    star_count: 3,
-    darkstar_count: 2,
-  },
-  {image: GitHub,
-    image_alt: "github logo",
-    comment: "Confident, Learning tricks daily",
-    star_count: 3,
-    darkstar_count: 2,
-  },
-  ]
-  
+const Skill = function(image, image_alt, comment, star_count, darkstar_count) {
+   this.image = image;
+   this.image_alt = image_alt;
+   this.comment = comment;
+   this.star_count = star_count;
+   this.darkstar_count = darkstar_count;
+}
 
+let arrayNew = [];
+
+let html = new Skill(HTML5, "HTML5 Logo", "Feel Confident", 3, 2)
+arrayNew.push(html)
+let css = new Skill(CSS3, "CSS3 Logo", "Need to develop a designers eye.", 2, 3)
+arrayNew.push(css)
+let js = new Skill(JS, "JavaScript Logo", "Some good days, some bad.", 2, 3)
+arrayNew.push(js)
+let react = new Skill(ReactIcon, "React Logo", "Work with React daily.", 3, 2)
+arrayNew.push(react)
+let ruby = new Skill(Ruby, "Ruby Logo", "Sound foundation.", 2, 3)
+arrayNew.push(ruby)
+let rails = new Skill(Rails, "", "Pretty, pretty good.", 2, 3)
+arrayNew.push(rails)
+let styledComp = new Skill(StyledComp, "Styled Component Logo", "A styling tool", 1, 4)
+arrayNew.push(styledComp)
+let postgresql = new Skill(Postgresql, "Postgreql Logo", "Basic Database Foundation", 2, 3)
+arrayNew.push(postgresql)
+let sql = new Skill(SQL, "SQL Logo", "I ❤️ SQL", 2, 3)
+arrayNew.push(sql)
+let semanticR = new Skill(SemanticR, "React Semantic Logo", "When you need to style an app quickly...", 3, 2)
+arrayNew.push(semanticR)
+let semantic = new Skill(Semantic, "Semantic Logo", "Framework tool library", 3, 2)
+arrayNew.push(semantic)
+let bootsReact= new Skill(BootsReact, "BootsReact Logo", "Framework tool library", 3, 2)
+arrayNew.push(bootsReact)
+let esc6= new Skill(ES6, "ecmaScript6 Logo", "Learning every day, Arrow(), Spread, etc.", 1, 4)
+arrayNew.push(esc6)
+let sqlectron = new Skill(Sqlectron, "Sqlectron Logo", "When you need to see those databases you made in action", 2, 3)
+arrayNew.push(sqlectron)
+let bootstrap = new Skill(BootStrap, " BootStrap Logo", "Framework tool library", 2, 3)
+arrayNew.push(bootstrap)
+let github = new Skill(GitHub, " BootStrap Logo", "Confident, Learning tricks daily", 3, 2)
+arrayNew.push(github)
+
+  
 const Skills = () => (
  <Grid stackable style={{marginTop: "25px"}}>
   <Grid.Row>
@@ -127,15 +71,15 @@ const Skills = () => (
       <Header as="h1" textAlign="center">Tools & Skills</Header>
      </Grid.Column>
    </Grid.Row>
-   { skillsArray.map( skill => 
+   { arrayNew.map( skill => 
       <Grid.Column key={skill.id} width={4}>
-         <div className="panel">
-           <div className="front">
+         <div className="panel" key={skill.id}>
+           <div className="front" key={skill.id}>
             <Image src={skill.image} alt={skill.image_alt} width="150px" height="150px"/>
            </div>
-            <div className="back"> 
+            <div className="back" key={skill.id}> 
              <p className="pad">{skill.comment}</p> 
-              <div>
+              <div key={skill.id}>
                 { function() {
                   let stars = [];
                   for (let i=0; i < skill.star_count; i++) {

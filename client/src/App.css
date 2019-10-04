@@ -55,7 +55,6 @@ body {
 }
 
 .panel:hover .back {
-
   z-index: 1000;
   transform: rotateX(0deg);
   cursor: pointer;
