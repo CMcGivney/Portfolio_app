@@ -3,7 +3,7 @@ import { Header, Grid, Image} from 'semantic-ui-react'
 import SocialFollow from './SocialFollow'
 import pcPano from '../images/pcPano.jpg'
 import distantStare from '../images/distantStare.jpg'
-import Notes from './PostItNotes'
+import Notes from '../Notes/PostItNotes'
 
 
 const Contact = () => (

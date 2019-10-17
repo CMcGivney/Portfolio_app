@@ -1,18 +1,18 @@
 import React from 'react'
 import Home from './components/Home'
 import Projects from './components/Projects'
-import Skills from './components/Skills'
-import Contact from './components/Contact'
+import Skills from './Skills/Skills'
+import Contact from './Contact/Contact'
 import Blog from './components/Blog'
-import NoMatch from './components/NoMatch'
+import NoMatch from './Devise/NoMatch'
 import Navbar from './components/Navbar'
-import NotesForm from './components/PostItNoteForm'
+import NotesForm from './Notes/PostItNoteForm'
 import { Switch, Route, } from 'react-router-dom'
 import { Container, } from "semantic-ui-react"
-import Login from './components/Login'
-import Register from './components/Register'
-import FetchUser from './components/FetchUser'
-import ProtectedRoute from './components/ProtectedRoute'
+import Login from './Devise/Login'
+import Register from './Devise/Register'
+import FetchUser from './Devise/FetchUser'
+import ProtectedRoute from './Devise/ProtectedRoute'
 
 
 const App = () => (

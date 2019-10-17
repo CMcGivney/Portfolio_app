@@ -2,6 +2,7 @@ import React from 'react';
 import { Header, Grid, Image, } from 'semantic-ui-react';
 import dashboard from '../images/dashboard.png'
 import dashboard2 from '../images/dashboard2.png'
+import '../App.css'
 
 const Projects = () => (
   <Grid stackable columns= 'equal' style={{padding: "25px", marginTop: "25px"}}>

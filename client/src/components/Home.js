@@ -78,6 +78,7 @@ const Home = () => (
               <li>Stay true and focused on my goals.</li>
            </ul>
         </div>
+  
          </Grid.Column>
        </Grid.Row>
 </Grid>
