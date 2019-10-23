@@ -17,6 +17,7 @@ import Sqlectron from '../images/sqlectron.png'
 import BootStrap from '../images/BootStrap.png'
 import BootsReact from '../images/BootstrapReact.png'
 import Semantic from '../images/Semantic.png'
+import './Skills.css'
 import '../App.css'
 
 
@@ -28,40 +29,40 @@ const Skill = function(image, image_alt, comment, star_count, darkstar_count) {
    this.darkstar_count = darkstar_count;
 }
 
-let arrayNew = [];
+let skillsArr = [];
 
 let html = new Skill(HTML5, "HTML5 Logo", "Feel Confident", 3, 2)
-arrayNew.push(html)
+skillsArr.push(html)
 let css = new Skill(CSS3, "CSS3 Logo", "Need to develop a designers eye.", 2, 3)
-arrayNew.push(css)
+skillsArr.push(css)
 let js = new Skill(JS, "JavaScript Logo", "Some good days, some bad.", 2, 3)
-arrayNew.push(js)
+skillsArr.push(js)
 let react = new Skill(ReactIcon, "React Logo", "Work with React daily.", 3, 2)
-arrayNew.push(react)
+skillsArr.push(react)
 let ruby = new Skill(Ruby, "Ruby Logo", "Sound foundation.", 2, 3)
-arrayNew.push(ruby)
+skillsArr.push(ruby)
 let rails = new Skill(Rails, "", "Pretty, pretty good.", 2, 3)
-arrayNew.push(rails)
+skillsArr.push(rails)
 let styledComp = new Skill(StyledComp, "Styled Component Logo", "A styling tool", 1, 4)
-arrayNew.push(styledComp)
+skillsArr.push(styledComp)
 let postgresql = new Skill(Postgresql, "Postgreql Logo", "Basic Database Foundation", 2, 3)
-arrayNew.push(postgresql)
+skillsArr.push(postgresql)
 let sql = new Skill(SQL, "SQL Logo", "I ❤️ SQL", 2, 3)
-arrayNew.push(sql)
+skillsArr.push(sql)
 let semanticR = new Skill(SemanticR, "React Semantic Logo", "When you need to style an app quickly...", 3, 2)
-arrayNew.push(semanticR)
+skillsArr.push(semanticR)
 let semantic = new Skill(Semantic, "Semantic Logo", "Framework tool library", 3, 2)
-arrayNew.push(semantic)
+skillsArr.push(semantic)
 let bootsReact= new Skill(BootsReact, "BootsReact Logo", "Framework tool library", 3, 2)
-arrayNew.push(bootsReact)
+skillsArr.push(bootsReact)
 let esc6= new Skill(ES6, "ecmaScript6 Logo", "Learning every day, Arrow(), Spread, etc.", 1, 4)
-arrayNew.push(esc6)
+skillsArr.push(esc6)
 let sqlectron = new Skill(Sqlectron, "Sqlectron Logo", "When you need to see those databases you made in action", 2, 3)
-arrayNew.push(sqlectron)
+skillsArr.push(sqlectron)
 let bootstrap = new Skill(BootStrap, " BootStrap Logo", "Framework tool library", 2, 3)
-arrayNew.push(bootstrap)
+skillsArr.push(bootstrap)
 let github = new Skill(GitHub, " BootStrap Logo", "Confident, Learning tricks daily", 3, 2)
-arrayNew.push(github)
+skillsArr.push(github)
 
   
 const Skills = () => (
@@ -71,10 +72,10 @@ const Skills = () => (
       <Header as="h1" textAlign="center">Tools & Skills</Header>
      </Grid.Column>
    </Grid.Row>
-   { arrayNew.map( skill => 
+   { skillsArr.map( skill => 
       <Grid.Column key={skill.id} width={4}>
-         <div className="panel" key={skill.id}>
-           <div className="front" key={skill.id}>
+         <div className="panel">
+           <div className="front">
             <Image src={skill.image} alt={skill.image_alt} width="150px" height="150px"/>
            </div>
             <div className="back" key={skill.id}> 
@@ -108,4 +109,4 @@ color: yellow;
 text-shadow: 1px 1px 1px black;
 `;
 
-export default Skills
+export default Skills;

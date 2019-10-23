@@ -2,6 +2,8 @@ import React from 'react';
 import { Header, Grid, Image, } from 'semantic-ui-react';
 import dashboard from '../images/dashboard.png'
 import dashboard2 from '../images/dashboard2.png'
+import RPS from '../images/RPS.png'
+import '../App.css'
 
 const Projects = () => (
   <Grid stackable columns= 'equal' style={{padding: "25px", marginTop: "25px"}}>
@@ -44,6 +46,26 @@ const Projects = () => (
           />
         </div>
      
+       </div>
+      </Grid.Column>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Column width={8} className="headerBox">
+       <Header as="h3" textAlign="center">A Silly Little JS Rock, Paper Scissor Game</Header>
+         <p>This game was created with Html, CSS and Javascript. It was great practice. 
+         I am still learning the in's and out's of JavaScript but by doing this exercise I really start to see the power of this language. </p>
+         <a href="https://github.com/CMcGivney/RPS">https://github.com/CMcGivney/RPS</a>
+      </Grid.Column>
+    <Grid.Column width={8}>
+      <div className="imageFlex">
+       <div>
+        <Image 
+          className="imgBoxHome"
+          src={RPS} 
+          alt="A JS made Rock, Paper, Scissor Game"
+          size="big"
+         />
+        </div>
        </div>
       </Grid.Column>
     </Grid.Row>
