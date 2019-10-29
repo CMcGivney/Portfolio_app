@@ -21,47 +21,49 @@ import './Skills.css'
 import '../App.css'
 
 
-const Skill = function(image, image_alt, comment, star_count, darkstar_count) {
+class Skill { 
+  constructor(image, image_alt, comment, star_count, darkstar_count) {
    this.image = image;
    this.image_alt = image_alt;
    this.comment = comment;
    this.star_count = star_count;
    this.darkstar_count = darkstar_count;
+ }
 }
-
 let skillsArr = [];
+let html, css, js, react, ruby, rails, styledComp, postgresql, sql, semanticR, semantic, bootsReact, esc6, sqlectron, bootstrap, github;
 
-let html = new Skill(HTML5, "HTML5 Logo", "Feel Confident", 3, 2)
+html = new Skill(HTML5, "HTML5 Logo", "Feel Confident", 3, 2)
 skillsArr.push(html)
-let css = new Skill(CSS3, "CSS3 Logo", "Need to develop a designers eye.", 2, 3)
+css = new Skill(CSS3, "CSS3 Logo", "Need to develop a designers eye.", 2, 3)
 skillsArr.push(css)
-let js = new Skill(JS, "JavaScript Logo", "Some good days, some bad.", 2, 3)
+js = new Skill(JS, "JavaScript Logo", "Some good days, some bad.", 3, 2)
 skillsArr.push(js)
-let react = new Skill(ReactIcon, "React Logo", "Work with React daily.", 3, 2)
+react = new Skill(ReactIcon, "React Logo", "Work with React daily.", 3, 2)
 skillsArr.push(react)
-let ruby = new Skill(Ruby, "Ruby Logo", "Sound foundation.", 2, 3)
+ruby = new Skill(Ruby, "Ruby Logo", "Sound foundation.", 2, 3)
 skillsArr.push(ruby)
-let rails = new Skill(Rails, "", "Pretty, pretty good.", 2, 3)
+rails = new Skill(Rails, "", "Pretty, pretty good.", 2, 3)
 skillsArr.push(rails)
-let styledComp = new Skill(StyledComp, "Styled Component Logo", "A styling tool", 1, 4)
+styledComp = new Skill(StyledComp, "Styled Component Logo", "A styling tool", 1, 4)
 skillsArr.push(styledComp)
-let postgresql = new Skill(Postgresql, "Postgreql Logo", "Basic Database Foundation", 2, 3)
+postgresql = new Skill(Postgresql, "Postgreql Logo", "Basic Database Foundation", 2, 3)
 skillsArr.push(postgresql)
-let sql = new Skill(SQL, "SQL Logo", "I ❤️ SQL", 2, 3)
+sql = new Skill(SQL, "SQL Logo", "I ❤️ SQL", 2, 3)
 skillsArr.push(sql)
-let semanticR = new Skill(SemanticR, "React Semantic Logo", "When you need to style an app quickly...", 3, 2)
+semanticR = new Skill(SemanticR, "React Semantic Logo", "When you need to style an app quickly...", 3, 2)
 skillsArr.push(semanticR)
-let semantic = new Skill(Semantic, "Semantic Logo", "Framework tool library", 3, 2)
+semantic = new Skill(Semantic, "Semantic Logo", "Framework tool library", 3, 2)
 skillsArr.push(semantic)
-let bootsReact= new Skill(BootsReact, "BootsReact Logo", "Framework tool library", 3, 2)
+bootsReact= new Skill(BootsReact, "BootsReact Logo", "Framework tool library", 3, 2)
 skillsArr.push(bootsReact)
-let esc6= new Skill(ES6, "ecmaScript6 Logo", "Learning every day, Arrow(), Spread, etc.", 1, 4)
+esc6= new Skill(ES6, "ecmaScript6 Logo", "Learning every day, Arrow(), Spread, etc.", 2, 3)
 skillsArr.push(esc6)
-let sqlectron = new Skill(Sqlectron, "Sqlectron Logo", "When you need to see those databases you made in action", 2, 3)
+sqlectron = new Skill(Sqlectron, "Sqlectron Logo", "When you need to see those databases you made in action", 2, 3)
 skillsArr.push(sqlectron)
-let bootstrap = new Skill(BootStrap, " BootStrap Logo", "Framework tool library", 2, 3)
+bootstrap = new Skill(BootStrap, " BootStrap Logo", "Framework tool library", 2, 3)
 skillsArr.push(bootstrap)
-let github = new Skill(GitHub, " BootStrap Logo", "Confident, Learning tricks daily", 3, 2)
+github = new Skill(GitHub, " BootStrap Logo", "Confident, Learning tricks daily", 3, 2)
 skillsArr.push(github)
 
   
