@@ -1,4 +1,9 @@
+
+
+
+
 /* this is the styles and animation for the tile flip */
+
 .panel  {
   margin: 0 auto;
   width: 150px;
@@ -7,10 +12,12 @@
   font-size: 1em;
   perspective: 600px;
   border-radius: 50px;
+  flex-wrap: wrap;
 }
 
 .pad {
   border-radius: 50px;
+  /* background-color: grey; */
 }
 
 .panel .front {
@@ -54,4 +61,12 @@
   z-index: 1000;
   transform: rotateX(0deg);
   cursor: pointer;
+ 
+  
+}
+
+.commentBox {
+  background-color: grey;
+  border-radius: 15px;
+  opacity: 0.8;
 }

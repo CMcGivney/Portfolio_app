@@ -42,7 +42,7 @@ class Navbar extends React.Component {
   render() {
     return (
       <div>
-        <Menu inverted pointing secondary>
+        <Menu color="black" pointing secondary>
           <Link to='/'>
             <Menu.Item
               name='home'

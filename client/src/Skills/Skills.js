@@ -20,7 +20,6 @@ import Semantic from '../images/Semantic.png'
 import './Skills.css'
 import '../App.css'
 
-
 class Skill { 
   constructor(image, image_alt, comment, star_count, darkstar_count) {
    this.image = image;
@@ -33,6 +32,7 @@ class Skill {
 let skillsArr = [];
 let html, css, js, react, ruby, rails, styledComp, postgresql, sql, semanticR, semantic, bootsReact, esc6, sqlectron, bootstrap, github;
 
+//create instance of skill (image, image_alt, comment, star_count, darkstar_count) and push to array
 html = new Skill(HTML5, "HTML5 Logo", "Feel Confident", 3, 2)
 skillsArr.push(html)
 css = new Skill(CSS3, "CSS3 Logo", "Need to develop a designers eye.", 2, 3)
@@ -68,9 +68,9 @@ skillsArr.push(github)
 
   
 const Skills = () => (
- <Grid stackable style={{marginTop: "25px"}}>
+ <Grid stackable >
   <Grid.Row>
-     <Grid.Column className="headerBox">
+     <Grid.Column className="headerBox" >
       <Header as="h1" textAlign="center">Tools & Skills</Header>
      </Grid.Column>
    </Grid.Row>
@@ -81,7 +81,9 @@ const Skills = () => (
             <Image src={skill.image} alt={skill.image_alt} width="150px" height="150px"/>
            </div>
             <div className="back" key={skill.id}> 
-             <p className="pad">{skill.comment}</p> 
+             <div className="commentBox">
+               <p className="pad">{skill.comment}</p> 
+          
               <div key={skill.id}>
                 { function() {
                   let stars = [];
@@ -97,6 +99,7 @@ const Skills = () => (
                   }
                   return darkStars;
                 }()}
+               </div>
                </div>
              </div>
           </div>

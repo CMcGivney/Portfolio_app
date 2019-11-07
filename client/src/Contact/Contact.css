@@ -1,0 +1,121 @@
+/*For Desktop viewing*/
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr auto;
+  grid-template-areas: 
+  'header header header header'
+  'img1 email social about' 
+  'notes notes notes notes';
+  grid-gap: 20px;
+  /* padding: 10px; */
+  color:black;
+  font-weight: 900;
+  
+}
+
+a.email {
+  color: chartreuse;
+}
+
+a.email:hover {
+  color: hotpink;
+}
+
+.header_img {
+  grid-area: header;
+
+}
+.contact_text {
+  grid-area: about;
+  background-color: #4968ad;
+  opacity: 0.9;
+  padding-top: 5px;
+  
+}
+.socialFollows {
+  grid-area: social;
+}
+.headShot_img{
+  grid-area: img1;
+}
+.notes {
+  grid-area: notes;
+}
+
+/*Style for header image*/
+.imgBoxContact {
+  border: 1px solid grey;
+  box-shadow: 2px 2px 5px black;
+  /* justify-content: center; */
+  padding: 1px;
+}
+
+/*Style for HeadShot images*/
+.imgBox {
+border: 1px solid grey;
+border-radius: 300px;
+box-shadow: 2px 2px 5px black;
+}
+
+/* styles for the social media icons */
+a.social {
+margin: 0 1rem;
+transition: transform 250ms;
+display: inline-block;
+}
+
+a.social:hover {
+transform: translateY(-2px); 
+color: chartreuse;
+}
+
+a.linkedin {
+color: #4968ad;
+}
+
+a.twitter {
+color: #49a1eb;
+}
+
+a.instagram {
+color: black;
+}
+
+a.github {
+color: black;
+}
+a.google {
+color: green;
+}
+/*style for Posted notes */
+.corkboard {
+background-color: tan;
+border: 10px solid  rgba(75, 47, 47, 0.911);
+border-radius: 10px;
+box-shadow: 2px 2px 5px black;
+}
+
+/* Mobile size Media Query's */
+@media only screen and (max-width: 768px) {
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px auto auto auto auto auto;
+    grid-template-areas: 
+    'header header'
+    'social email'
+    'about about'
+    'img1 img1' 
+    'notes notes';
+    grid-gap: 20px;
+    padding: 10px;
+    color:black;
+                       
+  }
+
+  .ui.container {
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+}

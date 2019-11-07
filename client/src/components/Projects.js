@@ -6,7 +6,7 @@ import RPS from '../images/RPS.png'
 import '../App.css'
 
 const Projects = () => (
-  <Grid stackable columns= 'equal' style={{padding: "25px", marginTop: "25px"}}>
+  <Grid stackable columns= 'equal' style={{padding: "15px", marginTop: "15px"}}>
     <Grid.Row>
       <Grid.Column width={8} className="headerBox">
        <Header as="h3" textAlign="center">Dev Point Labs Dash Board</Header>

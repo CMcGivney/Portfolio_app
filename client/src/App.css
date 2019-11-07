@@ -1,11 +1,21 @@
 body {
-  background-color: rgb(163, 160, 160); 
+  background-image: url('./images/buckskinGultch.jpg'), url('./images/ocean-wave-sunset.jpg'); 
+  /* background-position:  */
+  background-repeat: no-repeat, repeat;
+  height: auto;
+  background-size: cover;
+  background-color: grey
+
 }
 
-/* styles for homepage*/
+.navBar {
+  background-color: black;
+  color: white;
+}
+
 .headerBox {
-  padding: 50px;
-  position: absolute;
+  padding: 10px;
+  margin-top: 30px;
   border: 1px solid grey;
   border-radius: 25px;
   background-color: rgb(52, 214, 214);
@@ -13,105 +23,4 @@ body {
   color: black;
   box-shadow: 2px 2px black;
 }
-.aboutMeHome {
-  justify-content: center;
-  padding: 30px;
-}
 
-.imgBoxHome {
-  border: 1px solid grey;
-  box-shadow: 2px 2px 5px black;
-  justify-content: center;
-  padding: 1px;
-}
-/*Style for contact page*/
-  .imgBoxContact {
-    border: 1px solid grey;
-    box-shadow: 2px 2px 5px black;
-    justify-content: center;
-    padding: 1px;
-  }
-.contact-headerBox {
-  position: absolute;
-  text-align: center;
-  color: black;
-  
-}
-.footerBox {
-  padding: 25px;
-  background: lightcyan;
-  margin: 40px;
-  border: 1px solid grey;
-  border-radius: 25px;
-  box-shadow: 2px 2px black;
-  text-align: center;
-}
-
-.emailBox {
-  background-color:lightcyan;
-  text-align: center;
-  padding: 55px;
-  border: 1px solid grey;
-  box-shadow: 2px 2px black;
-}
-
-.aboutMe {
-  justify-content: center;
-  padding: 40px;
-}
-
-.socialBox {
-  padding: 55px 50px;
-  text-align: center;
-  
-}
-/*Style for images*/
-.imgBox {
-  border: 1px solid grey;
-  border-radius: 300px;
-  box-shadow: 2px 2px 5px black;
-}
-
-.imageFlex{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-/* styles for the social media icons */
-a.social {
-  margin: 0 1rem;
-  transition: transform 250ms;
-  display: inline-block;
-}
-
-a.social:hover {
-  transform: translateY(-2px); 
-}
-
-a.linkedin {
-  color: #4968ad;
-}
-
-a.twitter {
-  color: #49a1eb;
-}
-
-a.instagram {
-  color: black;
-}
-
-a.github {
-  color: black;
-}
-a.google {
-  color: green;
-}
-/*style for Posted notes */
-.corkboard {
-  background-color: tan;
-  border: 10px solid  rgba(75, 47, 47, 0.911);
-  border-radius: 10px;
-  box-shadow: 2px 2px 5px black;
-}

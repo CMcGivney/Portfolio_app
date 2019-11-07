@@ -1,0 +1,100 @@
+/* desktop view*/
+.home-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: 'header header header header' 
+                       'about about success success'
+                       ' main main img1 img1';
+  grid-gap: 20px;
+  padding: 10px;
+  background-color: grey; 
+  opacity: 0.9;
+  color:black;
+}
+
+.grid-header {
+  grid-area: header;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 25px;
+  background-color: rgb(52, 214, 214);
+  text-align: center;
+  color: black;
+  box-shadow: 2px 2px black;
+
+}
+/* I can not seem to center this image content in the cell */
+.grid-img1 {
+  grid-area: img1;
+  padding-left: 60px;
+
+} 
+
+.polaroid {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* margin-bottom: 25px; */
+}
+
+.container {
+  text-align: center;
+  padding: 10px 20px;
+}
+/* ^^ I can not seem to center this image content in the cell */
+
+.grid-main {
+  grid-area: main;
+  padding: 20px;
+  color: black;
+  text-align: left
+}
+.grid-about {
+  grid-area: about;
+  color: black;
+  text-align: left
+}
+.grid-success {
+  grid-area: success;
+  color: black;
+  text-align: left
+}
+/* styles for homepage*/
+/* .headerBox {
+  padding: 50px;
+  position: absolute;
+  border: 1px solid grey;
+  border-radius: 25px;
+  background-color: rgb(52, 214, 214);
+  text-align: center;
+  color: black;
+  box-shadow: 2px 2px black;
+} */
+
+
+.imgBoxHome {
+  border: 1px solid grey;
+  box-shadow: 2px 2px 5px black;
+  justify-content: center;
+  padding: 1px;
+}
+.imgBackground {
+  opacity: 0.5;
+  justify-content: center;
+  padding: 1px;
+}
+
+@media only screen and (max-width: 768px) {
+  .home-container {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas: 
+  'header' 
+  'about' 
+  'success'
+  'main'
+  'img1';              
+  }
+ 
+}

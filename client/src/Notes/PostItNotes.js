@@ -86,9 +86,9 @@ state = { notes: [], }
     render() {
       return(
         
-        <Container style={{marginTop: "25px"}}>
+        <Container>
           <Link to="/notes/new">
-           <Button inverted color="black">
+           <Button color="black">
             <Icon name="add" />
               Leave me a Note!
             </Button>
