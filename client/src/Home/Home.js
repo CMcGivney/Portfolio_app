@@ -1,7 +1,5 @@
 import React from 'react'
-import { Image } from 'semantic-ui-react'
 import Alaska from '../images/Alaska.jpg'
-// import buckskinGultch from '../images/buckskinGultch.jpg'
 import './Home.css'
 
 
@@ -25,7 +23,7 @@ const Home = () => (
           </p>
           <p>
             I love my new career path, and have a new found passion for all that goes into software and web development. 
-            I know I am very green in this business, but I believe that with hard work, and a strong sense of curiosity I will be successful and be able to thoughtfully
+            I know I am very green in this business, but I believe with strong sense of curiosity and equally strong work ethic, I will be successful and able to thoughtfully
             contribute to this ever-changing tech landscape.
           </p>
   </div>
@@ -36,10 +34,10 @@ const Home = () => (
        src={Alaska}
        alt="Chris in Alaska"
        width="100%"
-       height="350px"
+       height="250px"
        />
       <div className="container">
-        <p>My Wife & I biking across Alaska</p>
+        <p>Lisa, my wife & I biking across Alaska</p>
       </div>
     </div>
   </div>
@@ -47,9 +45,8 @@ const Home = () => (
     <h3>"The Dream Job"</h3>
        <ul>
           <li>Work at a company that I believe in the product, culture and community impact.</li>
-          <li>A position that challenges and teaches me everyday.</li>
+          <li>A position that challenges and teaches me every day, where I am a part of a team and am making a positive contribution to the mission of the company.</li>
           <li>A position I can grow in and with, through hard work and thoughtful collaboration.</li>
-          <li>Is it too much to ask for a outdoor company, with a bit of travel?</li>
         </ul>
     </div>
     <div className="grid-success">
@@ -62,7 +59,7 @@ const Home = () => (
              </ul>
             <li>Run through whiteboard problems daily.</li>
             <li>Spend 30 minutes on a coding problem; solve by using each language I know.</li>
-            <li>Research and contact companies that spark my interests and skill set.</li>
+            <li>Research and contact companies that spark my interests and skill sets and where I believe I can make a contribution.</li>
             <li>Go to meetups and become a part of the Utah community.</li>
             <li>Contact local leaders and recruiters for quick insight to what they look for in new hires.</li>
             <li>Read, study and adapt to changes in the skills and tools I use. </li>

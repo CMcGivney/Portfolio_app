@@ -1,10 +1,10 @@
 /*For Desktop viewing*/
 .contact-container {
+  margin-top: 35px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 2fr 1fr auto;
+  grid-template-rows: auto auto;
   grid-template-areas: 
-  'header header header header'
   'img1 email social about' 
   'notes notes notes notes';
   grid-gap: 20px;
@@ -101,9 +101,9 @@ box-shadow: 2px 2px 5px black;
   .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 150px auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas: 
-    'header header'
+    /* 'header header' */
     'social email'
     'about about'
     'img1 img1' 
