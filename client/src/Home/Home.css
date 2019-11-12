@@ -8,6 +8,7 @@
                        ' main main img1 img1';
   grid-gap: 10px;
   padding: 5px;
+  width: 100%;
   background-color: grey; 
   opacity: 0.9;
   color:black;
@@ -30,6 +31,11 @@
   padding-left: 60px;
 } 
 
+.alaskaImg {
+  width: 100%;
+  height: 250px;
+}
+
 .polaroid {
   width: 80%;
   background-color: white;
@@ -42,22 +48,27 @@
   padding: 1px 20px;
 }
 /* ^^ I can not seem to center this image content in the cell */
-
+.contentHeaders {
+  text-align: center;
+}
 .grid-main {
   grid-area: main;
   padding: 20px;
   color: black;
-  text-align: left
+  text-align: justify;
+  padding: 0 7px 0 7px;
 }
 .grid-about {
   grid-area: about;
   color: black;
-  text-align: left
+  text-align: justify;
+  padding: 0 7px 0 7px;
 }
 .grid-success {
   grid-area: success;
   color: black;
-  text-align: left
+  text-align: justify;
+  padding: 0 7px 0 7px;
 }
 /* styles for homepage*/
 /* .headerBox {
@@ -72,12 +83,7 @@
 } */
 
 
-.imgBoxHome {
-  border: 1px solid grey;
-  box-shadow: 2px 2px 5px black;
-  justify-content: center;
-  padding: 1px;
-}
+
 .imgBackground {
   opacity: 0.5;
   justify-content: center;
@@ -86,6 +92,7 @@
 
 @media only screen and (max-width: 768px) {
   .home-container {
+  width: 100%;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto auto;
   grid-template-areas: 
@@ -94,6 +101,84 @@
   'success'
   'main'
   'img1';              
+  }
+
+  .grid-img1 {
+    grid-area: img1;
+    padding-left: 18em;
+    
+  } 
+  
+  .alaskaImg {
+    width: 100%;
+    height: 250px;
+  }
+  
+  .polaroid {
+    justify-self: center;
+    width: 50%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* margin-bottom: 25px; */
+  }
+  /* the text container for the polaroid element*/
+  .container {
+    text-align: center;
+    padding: 1px 20px;
+  }
+  .ui.container {
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+ 
+}
+@media only screen and (max-width: 768px) {
+  .home-container {
+  width: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas: 
+  'header' 
+  'about' 
+  'success'
+  'main'
+  'img1';              
+  }
+
+  .grid-img1 {
+    grid-area: img1;
+    padding-left: 18em;
+    
+  } 
+  .ui.container {
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+ 
+}
+
+@media only screen and (max-width: 414px) {
+  .home-container {
+  width: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas: 
+  'header' 
+  'about' 
+  'success'
+  'main'
+  'img1';              
+  }
+
+  .grid-img1 {
+    grid-area: img1;
+    padding-left: 10em;
+    
+  } 
+  
+  .ui.container {
+    margin: 0px !important;
+    padding: 0px !important;
   }
  
 }

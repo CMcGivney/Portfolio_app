@@ -1,0 +1,97 @@
+/*Project css*/
+.project-container {
+  margin-top: 25px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-gap: 15px;
+  color:black;
+  grid-template-areas: 
+  "content1 content1" 
+  "img1 img1"
+  "content2 content2"
+  "img2 img2";
+}
+
+
+.content1 {
+  grid-area: content1
+}
+.content2 {
+  grid-area: content2
+}
+.img1 {
+  grid-area: img1;
+  justify-items: start;
+  align-items: end;
+}
+.img2 {
+  grid-area: img2;
+  justify-items: start;
+  align-items: end;
+}
+
+
+.imgBoxHome {
+  border: 1px solid grey;
+  box-shadow: 2px 2px 5px black;
+  justify-content: center;
+  padding: 1px;
+  height: auto;
+  width: 100%;
+}
+
+.contentBox {
+  padding: 15px;
+  border: 1px solid grey;
+  border-radius: 25px;
+  background-color: rgb(52, 214, 214);
+  text-align: justify;
+  color: black;
+  box-shadow: 2px 2px black;
+}
+
+
+/* Mobile size Media Query's */
+@media only screen and (max-width: 768px) {
+  .project-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    'content1'
+    'img1'
+    'content2' 
+    'img2';
+    grid-gap: 10px;
+    color:black;
+                       
+  }
+
+  .ui.container {
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .project-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    'content1'
+    'img1'
+    'content2' 
+    'img2';
+    grid-gap: 10px;
+    color:black;
+                       
+  }
+
+  .ui.container {
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+}

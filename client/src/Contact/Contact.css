@@ -2,18 +2,23 @@
 .contact-container {
   margin-top: 35px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr auto;
   grid-template-areas: 
-  'img1 email social about' 
-  'notes notes notes notes';
+  "about img1 social" 
+  "about img1 email"
+  "notes notes notes";
   grid-gap: 20px;
   /* padding: 10px; */
   color:black;
-  font-weight: 900;
-  
+
 }
 
+.emailBox {
+  grid-area: email;
+  /* padding: 20px; */
+}
 a.email {
   color: chartreuse;
 }
@@ -22,32 +27,31 @@ a.email:hover {
   color: hotpink;
 }
 
-.header_img {
-  grid-area: header;
 
-}
 .contact_text {
   grid-area: about;
   background-color: #4968ad;
   opacity: 0.9;
-  padding-top: 5px;
-  
+  padding: 15px;
+  text-align: justify;  
 }
 .socialFollows {
   grid-area: social;
+  /* padding: 20px */
 }
-.headShot_img{
-  grid-area: img1;
-}
+
 .notes {
   grid-area: notes;
 }
 
 /*Style for header image*/
+.header_img {
+  grid-area: header;
+
+}
 .imgBoxContact {
   border: 1px solid grey;
   box-shadow: 2px 2px 5px black;
-  /* justify-content: center; */
   padding: 1px;
 }
 
@@ -56,6 +60,10 @@ a.email:hover {
 border: 1px solid grey;
 border-radius: 300px;
 box-shadow: 2px 2px 5px black;
+}
+.headShot_img{
+  grid-area: img1;
+  
 }
 
 /* styles for the social media icons */
@@ -104,9 +112,9 @@ box-shadow: 2px 2px 5px black;
     grid-template-rows: auto auto auto auto;
     grid-template-areas: 
     /* 'header header' */
-    'social email'
     'about about'
-    'img1 img1' 
+    'email email'
+    'img1 social' 
     'notes notes';
     grid-gap: 20px;
     padding: 10px;

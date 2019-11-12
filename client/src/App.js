@@ -1,6 +1,6 @@
 import React from 'react'
 import Home from './Home/Home'
-import Projects from './components/Projects'
+import Projects from './Project/Projects'
 import Skills from './Skills/Skills'
 import Contact from './Contact/ContactGrid'
 import Blog from './components/Blog'

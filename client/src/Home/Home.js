@@ -10,7 +10,7 @@ const Home = () => (
       <p> Full Stack Web Developer | Ruby on Rails & React | Outdoor Adventure Fanatic</p>
    </div>
   <div className="grid-about">  
-  <h3>Welcome:</h3>
+  <h3 className="contentHeaders">Welcome</h3>
           <p>
             I live in Park City, Utah and have called Utah home for the past 15 years. I grew up in
             California, and was recruited from San Francisco to move here to open/run restaurants, a career
@@ -33,8 +33,7 @@ const Home = () => (
       <img
        src={Alaska}
        alt="Chris in Alaska"
-       width="100%"
-       height="250px"
+       className="alaskaImg"
        />
       <div className="container">
         <p>Lisa, my wife & I biking across Alaska</p>
@@ -42,7 +41,7 @@ const Home = () => (
     </div>
   </div>
   <div className="grid-main">
-    <h3>"The Dream Job"</h3>
+    <h3 className="contentHeaders">"The Dream Job"</h3>
        <ul>
           <li>Work at a company that I believe in the product, culture and community impact.</li>
           <li>A position that challenges and teaches me every day, where I am a part of a team and am making a positive contribution to the mission of the company.</li>
@@ -50,7 +49,7 @@ const Home = () => (
         </ul>
     </div>
     <div className="grid-success">
-      <h3>My Strategy For Success</h3>
+      <h3 className="contentHeaders">My Strategy For Success</h3>
         <ul>
            <li>Work on a personal project everyday.</li>
            <li>Choose a new tool to learn each week/month.</li>

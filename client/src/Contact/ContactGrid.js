@@ -18,18 +18,15 @@ const Contact = () => (
            />
   </div> */}
   <div className="contact_text">
-    <p>When I'm not glued to my keyboard studying and coding.</p>
-    <p> I'm outdoors, either running, mountain biking, snowboarding, or just walking the dog and kiddo.</p>
+    <p>When I'm not glued to my keyboard studying and coding, I'm outdoors, either running, mountain biking, snowboarding, or just walking the dog and kiddo.</p>
     <p>Come join me!</p>
   </div>
   <div className="socialFollows">
    <SocialFollow/>
   </div>
-  <div className="email">
+  <div className="emailBox">
     <h3>Drop Me A Email</h3>
-     <a href="mailto:cmmcgivney84@gmail.com"
-        className="email"
-        >CmMcGivney84@gmail.com</a>
+     <a className="email" href="mailto:cmmcgivney84@gmail.com?Subject=Hello%20Chris">CmMcGivney84@gmail.com</a>
   </div>
   <div className="headShot_img">
       <img

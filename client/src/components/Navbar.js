@@ -3,6 +3,7 @@ import { AuthConsumer, } from "../providers/AuthProvider";
 import { Menu, } from 'semantic-ui-react'
 import { Link, withRouter, } from 'react-router-dom'
 
+
 class Navbar extends React.Component {
   
   rightNavItems = () => {
@@ -10,7 +11,7 @@ class Navbar extends React.Component {
     
     if (user) {
       return (
-        <Menu.Menu position='right'>
+        <Menu.Menu style={{backgroundColor: "lightskyblue"}} position='right'>
           <Menu.Item
             name='logout'
             onClick={ () => handleLogout(this.props.history) }
@@ -19,7 +20,7 @@ class Navbar extends React.Component {
       )
     } else {
       return (
-        <Menu.Menu position='right'>
+        <Menu.Menu style={{backgroundColor: "lightskyblue"}} position='right'>
           <Link to='/login'>
             <Menu.Item
               id='login'
@@ -42,7 +43,7 @@ class Navbar extends React.Component {
   render() {
     return (
       <div>
-        <Menu color="black" pointing secondary>
+        <Menu style={{backgroundColor: "lightskyblue"}} pointing secondary>
           <Link to='/'>
             <Menu.Item
               name='home'

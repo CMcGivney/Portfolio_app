@@ -1,26 +1,26 @@
 body {
   background-image: url('./images/buckskinGultch.jpg'), url('./images/ocean-wave-sunset.jpg'); 
-  /* background-position:  */
-  background-repeat: no-repeat, repeat;
-  height: auto;
+  background-repeat: no-repeat, repeat; 
+  height: 100%;
+  /* box-sizing: 100%; */
   background-size: cover;
-  background-color: grey
+  background-color: grey;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  
 
-}
-
-.navBar {
-  background-color: black;
-  color: white;
 }
 
 .headerBox {
-  padding: 10px;
+  padding: 20px;
   margin-top: 30px;
   border: 1px solid grey;
   border-radius: 25px;
   background-color: rgb(52, 214, 214);
-  text-align: center;
+  text-align: justify;
   color: black;
   box-shadow: 2px 2px black;
 }
+
 
