@@ -2,7 +2,7 @@ body {
   background-image: url('./images/buckskinGultch.jpg'), url('./images/ocean-wave-sunset.jpg'); 
   background-repeat: no-repeat, repeat; 
   height: 100%;
-  /* box-sizing: 100%; */
+  /* ! */
   background-size: cover;
   background-color: grey;
   -webkit-background-size: cover;
