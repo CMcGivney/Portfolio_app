@@ -35,34 +35,49 @@ let html, css, js, react, ruby, rails, styledComp, postgresql, sql, semanticR, s
 //create instance of skill (image, image_alt, comment, star_count, darkstar_count) and push to array
 html = new Skill(HTML5, "HTML5 Logo", "Feel Confident", 3, 2)
 skillsArr.push(html)
+
 css = new Skill(CSS3, "CSS3 Logo", "Need to develop a designers eye.", 2, 3)
 skillsArr.push(css)
+
 js = new Skill(JS, "JavaScript Logo", "Some good days, some bad.", 3, 2)
 skillsArr.push(js)
+
 react = new Skill(ReactIcon, "React Logo", "Work with React daily.", 3, 2)
 skillsArr.push(react)
+
 ruby = new Skill(Ruby, "Ruby Logo", "Sound foundation.", 2, 3)
 skillsArr.push(ruby)
+
 rails = new Skill(Rails, "", "Pretty, pretty good.", 2, 3)
 skillsArr.push(rails)
+
 styledComp = new Skill(StyledComp, "Styled Component Logo", "A styling tool", 1, 4)
 skillsArr.push(styledComp)
+
 postgresql = new Skill(Postgresql, "Postgreql Logo", "Basic Database Foundation", 2, 3)
 skillsArr.push(postgresql)
+
 sql = new Skill(SQL, "SQL Logo", "I ❤️ SQL", 2, 3)
 skillsArr.push(sql)
+
 semanticR = new Skill(SemanticR, "React Semantic Logo", "When you need to style an app quickly...", 3, 2)
 skillsArr.push(semanticR)
+
 semantic = new Skill(Semantic, "Semantic Logo", "Framework tool library", 3, 2)
 skillsArr.push(semantic)
+
 bootsReact= new Skill(BootsReact, "BootsReact Logo", "Framework tool library", 3, 2)
 skillsArr.push(bootsReact)
+
 esc6= new Skill(ES6, "ecmaScript6 Logo", "Learning every day, Arrow(), Spread, etc.", 2, 3)
 skillsArr.push(esc6)
+
 sqlectron = new Skill(Sqlectron, "Sqlectron Logo", "When you need to see those databases you made in action", 2, 3)
 skillsArr.push(sqlectron)
+
 bootstrap = new Skill(BootStrap, " BootStrap Logo", "Framework tool library", 2, 3)
 skillsArr.push(bootstrap)
+
 github = new Skill(GitHub, " BootStrap Logo", "Confident, Learning tricks daily", 3, 2)
 skillsArr.push(github)
 
@@ -71,7 +86,7 @@ const Skills = () => (
  <Grid stackable style={{marginTop: "25px"}}>
   <Grid.Row>
      <Grid.Column className="headerBox" >
-      <Header as="h1" textAlign="center">Tools & Skills</Header>
+      <Header as="h3" textAlign="center">Skills, Frameworks & Tools</Header>
      </Grid.Column>
    </Grid.Row>
    { skillsArr.map( skill => 

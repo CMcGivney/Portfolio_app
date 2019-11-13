@@ -19,7 +19,8 @@
   grid-area: content1
 }
 .content2 {
-  grid-area: content2
+  grid-area: content2;
+  margin-top: 30px
 }
 .img1 {
   grid-area: img1;
@@ -50,6 +51,7 @@
   text-align: justify;
   color: black;
   box-shadow: 2px 2px black;
+  opacity: 0.9;
 }
 
 

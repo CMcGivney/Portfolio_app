@@ -40,7 +40,7 @@ const Projects = () => (
       <div className="content2 contentBox">
        <Header as="h3" textAlign="center">A Silly Little JS Rock, Paper Scissor Game</Header>
          <p>This game was created with HTML, CSS and Javascript. It was great practice. 
-         I am still learning the in's and out's of JavaScript but by doing this exercise I really start to see the power of this language. </p>
+         I am still learning the in's and out's of JavaScript but by doing this exercise I really start to see the power of this language to traverse and manipulate the DOM. </p>
          <a href="https://github.com/CMcGivney/RPS">https://github.com/CMcGivney/RPS</a>
       </div>
       <div className="img2">

@@ -35,7 +35,7 @@ const Home = () => (
        alt="Chris in Alaska"
        className="alaskaImg"
        />
-      <div className="container">
+      <div className="polaroidText">
         <p>Lisa, my wife & I biking across Alaska</p>
       </div>
     </div>

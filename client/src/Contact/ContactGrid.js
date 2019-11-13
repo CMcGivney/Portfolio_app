@@ -1,5 +1,4 @@
 import React from 'react'
-// import { Header, Grid, Image} from 'semantic-ui-react'
 import SocialFollow from './SocialFollow'
 // import pcPano from '../images/pcPano.jpg'
 import distantStare from '../images/distantStare.jpg'
@@ -8,6 +7,7 @@ import './Contact.css'
 
 const Contact = () => (
 <div className="contact-container">
+
   {/* <div className="header_img">
    <img   
            className="imgBoxContact"
@@ -18,8 +18,9 @@ const Contact = () => (
            />
   </div> */}
   <div className="contact_text">
+    <p>Hey there...</p>
     <p>When I'm not glued to my keyboard studying and coding, I'm outdoors, either running, mountain biking, snowboarding, or just walking the dog and kiddo.</p>
-    <p>Come join me!</p>
+    <p>Join me!</p>
   </div>
   <div className="socialFollows">
    <SocialFollow/>
