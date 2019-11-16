@@ -70,10 +70,10 @@ a {
 
 
 /* Mobile size Media Query's */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .project-container {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
     grid-template-areas: 
     'content1'
@@ -82,6 +82,7 @@ a {
     'img2';
     grid-gap: 10px;
     color:black;
+    width: 100%;
                        
   }
 
@@ -91,10 +92,10 @@ a {
   }
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 667px) {
   .project-container {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
     grid-template-areas: 
     'content1'
@@ -105,6 +106,7 @@ a {
     'img3';
     grid-gap: 10px;
     color:black;
+    width: 100%;
                        
   }
 

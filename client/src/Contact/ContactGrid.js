@@ -18,7 +18,7 @@ const Contact = () => (
            />
   </div> */}
   <div className="contact_text">
-    <p>Hey there...</p>
+    <p>Hey...</p>
     <p>When I'm not glued to my keyboard studying and coding, I'm outdoors, either running, mountain biking, snowboarding, or just walking the dog and kiddo.</p>
     <p>Join me!</p>
   </div>

@@ -43,8 +43,8 @@ handleSubmit = (e) => {
     const { body, name,  } = this.state
     return (
       <Container style={{marginTop: "100px"}}>
-      <Header> {id ? 'Edit Your' : 'Add A'} Note </Header>
-      <Header as="h4">Note:</Header>
+      <Header style={{textDecoration: "underline"}}> {id ? 'Edit Your' : 'Add A'} Note </Header>
+      <Header as="h4" style={{textAlign: "left"}}>Note:</Header>
         <Form onSubmit={this.handleSubmit}>
         <Form.Input
         name="body"
@@ -53,7 +53,7 @@ handleSubmit = (e) => {
         onChange={this.handleChange}
         required
         />
-        <Header as="h4">Name:</Header>
+        <Header as="h4" style={{textAlign: "left"}}>Name:</Header>
         <Form.Input
         name="name"
         placeholder="example: Love, Mom"

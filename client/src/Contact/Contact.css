@@ -7,8 +7,8 @@
   grid-template-rows: 1fr 1fr auto;
   grid-template-areas:
   /* "header header header"  */
-  "social img1 about" 
-  "email img1 about"
+  "social about img1 " 
+  "email about img1 "
   "notes notes notes";
   grid-gap: 20px;
   /* padding: 10px; */

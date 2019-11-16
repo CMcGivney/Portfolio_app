@@ -2,7 +2,7 @@ import React from "react"
 import axios from 'axios'
 import {Link, } from "react-router-dom"
 import {Card, Grid, Button, Icon, Container, } from "semantic-ui-react"
-import { AuthConsumer, } from "../providers/AuthProvider"
+// import { AuthConsumer, } from "../providers/AuthProvider"
 
 class PostItNotes extends React.Component {
   
@@ -20,13 +20,12 @@ state = { notes: [], }
 
 
   allNotes = () => {
-    const user = AuthConsumer
     const {notes} = this.state
     if (notes.length <= 0)
     return <h2>No Notes Yet...</h2>
     return (
       
-  <Grid stackable container style={{marginTop: "25px"}}>
+  <Grid stackable style={{marginTop: "25px"}}>
       <Grid.Row>
          <Grid.Column stackable= "true">
            <Card.Group className="corkboard">
@@ -41,7 +40,7 @@ state = { notes: [], }
                    </Card.Meta>
                 </Card.Content>
                 
-            { user ? 
+            
              <Card.Content extra>
               <Button 
                 color='red' 
@@ -59,9 +58,6 @@ state = { notes: [], }
                </Button>
               </Link>
              </Card.Content>
-            :
-            <div></div>
-          }
        </Card>
          )
         }

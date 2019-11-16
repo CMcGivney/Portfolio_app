@@ -83,10 +83,10 @@ skillsArr.push(github)
 
   
 const Skills = () => (
- <Grid className="skillsCont" style={{marginTop: "30px"}} stackable>
+ <Grid className="skillsCont" style={{marginTop: "1px"}} stackable>
   <Grid.Row>
      <Grid.Column className="headerBox" >
-      <Header as="h3" textAlign="center">Skills, Frameworks & Tools</Header>
+      <Header as="h3" textAlign="center">My Current Tool Kit</Header>
      </Grid.Column>
    </Grid.Row>
    { skillsArr.map( skill => 
