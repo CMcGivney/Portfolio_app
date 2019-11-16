@@ -29,7 +29,7 @@ a {
 }
 .content3 {
   grid-area: content3;
-  margin-top: 30px
+  margin-top: 30px;
 }
 .img1 {
   grid-area: img1;

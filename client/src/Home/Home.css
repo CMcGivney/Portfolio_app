@@ -1,7 +1,6 @@
 /* desktop view*/
 .home-container {
-  margin: 30px 0 10px 20px;
-  padding: 10px;
+  margin: 10px 0 0 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto 300px;
@@ -100,7 +99,8 @@
   'header header' 
   'about success' 
   'about success'
-  'main img1';              
+  'main img1';
+              
   }
 
   .grid-img1 {
@@ -144,7 +144,8 @@
   'about' 
   'success'
   'main'
-  'img1';              
+  'img1'; 
+              
   }
 
   .grid-img1 {

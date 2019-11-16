@@ -44,6 +44,8 @@ a.email:hover {
 .socialFollows {
   grid-area: social;
   padding-top: 10px;
+  justify-items: center;
+  align-self: center;
 }
 
 .notes {
