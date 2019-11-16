@@ -3,6 +3,9 @@ import { Header, Image, } from 'semantic-ui-react';
 // import dashboard from '../images/dashboard.png'
 import dashboard2 from '../images/dashboard2.png'
 import RPS from '../images/RPS.png'
+import CPA from '../images/cpa-site.png'
+
+
 import './Project.css'
 
 const Projects = () => (
@@ -22,35 +25,45 @@ const Projects = () => (
         <p>
          There remains a few bugs to fix, like getting the Twitter Api to display.  Although I am finished with the class, I continue to work on these problems as a side project and will show my results to Dev Point Labs when I feel satisfied that it is finished.  My hope is that they will use this experience will benefit future coders in their classes.
         </p>
-       <a href="https://dpl-dashboard.herokuapp.com/">https://dpl-dashboard.herokuapp.com/</a>
+        <p>Check it out on heroku: <a href="https://ventura-cpa-site.herokuapp.com/">Dashboard Site</a></p>
       </div>
-    <div className="img1">
-        {/* <img 
-          className="imgBoxHome"
-          src={dashboard} 
-          alt="Dev Point Labs DashBoard Project"
-         /> */}
+       <div className="img1">
          <img 
            className="imgBoxHome"
+           href="https://dpl-dashboard.herokuapp.com/"
            src={dashboard2} 
            alt="Dev Point Labs DashBoard Project"
           />
-    </div>
+       </div>
      
       <div className="content2 contentBox">
        <Header as="h3" textAlign="center">A Silly Little JS Rock, Paper Scissor Game</Header>
          <p>This game was created with HTML, CSS and Javascript. It was great practice. 
-         I am still learning the in's and out's of JavaScript but by doing this exercise I really start to see the power of this language to traverse and manipulate the DOM. </p>
-         <a href="https://github.com/CMcGivney/RPS">https://github.com/CMcGivney/RPS</a>
+            I am still learning the in's and out's of JavaScript but by doing this exercise I really start to see the power of this language to traverse and manipulate the DOM. </p>
+          <p><a href="https://js-rps-game.herokuapp.com/">Play the Game?!</a> Or check out code on GitHub: <a href="https://github.com/CMcGivney/RPS">https://github.com/CMcGivney/RPS</a></p>
       </div>
       <div className="img2">
         <Image 
           className="imgBoxHome"
+          href="https://js-rps-game.herokuapp.com/"
           src={RPS} 
           alt="A JS made Rock, Paper, Scissor Game"
          />
         </div>
-       </div>
+      <div className="content3 contentBox">
+       <Header as="h3" textAlign="center">Static Business Site</Header>
+       <p>I was asked to update a Adobe Flash business site. I followed the layout and style of the Flash site using React. Quickly I realized that for this kind of static site I could easily make it with just pure Javascript, CSS and HTML. So that will be my next project. This was a fun exercise in replicating a layout/style page.</p>
+       <p>Check it out on heroku: <a href="https://ventura-cpa-site.herokuapp.com/">Business Site</a></p>
+      </div>
+      <div className="img3">
+        <Image 
+          className="imgBoxHome"
+          href="https://ventura-cpa-site.herokuapp.com/"
+          src={CPA} 
+          alt="A JS made Rock, Paper, Scissor Game"
+         />
+        </div>
+  </div>
       
   
 )

@@ -1,6 +1,7 @@
 body {
-  background-image: url('./images/buckskinGultch.jpg'), url('./images/ocean-wave-sunset.jpg'); 
-  background-repeat: no-repeat, repeat; 
+  background-image: url('./images/buckskinGultch.jpg'), url('./images/ocean-wave-sunset.jpg');
+  /* background-position:center top, right top, center bottom; */
+	background-repeat:repeat, repeat-x, repeat-y;
   height: 100%;
   /* ! */
   background-size: cover;

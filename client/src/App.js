@@ -12,13 +12,13 @@ import { Container, } from "semantic-ui-react"
 import Login from './Devise/Login'
 import Register from './Devise/Register'
 import FetchUser from './Devise/FetchUser'
-import ProtectedRoute from './Devise/ProtectedRoute'
+// import ProtectedRoute from './Devise/ProtectedRoute'
 
 
 const App = () => (
   <>
    <Navbar/>
-    <FetchUser>
+    {/* <FetchUser> */}
      <Container>
       <Switch>
        <Route exact path='/' component={Home} />
@@ -27,14 +27,14 @@ const App = () => (
        <Route exact path='/projects' component={Projects} />
        <Route exact path='/skills' component={Skills} />
        <Route exact path='/contact' component={Contact} />
-       <ProtectedRoute exact path="/notes/new" component={NotesForm} />
+       <Route exact path="/notes/new" component={NotesForm} />
        <Route exact path="/notes/:id/edit" component={NotesForm} />
        <Route exact path="/notes/:id/edit" render={props => <NotesForm edit {...props} />} />
        <Route exact path='/blog' component={Blog} />
        <Route component={NoMatch} />
       </Switch>
      </Container>
-    </FetchUser>
+    {/* </FetchUser> */}
   </>
 )
 
