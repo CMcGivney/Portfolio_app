@@ -1,27 +1,48 @@
 body {
-  background-image: url('./images/buckskinGultch.jpg'), url('./images/ocean-wave-sunset.jpg');
-  /* background-position:center top, right top, center bottom; */
-	background-repeat:no-repeat, repeat;
-  height: 100%;
-  /* ! */
-  background-size: cover;
-  background-color: grey;
+  background: linear-gradient(purple 0%, red 90%), 
+  linear-gradient(to right, purple 0%, yellow 90%), 
+   url('./images/buckskinGultch.jpg');
+  background-blend-mode: screen, difference, lighten;
+  opacity: 0.8em;
+  background-size: cover, cover, cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  
-
 }
 
+
+
+p {
+  text-indent: 20px;
+}
+
+ul {
+  margin: 0;
+  padding: 0 0 0 0 5em;
+}
+
+li {
+  padding: .6em;
+}
+
+
 .headerBox {
-  padding: 12px;
+  padding: .6em;
   margin-top: 20px;
   border: 1px solid grey;
   border-radius: 25px;
   background-color: rgb(52, 214, 214);
-  text-align: justify;
+  text-align: center;
   color: black;
   box-shadow: 2px 2px black;
+  font-family: 'Calistoga', cursive;
+  font-size: calc(1.5rem + ((1vw - 3.2px) * 1));
 }
+
+.contactHead{
+  font-size: calc(1rem + ((1vw - 3.2px) * 1));
+  font-family: 'Roboto Slab', serif;
+  margin: 1em 0 1em 0;
+ }
 
 

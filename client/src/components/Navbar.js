@@ -43,7 +43,7 @@ class Navbar extends React.Component {
   render() {
     return (
       <div>
-        <Menu style={{backgroundColor: "lightskyblue"}} pointing secondary>
+        <Menu style={{backgroundColor: "lightskyblue", opacity: "0.9", fontSize: "calc(.8rem + ((1vw - 3.2px) * 1))"}} pointing secondary>
           <Link to='/'>
             <Menu.Item
               name='home'
@@ -72,13 +72,13 @@ class Navbar extends React.Component {
               active={this.props.location.pathname === '/contact'}
             />
           </Link>
-            {/* { this.rightNavItems() } */}
         </Menu>
       </div>
-    )
+      )
+    }
   }
-}
-
+  
+  /* { this.rightNavItems() } */
 export class ConnectedNavbar extends React.Component {
   render() {
     return (

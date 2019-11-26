@@ -10,7 +10,7 @@ import './Project.css'
 const Projects = () => (
   <div className="project-container">
     <div className="content1 contentBox">
-       <Header as="h3" textAlign="center">Dev Point Labs Dashboard</Header>
+       <div className="projectHead">Dev Point Labs Dashboard</div>
         <p> 
          This was a group project I worked on at school.  
          I followed a wire frame that was provided for the layout. 
@@ -27,7 +27,7 @@ const Projects = () => (
         <p>Check it out on heroku: <a href="https://dpl-dashboard.herokuapp.com/">Dashboard Site</a></p>
       </div>
        <div className="img1">
-         <Image 
+         <img 
            className="imgBoxHome"
            href="https://dpl-dashboard.herokuapp.com/"
            src={dashboard2} 
@@ -36,13 +36,13 @@ const Projects = () => (
        </div>
      
       <div className="content2 contentBox">
-       <Header as="h3" textAlign="center">A Silly Little JS Rock, Paper Scissor Game</Header>
+       <div className="projectHead">A Silly Little JS Rock, Paper Scissor Game</div>
          <p>This game was created with HTML, CSS and Javascript. It was great practice. 
             I am still learning the in's and out's of JavaScript but by doing this exercise I really start to see the power of this language to traverse and manipulate the DOM. </p>
           <p><a href="https://js-rps-game.herokuapp.com/">Play the Game?!</a> Or check out my code on GitHub: <a href="https://github.com/CMcGivney/RPS">https://github.com/CMcGivney/RPS</a></p>
       </div>
       <div className="img2">
-        <Image 
+        <img 
           className="imgBoxHome"
           href="https://js-rps-game.herokuapp.com/"
           src={RPS} 
@@ -50,12 +50,12 @@ const Projects = () => (
          />
         </div>
       <div className="content3 contentBox">
-       <Header as="h3" textAlign="center">Business Website</Header>
-       <p>I was asked to update an Adobe Flash business site. I followed the layout and style of the Flash site using React. Quickly I realized that for this kind of static site I could easily make it with just pure Javascript, CSS and HTML. So that will be my next project. This was a fun exercise in replicating a layout/style page.</p>
-       <p>Check it out on heroku: <a href="https://ventura-cpa-site.herokuapp.com/">Business Site</a></p>
+       <div className="projectHead">Business Website</div>
+       <p>I was asked to update an Adobe Flash business site. I followed the layout and style of the Flash site using React. Quickly I realized that for this kind of static site I could easily make it with just pure Javascript, CSS and HTML. So that will be my next project. This was a fun exercise in replicating a layout/style page. This site is currently in use.</p>
+       <p>Check it out: <a href="https://ventura-cpa-site.herokuapp.com/" target="_blank" rel="noopener noreferrer">Business Site</a></p>
       </div>
       <div className="img3">
-        <Image 
+        <img
           className="imgBoxHome"
           href="https://ventura-cpa-site.herokuapp.com/"
           src={CPA} 

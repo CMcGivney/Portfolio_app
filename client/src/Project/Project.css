@@ -1,11 +1,11 @@
 /*Project css*/
 .project-container {
-  margin-top: 25px;
-  width: 100%;
+  margin: 3em;
+  width: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto auto auto auto;
-  grid-gap: 15px;
+  grid-gap: 1em;
   color:black;
   grid-template-areas: 
   "content1 content1" 
@@ -19,6 +19,13 @@
 a {
   color: darkblue;
 }
+.projectHead{
+  font-size: calc(1rem + ((1vw - 3.2px) * 1));
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  margin: 0 0 1em 0;
+ }
+/* Content Grids*/
 .content1 {
   grid-area: content1;
  
@@ -31,6 +38,8 @@ a {
   grid-area: content3;
   margin-top: 30px;
 }
+
+/*Image Grids*/
 .img1 {
   grid-area: img1;
   justify-items: start;
@@ -52,7 +61,6 @@ a {
   border: 1px solid grey;
   box-shadow: 2px 2px 5px black;
   justify-content: center;
-  padding: 1px;
   height: auto;
   width: 100%;
 }
@@ -66,12 +74,16 @@ a {
   color: black;
   box-shadow: 2px 2px black;
   opacity: 0.9;
+  font-size: calc(.7rem + ((1vw - 3.2px) * 1));
+  font-family: 'Roboto Slab', serif;
 }
 
 
 /* Mobile size Media Query's */
 @media only screen and (max-width: 767px) {
   .project-container {
+    margin: 3em;
+    width: auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
@@ -94,6 +106,8 @@ a {
 
 @media only screen and (max-width: 667px) {
   .project-container {
+    margin: 0;
+    width: auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
@@ -109,9 +123,23 @@ a {
     width: 100%;
                        
   }
-
-  .ui.container {
-    margin: 0px !important;
-    padding: 0px !important;
+}
+@media only screen and (max-width: 320px) {
+  .project-container {
+    margin: .5em;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    'content1'
+    'img1'
+    'content2' 
+    'img2'
+    'content3' 
+    'img3';
+    grid-gap: 10px;
+    color:black;       
   }
+
 }

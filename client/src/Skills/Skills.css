@@ -17,6 +17,7 @@
 
 .pad {
   border-radius: 50px;
+  text-indent: 0;
   /* background-color: grey; */
 }
 
@@ -44,7 +45,8 @@
 .panel .back {
   border-radius: 75px;
   text-align: center;
-  padding: 35px 0;
+  text-indent: 0;
+  padding: 2em 1em;
   position: absolute;
   top: 0;
   z-index: 800;
@@ -61,12 +63,6 @@
   z-index: 1000;
   transform: rotateX(0deg);
   cursor: pointer;
- 
   
 }
 
-.commentBox {
-  background-color: grey;
-  border-radius: 15px;
-  opacity: 0.8;
-}

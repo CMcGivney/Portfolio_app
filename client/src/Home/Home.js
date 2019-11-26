@@ -1,16 +1,18 @@
 import React from 'react'
-import Alaska from '../images/Alaska.jpg'
+// import Alaska from '../images/Alaska.jpg'
 import './Home.css'
 
 
 const Home = () => (
   <div className="home-container">
-   <div className="grid-header">
-     <h2>Chris McGivney</h2>
-      <p> Full Stack Web Developer | Ruby on Rails & React | Outdoor Adventure Fanatic</p>
-   </div>
-  <div className="grid-about">  
-  <h3 className="contentHeaders">Welcome</h3>
+    <div className="grid-header">
+      <div className="txtHead">
+       <div className="nameHead">Chris McGivney</div>
+       <div className="homeHead"> Full Stack Developer | Ruby on Rails & React | Outdoor Adventure Fanatic</div>
+      </div>
+    </div>
+   <div className="grid-about">  
+    <h3 className="contentHeaders">Welcome</h3>
           <p>
             I live in Park City, Utah and have called Utah home for the past 15 years. I grew up in
             California, and was recruited from San Francisco to move here to open/run restaurants, a career
@@ -26,9 +28,9 @@ const Home = () => (
             I know I am very green in this business, but I believe with strong sense of curiosity and equally strong work ethic, I will be successful and able to thoughtfully
             contribute to this ever-changing tech landscape.
           </p>
-  </div>
+   </div>
   {/* I cant seem to move the content Image to the center of the cell!?!?! */}
-  <div className="grid-img1">
+  {/* <div className="grid-img1">
    <div className="polaroid">
       <img
        src={Alaska}
@@ -39,32 +41,37 @@ const Home = () => (
         <p>Lisa, my wife & I biking across Alaska</p>
       </div>
     </div>
-  </div>
+  </div> */}
   <div className="grid-main">
     <h3 className="contentHeaders">"The Dream Job"</h3>
-       <ul>
-          <li>Work at a company that I believe in the product, culture and community impact.</li>
-          <li>A position that challenges and teaches me every day, where I am a part of a team and am making a positive contribution to the mission of the company.</li>
-          <li>A position I can grow in and with, through hard work and thoughtful collaboration.</li>
-        </ul>
+          <p className="mainTxt">Work at a company that I believe in the product, culture and community impact.</p>
+          <p className="mainTxt">A position that challenges and teaches me every day, where I am a part of a team and am making a positive contribution to the mission of the company.</p>
+          <p className="mainTxt">A position I can grow in and with, through hard work and thoughtful collaboration.</p>
+       
     </div>
     <div className="grid-success">
-      <h3 className="contentHeaders">My Strategy For Success</h3>
-        <ul>
+      <h3 className="successHead">My Strategy For Success</h3>
+       <div className="col-1">
+         <ul>
            <li>Work on a personal project everyday.</li>
            <li>Choose a new tool to learn each week/month.</li>
              <ul>
               <li>Currently, mine is GraphQL</li> 
              </ul>
             <li>Run through whiteboard problems daily.</li>
+            <li>Stay true and focused on my goals.</li>
             <li>Spend 30 minutes on a coding problem; solve by using each language I know.</li>
+         </ul>
+       </div>
+       <div className="col-2">
+          <ul>
             <li>Research and contact companies that spark my interests and skill sets and where I believe I can make a contribution.</li>
             <li>Go to meetups and become a part of the Utah community.</li>
             <li>Contact local leaders and recruiters for quick insight to what they look for in new hires.</li>
             <li>Read, study and adapt to changes in the skills and tools I use. </li>
-            <li>Stay positive; its a long road, I will get there.</li>
-            <li>Stay true and focused on my goals.</li>
-        </ul>
+            <li>Stay positive; its a long road, I will get there.</li> 
+          </ul>
+        </div>
    </div>
 </div>
 )
