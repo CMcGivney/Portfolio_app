@@ -59,6 +59,7 @@ a.email:hover {
 }
 
 .notes {
+  
   grid-area: notes;
   text-align: center;
   align-self: center;

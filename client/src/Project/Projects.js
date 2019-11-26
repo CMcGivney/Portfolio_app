@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Image, } from 'semantic-ui-react';
+import NavBar from '../components/Navbar'
 import dashboard2 from '../images/dashboard2.png'
 import RPS from '../images/RPS.png'
 import CPA from '../images/cpa-site.png'
@@ -8,6 +8,7 @@ import CPA from '../images/cpa-site.png'
 import './Project.css'
 
 const Projects = () => (
+  <>
   <div className="project-container">
     <div className="content1 contentBox">
        <div className="projectHead">Dev Point Labs Dashboard</div>
@@ -63,8 +64,8 @@ const Projects = () => (
          />
         </div>
   </div>
-      
-  
+     <NavBar/> 
+  </>
 )
 
 

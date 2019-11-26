@@ -9,7 +9,7 @@ const Contact = () => (
   <div className="contact_text">
     <div className="contactHead">Hey...</div>
     <p>When I'm not glued to my keyboard studying and coding, I'm outdoors, either running, mountain biking, snowboarding, or just walking the dog and kiddo.</p>
-    <div className="contactHead" style={{textAlign: "center"}}>Join me!</div>
+    <div className="contactHead" style={{textAlign: "center"}}>Come join me!</div>
   </div>
   <div className="socialFollows">
    <SocialFollow/>

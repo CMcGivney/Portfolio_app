@@ -1,18 +1,29 @@
-body {
-  background: linear-gradient(purple 0%, red 90%), 
-  linear-gradient(to right, purple 0%, yellow 90%), 
+
+#root {
+  background: linear-gradient(rgb(68, 1, 68) 0%, rgb(243, 94, 94) 90%), 
+  linear-gradient(to right, rgb(68, 1, 68) 0%, rgb(100, 100, 66) 80%), 
    url('./images/buckskinGultch.jpg');
+  background-repeat: no-repeat;
   background-blend-mode: screen, difference, lighten;
-  opacity: 0.8em;
+  /* background:
+  linear-gradient(red, transparent),
+  linear-gradient(to top left, lime, transparent),
+  linear-gradient(to top right, blue, transparent);
+  background-blend-mode: screen; */
   background-size: cover, cover, cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  width: 100%;
+  min-height: 100em;
+  /* resize: both; */
+  /* overflow: scroll; */
+  -webkit-background-size: cover, cover, cover;
+  -moz-background-size: cover, cover, cover;
+  -o-background-size: cover, cover, cover;
+
 }
 
 
 
-p {
+p { 
   text-indent: 20px;
 }
 
