@@ -26,15 +26,15 @@
 p { 
   text-indent: 20px;
 }
+p  li{ 
+ padding: .5em;
+}
 
 ul {
   margin: 0;
   padding: 0 0 0 0 5em;
 }
 
-li {
-  padding: .6em;
-}
 
 
 .headerBox {

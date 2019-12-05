@@ -43,7 +43,7 @@ class Navbar extends React.Component {
   render() {
     return (
       <div>
-        <Menu style={{backgroundColor: "lightskyblue", opacity: "0.9", fontSize: "calc(.8rem + ((1vw - 3.2px) * 1))"}} pointing secondary>
+        <Menu style={{backgroundColor: "lightskyblue",}} pointing secondary fixed="top">
           <Link to='/'>
             <Menu.Item
               name='home'

@@ -4,11 +4,11 @@ import './Home.css'
 
 
 const Home = () => (
-  <div className="home-container">
+  <div className="home">
     <div className="grid-header">
       <div className="txtHead">
        <div className="nameHead">Chris McGivney</div>
-       <div className="homeHead"> Full Stack Developer | Ruby on Rails & React | Outdoor Adventure Fanatic</div>
+       <div className="homeHead"> Full Stack Developer | Ruby on Rails & React | Outdoor Fanatic</div>
       </div>
     </div>
    <div className="grid-about">  
@@ -50,26 +50,26 @@ const Home = () => (
        
     </div>
     <div className="grid-success">
-      <h3 className="successHead">My Strategy For Success</h3>
        <div className="col-1">
+      <h3 className="successHead">My Strategy For Success</h3>
          <ul>
-           <li>Work on a personal project everyday.</li>
-           <li>Choose a new tool to learn each week/month.</li>
+           <p><li>Work on a personal project everyday.</li></p>
+           <p><li>Choose a new tool to learn each week/month.</li></p>
              <ul>
-              <li>Currently, mine is GraphQL</li> 
+             <p><li>Currently, mine is GraphQL</li></p>
              </ul>
-            <li>Run through whiteboard problems daily.</li>
-            <li>Stay true and focused on my goals.</li>
-            <li>Spend 30 minutes on a coding problem; solve by using each language I know.</li>
+            <p><li>Run through whiteboard problems daily.</li></p>
+            <p><li>Stay true and focused on my goals.</li></p>
+            <p><li>Spend 30 minutes on a coding problem; solve by using each language I know.</li></p>
          </ul>
        </div>
        <div className="col-2">
           <ul>
-            <li>Research and contact companies that spark my interests and skill sets and where I believe I can make a contribution.</li>
-            <li>Go to meetups and become a part of the Utah community.</li>
-            <li>Contact local leaders and recruiters for quick insight to what they look for in new hires.</li>
-            <li>Read, study and adapt to changes in the skills and tools I use. </li>
-            <li>Stay positive; its a long road, I will get there.</li> 
+            <p><li>Research and contact companies that spark my interests and skill sets and where I believe I can make a contribution.</li></p>
+            <p><li>Go to meetups and become a part of the Utah community.</li></p>
+            <p><li>Contact local leaders and recruiters for quick insight to what they look for in new hires.</li></p>
+            <p><li>Read, study and adapt to changes in the skills and tools I use. </li></p>
+            <p><li>Stay positive; its a long road, I will get there.</li></p> 
           </ul>
         </div>
    </div>

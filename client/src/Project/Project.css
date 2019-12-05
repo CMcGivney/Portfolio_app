@@ -1,19 +1,23 @@
 /*Project css*/
-.project-container {
-  margin: 3em;
-  width: auto;
+.projectGrid {
+  margin: 2em 0 3em 0;
+  width: 100%;
+  height: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
   grid-gap: 1em;
   color:black;
-  grid-template-areas: 
-  "content1 content1" 
-  "img1 img1"
-  "content2 content2"
-  "img2 img2"
-  "content3 content3"
-  "img3 img3";
+  grid-template-areas:
+  "content4 "
+  "img4"
+  "content3 "
+  "img3" 
+  "content1" 
+  "img1"
+  "content2"
+  "img2"
+  ;
 }
 
 a {
@@ -28,32 +32,37 @@ a {
 /* Content Grids*/
 .content1 {
   grid-area: content1;
- 
 }
 .content2 {
   grid-area: content2;
-  margin-top: 30px
-}
+  }
 .content3 {
-  grid-area: content3;
-  margin-top: 30px;
+  grid-area: content3;  
+}
+.content4 {
+  grid-area: content4; 
 }
 
 /*Image Grids*/
 .img1 {
   grid-area: img1;
-  justify-items: start;
-  align-items: end;
+  /* justify-items: start;
+  align-items: end; */
 }
 .img2 {
   grid-area: img2;
-  justify-items: start;
-  align-items: end;
+  /* justify-items: start;
+  align-items: end; */
 }
 .img3 {
   grid-area: img3;
-  justify-items: start;
-  align-items: end;
+  /* justify-items: start;
+  align-items: end; */
+}
+.img4 {
+  grid-area: img4;
+  /* justify-items: start;
+  align-items: end; */
 }
 
 
@@ -61,6 +70,7 @@ a {
   border: 1px solid grey;
   box-shadow: 2px 2px 5px black;
   justify-content: center;
+  align-content: center;
   height: auto;
   width: 100%;
 }
@@ -80,10 +90,10 @@ a {
 
 
 /* Mobile size Media Query's */
-@media only screen and (max-width: 767px) {
+/* @media only screen and (max-width: 767px) {
   .project-container {
     margin: 3em;
-    width: auto;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
@@ -98,10 +108,7 @@ a {
                        
   }
 
-  .ui.container {
-    margin: 0px !important;
-    padding: 0px !important;
-  }
+ 
 }
 
 @media only screen and (max-width: 667px) {
@@ -142,4 +149,4 @@ a {
     color:black;       
   }
 
-}
+} */

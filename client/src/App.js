@@ -19,7 +19,7 @@ const App = () => (
   <>
    <Navbar/>
     {/* <FetchUser> */}
-     {/* <Container> */}
+     <Container style={{margin: "2.3em 0 0 0"}}>
       <Switch>
        <Route exact path='/' component={Home} />
        {/* <Route exact path="/login" component={Login} />
@@ -33,7 +33,7 @@ const App = () => (
        {/* <Route exact path='/blog' component={Blog} /> */}
        <Route component={NoMatch} />
       </Switch>
-     {/* </Container> */}
+     </Container>
     {/* </FetchUser> */}
   </>
 )

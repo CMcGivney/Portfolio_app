@@ -1,15 +1,15 @@
 import React from 'react';
-import NavBar from '../components/Navbar'
 import dashboard2 from '../images/dashboard2.png'
 import RPS from '../images/RPS.png'
 import CPA from '../images/cpa-site.png'
+import FoodTruck from '../images/FoodTruck.png'
+import {Container, Header} from 'semantic-ui-react'
 
 
 import './Project.css'
 
 const Projects = () => (
-  <>
-  <div className="project-container">
+  <div className="projectGrid">
     <div className="content1 contentBox">
        <div className="projectHead">Dev Point Labs Dashboard</div>
         <p> 
@@ -53,19 +53,32 @@ const Projects = () => (
       <div className="content3 contentBox">
        <div className="projectHead">Business Website</div>
        <p>I was asked to update an Adobe Flash business site. I followed the layout and style of the Flash site using React. Quickly I realized that for this kind of static site I could easily make it with just pure Javascript, CSS and HTML. So that will be my next project. This was a fun exercise in replicating a layout/style page. This site is currently in use.</p>
-       <p>Check it out: <a href="https://ventura-cpa-site.herokuapp.com/" target="_blank" rel="noopener noreferrer">Business Site</a></p>
+       <p>Check it out: <a href="http://sandpcpa.com/" target="_blank" rel="noopener noreferrer">Business Site</a></p>
       </div>
       <div className="img3">
         <img
           className="imgBoxHome"
           href="https://ventura-cpa-site.herokuapp.com/"
           src={CPA} 
-          alt="A JS made Rock, Paper, Scissor Game"
+          alt="CPA firm business site"
          />
         </div>
-  </div>
-     <NavBar/> 
-  </>
+  
+      <div className="content4 contentBox">
+       <div className="projectHead">Business Website</div>
+       <p>I built this simple business site for a co-worker at the restaurant. I think it turned out pretty good. Twitter widget and Instagram API work was fun.</p>
+       <p>Check it out: <a href="https://food-truck-site.herokuapp.com/" target="_blank" rel="noopener noreferrer">Business Site</a></p>
+      </div>
+      <div className="img4">
+        <img
+          className="imgBoxHome"
+          href="https://food-truck-site.herokuapp.com/"
+          src={FoodTruck} 
+          alt="Food Truck Catering business site"
+         />
+     </div>
+   </div>
+ 
 )
 
 

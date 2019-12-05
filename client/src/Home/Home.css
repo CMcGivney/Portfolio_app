@@ -1,15 +1,15 @@
 /* desktop view*/
-.home-container {
-  margin: 1em;
-
+.home {
+  margin-top: 2em;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  grid-template-areas: 'header header' 
-                       'about success'
-                       'main success';
+  grid-template-columns: 1fr;
+  grid-template-rows: 8em auto auto;
+  grid-template-areas: 'header' 
+                       'about'
+                       'success'
+                       'main';
   /* grid-gap: .2em; */
   /* background-color: rgb(179, 159, 159);  */
   opacity: 0.9;
@@ -74,14 +74,14 @@
   color: black;
   text-align: justify;
   padding: 0 1em 0 1em;
-  margin: 1em;
+  margin-top: 2em;
   /* font-size: calc(1rem + ((1vw - 3.2px) * 1)); */
   font-family: 'Roboto Slab', serif;
 }
 .mainTxt {
   font-size: calc(.8rem + ((1vw - 3.2px) * 1));
   font-family: 'Roboto Slab', serif;
-  padding: 0 0 0 2em;
+  /* padding: 0 0 0 2em; */
   text-indent: 0;
 
 }
@@ -89,8 +89,7 @@
   grid-area: about;
   color: black;
   text-align: justify;
-  padding: 1em;
-  margin: 1em;
+  margin-top: 1em;
   font-size: calc(.8rem + ((1vw - 3.2px) * 1));
   font-family: 'Roboto Slab', serif;
   
@@ -101,16 +100,16 @@
   color: black;
   text-align: left;
   /* margin: 1em; */
-  padding: 1em;
+  padding: 0;
   grid-template-columns: 1fr;
-  grid-template-rows:  4em auto auto 10em;
-  grid-template-areas: "head" "col-1" "col-2" ".";
+  grid-template-rows:  auto;
+  grid-template-areas: "col-1" "col-2" ".";
   grid-gap: 0;
   font-size: calc(.8rem + ((1vw - 3.2px) * 1));
   font-family: 'Roboto Slab', serif;
 }
 .successHead {
-  grid-area: head;
+  /* grid-area: head; */
   text-align: center;
   padding: 1em;
   margin: 0;
@@ -138,10 +137,10 @@
   padding: 1px;
 }
 
-@media only screen and (max-width: 768px) {
-  .home-container {
+/* @media only screen and (max-width: 768px) {
+  .home {
   width: auto;
-  margin: 1em;
+  margin-top: 1.5em;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto;
@@ -163,16 +162,16 @@
     box-shadow: 2px 2px black;
   
   }
-  /* .txtHead {
+   .txtHead {
     margin-top: 1em;
-  } */
+  } 
   .nameHead {
     margin: .2em;
     font-size: calc(1.5rem + ((1vw - 3.2px) * 1));
     font-family: 'Roboto', 'serif';
   }
   /* I can not seem to center this image content in the cell */
-  .grid-img1 {
+  /*.grid-img1 {
     grid-area: img1;
     padding-left: 60px;
   } 
@@ -186,15 +185,15 @@
     width: 80%;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    /* margin-bottom: 25px; */
+  
   }
   /* the text container for the polaroid element*/
-  .container {
+  /*.container {
     text-align: left;
     padding: 1px 20px;
   }
   /* ^^ I can not seem to center this image content in the cell */
-  .contentHeaders {
+  /*.contentHeaders {
     text-decoration: underline;
     text-align: center;
     margin: .5em;
@@ -213,7 +212,7 @@
     grid-area: about;
     color: black;
     text-align: left;
-    padding: 10px;
+    margin-top: .5em;
     
   }
   .grid-success {
@@ -221,8 +220,8 @@
     display: grid;
     color: black;
     text-align: left;
-    margin: 0;
-    padding: 15px;
+    /* margin: 0;
+    padding: 15px; 
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas: "head" "col-1" "col-2";
@@ -243,12 +242,12 @@
     grid-area: col-2;
   }
  
-}
+} */
 
-@media only screen and (max-width: 320px) {
-  .home-container {
+/* @media only screen and (max-width: 320px) {
+  .home {
   width: auto;
-  margin: 1em;
+  margin-top: 1em;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto auto;
@@ -259,4 +258,4 @@
   'main';           
   }
  
-}
+} */
