@@ -74,7 +74,7 @@
   color: black;
   text-align: justify;
   padding: 0 1em 0 1em;
-  margin-top: 2em;
+  margin: 2em 0 0 2em;
   /* font-size: calc(1rem + ((1vw - 3.2px) * 1)); */
   font-family: 'Roboto Slab', serif;
 }

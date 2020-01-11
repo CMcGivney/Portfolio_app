@@ -29,6 +29,9 @@ p {
 p  li{ 
  padding: .5em;
 }
+li {
+  padding: .5em;
+}
 
 ul {
   margin: 0;

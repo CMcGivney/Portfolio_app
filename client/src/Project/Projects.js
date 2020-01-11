@@ -67,7 +67,7 @@ const Projects = () => (
       <div className="content4 contentBox">
        <div className="projectHead">Business Website</div>
        <p>I built this simple business site for a co-worker at the restaurant. I think it turned out pretty good. Twitter widget and Instagram API work was fun.</p>
-       <p>Check it out: <a href="https://food-truck-site.herokuapp.com/" target="_blank" rel="noopener noreferrer">Business Site</a></p>
+       <p>Check it out: <a href="http://www.theelysiancatering.com/" target="_blank" rel="noopener noreferrer">Business Site</a></p>
       </div>
       <div className="img4">
         <img

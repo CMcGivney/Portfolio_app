@@ -19,7 +19,7 @@ const App = () => (
   <>
    <Navbar/>
     {/* <FetchUser> */}
-     <Container style={{margin: "2.3em 0 0 0"}}>
+     <Container style={{margin: "2.3em 0 0 0", padding: "0 0 2em 0"}}>
       <Switch>
        <Route exact path='/' component={Home} />
        {/* <Route exact path="/login" component={Login} />

@@ -56,7 +56,7 @@ const Home = () => (
            <p><li>Work on a personal project everyday.</li></p>
            <p><li>Choose a new tool to learn each week/month.</li></p>
              <ul>
-             <p><li>Currently, mine is GraphQL</li></p>
+             <li>Currently, mine is GraphQL</li>
              </ul>
             <p><li>Run through whiteboard problems daily.</li></p>
             <p><li>Stay true and focused on my goals.</li></p>
