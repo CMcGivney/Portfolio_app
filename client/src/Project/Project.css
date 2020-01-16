@@ -5,10 +5,11 @@
   height: auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto;
+  grid-template-rows: 1em auto;
   grid-gap: 1em;
   color:black;
   grid-template-areas:
+  "."
   "content4 "
   "img4"
   "content3 "
