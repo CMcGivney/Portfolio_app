@@ -3,12 +3,11 @@ import dashboard2 from '../images/dashboard2.png'
 import RPS from '../images/RPS.png'
 import CPA from '../images/cpa-site.png'
 import FoodTruck from '../images/FoodTruck.png'
-import {Container, Header} from 'semantic-ui-react'
-
-
+import {Image} from 'semantic-ui-react'
 import './Project.css'
 
 const Projects = () => (
+  <>
   <div className="projectGrid">
     <div className="content1 contentBox">
        <div className="projectHead">Dev Point Labs Dashboard</div>
@@ -27,58 +26,63 @@ const Projects = () => (
         </p>
         <p>Check it out on heroku: <a href="https://dpl-dashboard.herokuapp.com/">Dashboard Site</a></p>
       </div>
-       <div className="img1">
-         <img 
-           className="imgBoxHome"
+         <Image
+           className="imgBoxHome img1"
            href="https://dpl-dashboard.herokuapp.com/"
            src={dashboard2} 
            alt="Dev Point Labs DashBoard Project"
+           width="100%"
+          height="100%"
           />
-       </div>
-     
       <div className="content2 contentBox">
        <div className="projectHead">A Silly Little JS Rock, Paper Scissor Game</div>
          <p>This game was created with HTML, CSS and Javascript. It was great practice. 
             I am still learning the in's and out's of JavaScript but by doing this exercise I really start to see the power of this language to traverse and manipulate the DOM. </p>
           <p><a href="https://js-rps-game.herokuapp.com/">Play the Game?!</a> Or check out my code on GitHub: <a href="https://github.com/CMcGivney/RPS">https://github.com/CMcGivney/RPS</a></p>
       </div>
-      <div className="img2">
-        <img 
-          className="imgBoxHome"
+      
+        <Image
+          className="imgBoxHome img2"
           href="https://js-rps-game.herokuapp.com/"
           src={RPS} 
           alt="A JS made Rock, Paper, Scissor Game"
+          width="100%"
+          height="100%"
          />
-        </div>
+        
       <div className="content3 contentBox">
        <div className="projectHead">Business Website</div>
        <p>I was asked to update an Adobe Flash business site. I followed the layout and style of the Flash site using React. Quickly I realized that for this kind of static site I could easily make it with just pure Javascript, CSS and HTML. So that will be my next project. This was a fun exercise in replicating a layout/style page. This site is currently in use.</p>
        <p>Check it out: <a href="http://sandpcpa.com/" target="_blank" rel="noopener noreferrer">Business Site</a></p>
       </div>
-      <div className="img3">
-        <img
-          className="imgBoxHome"
+     
+        <Image
+          className="imgBoxHome img3"
           href="https://ventura-cpa-site.herokuapp.com/"
           src={CPA} 
           alt="CPA firm business site"
+          width="100%"
+          height="100%"
          />
-        </div>
+
   
       <div className="content4 contentBox">
        <div className="projectHead">Business Website</div>
-       <p>I built this simple business site for a co-worker at the restaurant. I think it turned out pretty good. Twitter widget and Instagram API work was fun.</p>
+       <p>I built this simple business site for a co-worker at the restaurant. I think it turned out pretty good considering it only tool a few hours. Twitter widget and Instagram API work was fun. However, the IG API depreciated and doesn't load when deployed to a production build. I will learn the new graph api used by facebook to add this feature back.</p>
        <p>Check it out: <a href="http://www.theelysiancatering.com/" target="_blank" rel="noopener noreferrer">Business Site</a></p>
       </div>
-      <div className="img4">
-        <img
-          className="imgBoxHome"
+      
+        <Image
+          className="imgBoxHome img4"
           href="https://food-truck-site.herokuapp.com/"
           src={FoodTruck} 
           alt="Food Truck Catering business site"
+          width="100%"
+          height="100%"
          />
-     </div>
+     
    </div>
- 
+ </>
 )
 
 

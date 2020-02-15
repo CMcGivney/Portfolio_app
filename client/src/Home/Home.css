@@ -1,5 +1,22 @@
 /* desktop view*/
-.home {
+.homeBox {
+  background-color: rgb(134, 134, 235);
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+  display: flex;
+  width: 100%;
+  min-height: 30em;
+  -webkit-background-size: cover;
+  -moz-background-size: cover, ;
+  -o-background-size: cover,;
+  /* -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0
+  filter: grayscale(90%); */
+
+}
+/* .home {
   margin-top: 2em;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
@@ -11,33 +28,31 @@
                        'about'
                        'success'
                        'main';
-  /* grid-gap: .2em; */
-  /* background-color: rgb(179, 159, 159);  */
+   grid-gap: .2em;
+   background-color: rgb(179, 159, 159); 
   opacity: 0.9;
   width: auto;
   min-height: 100vh;
-}
+} */
 
 .grid-header {
-  grid-area: header;
   padding: 10px;
-  border: 1px solid grey;
-  border-radius: 25px;
-  background-color: rgb(52, 214, 214);
   text-align: center;
-  color: black;
-  box-shadow: 2px 2px black;
+  background-color: rgba(173, 166, 166, 0.836);
+  opacity: 0.9;
+  width: 100%;
 
 }
 
 .nameHead {
   font-size: calc(2rem + ((1vw - 3.2px) * 1));
   font-family: 'Lobster Two', cursive;
-  margin: .5em;
+  padding: .5em;
 }
 .homeHead{
  font-size: calc(.7rem + ((1vw - 3.2px) * 1));
  font-family: 'Roboto Slab', serif;
+ padding: 1em;
 }
 /* I can not seem to center this image content in the cell */
 .grid-img1 {
@@ -64,19 +79,16 @@
 /* ^^ I can not seem to center this image content in the cell */
 .contentHeaders {
   text-align: center;
-  margin:  1em;
-  text-decoration: underline;
   font-size: calc(1rem + ((1vw - 3.2px) * 1));
   font-family: 'Calistoga', cursive;
 }
 
 .grid-main {
   grid-area: main;
+  background-color:rgba(219, 219, 64, 0.568);
   color: black;
-  text-align: justify;
-  padding: 0 1em 0 1em;
-  margin: 2em 0 0 2em;
-  /* font-size: calc(1rem + ((1vw - 3.2px) * 1)); */
+  text-align: center;
+  padding: 2em 2em 2em 2em;
   font-family: 'Roboto Slab', serif;
 }
 .mainTxt {
@@ -89,11 +101,16 @@
 .grid-about {
   grid-area: about;
   color: black;
+  background: tan;
   text-align: justify;
-  margin-top: 1em;
+  padding: 2em 2em 2em 2em;
   font-size: calc(.8rem + ((1vw - 3.2px) * 1));
   font-family: 'Roboto Slab', serif;
   
+}
+.successBlock {
+  background-color:  rgb(199, 116, 68);
+  padding: 2em;
 }
 .grid-success {
   grid-area: success;
@@ -102,15 +119,16 @@
   text-align: left;
   /* margin: 1em; */
   padding: 0;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows:  auto;
-  grid-template-areas: "col-1" "col-2" ".";
+  grid-template-areas: "head head" 
+                       "col-2 col-1";
   grid-gap: 0;
   font-size: calc(.8rem + ((1vw - 3.2px) * 1));
   font-family: 'Roboto Slab', serif;
 }
 .successHead {
-  /* grid-area: head; */
+  grid-area: head;
   text-align: center;
   padding: 1em;
   margin: 0;
@@ -121,9 +139,9 @@
 
 .col-1 {
   grid-area: col-1;
-  align-self: end;
+  /* align-self: end; */
   padding: 1em;
-  /* display: inline-block; */
+  display: inline-block;
 }
 .col-2 {
   grid-area: col-2;

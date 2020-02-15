@@ -1,6 +1,7 @@
 /*Project css*/
+
 .projectGrid {
-  margin: 2em 0 3em 0;
+  padding: 1em;
   width: 100%;
   height: auto;
   display: grid;
@@ -78,13 +79,13 @@ a {
 
 .contentBox {
   padding: 15px;
-  border: 1px solid grey;
+  /* border: 1px solid grey;
   border-radius: 25px;
-  background-color: rgb(52, 214, 214);
+  background-color: rgb(52, 214, 214); */
   text-align: justify;
   color: black;
-  box-shadow: 2px 2px black;
-  opacity: 0.9;
+  /* box-shadow: 2px 2px black;
+  opacity: 0.9; */
   font-size: calc(.7rem + ((1vw - 3.2px) * 1));
   font-family: 'Roboto Slab', serif;
 }
