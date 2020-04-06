@@ -3,11 +3,11 @@ import dashboard2 from '../images/dashboard2.png'
 import RPS from '../images/RPS.png'
 import CPA from '../images/cpa-site.png'
 import FoodTruck from '../images/FoodTruck.png'
-import {Image} from 'semantic-ui-react'
+import {Image, Container} from 'semantic-ui-react'
 import './Project.css'
 
 const Projects = () => (
-  <>
+  <Container>
   <div className="projectGrid">
     <div className="content1 contentBox">
        <div className="projectHead">Dev Point Labs Dashboard</div>
@@ -82,7 +82,7 @@ const Projects = () => (
          />
      
    </div>
- </>
+ </Container>
 )
 
 

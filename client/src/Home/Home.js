@@ -9,12 +9,13 @@ const Home = () => (
   <div className="homeBox">
     <div className="grid-header">
       <Header.Content className="nameHead">Chris McGivney</Header.Content>
-      <Header.Content className="homeHead"> Aspiring Full Stack Ruby on Rails PostgreSql JavaScript React Developer </Header.Content>
+      <Header.Content className="homeHead"> Aspiring Full Stack Developer </Header.Content>
+      <Header.Content className="homeHead"> Ruby on Rails || PostgreSql || JavaScript || React  </Header.Content>
      </div>
   </div>
    
    <div className="grid-about">  
-    <Header className="contentHeaders">Welcome</Header>
+    <Header.Content className="contentHeaders">Welcome</Header.Content>
         <Header.Content>
           <p>
             I live in Park City, Utah and have called Utah home for the past 15 years. I grew up in

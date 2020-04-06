@@ -68,8 +68,6 @@ state = { notes: [], }
   )
 }
 
-
-    
     destroyNote = (id) => {
       axios.delete(`/api/notes/${id}`)
       .then(res => {

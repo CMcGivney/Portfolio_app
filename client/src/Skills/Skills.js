@@ -1,5 +1,5 @@
 import React from 'react'
-import {Grid, Image, Icon, Header} from 'semantic-ui-react'
+import {Grid, Image, Icon, Container} from 'semantic-ui-react'
 import styled from 'styled-components'
 import CSS3 from '../images/CSS3.png'
 import ES6 from '../images/ES6.png'
@@ -29,8 +29,13 @@ class Skill {
    this.darkstar_count = darkstar_count;
  }
 }
+
 let skillsArr = [];
-let html, css, js, react, ruby, rails, styledComp, postgresql, sql, semanticR, semantic, bootsReact, esc6, sqlectron, bootstrap, github;
+let html, css, js, react, 
+    ruby, rails, styledComp, 
+    postgresql, sql, semanticR, 
+    semantic, bootsReact, esc6, 
+    sqlectron, bootstrap, github;
 
 //create instance of skill (image, image_alt, comment, star_count, darkstar_count) and push to array
 html = new Skill(HTML5, "HTML5 Logo", "Feel Confident", 3, 2)
@@ -83,13 +88,9 @@ skillsArr.push(github)
 
   
 const Skills = () => (
- <Grid className="skillsCont" style={{margin: ".5em"}} stackable>
-  <Grid.Row>
-     <Grid.Column >
-      <div className="headerBox">My Tool Kit</div>
-     </Grid.Column>
-   </Grid.Row>
-   { skillsArr.map( skill => 
+  <div className="skillsContainer">
+   <Grid className="" stackable>
+    { skillsArr.map( skill => 
       <Grid.Column key={skill.id} width={4}>
          <div className="panel">
            <div className="front">
@@ -121,8 +122,10 @@ const Skills = () => (
         </Grid.Column>
        )
       }
- </Grid>
+   </Grid>
+</div>
 )
+
 const Star = styled.div`
 display: inline-block;
 color: yellow;
