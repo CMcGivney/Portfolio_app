@@ -52,7 +52,8 @@ state = { notes: [], }
               <Link to={`/notes/${note.id}/edit`}>
                <Button 
                  color='blue' 
-                 icon basic 
+                 icon 
+                 basic 
                  >
                 <Icon name='pencil' />
                </Button>

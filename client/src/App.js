@@ -19,7 +19,7 @@ const App = () => (
   <>
    <Navbar/>
     {/* <FetchUser> */}
-     <Container fluid style={{padding: "0px"}}>
+     <Container fluid style={{ padding: "0px"}}>
       <Switch>
        <Route exact path='/' component={Home} />
        {/* <Route exact path="/login" component={Login} />
