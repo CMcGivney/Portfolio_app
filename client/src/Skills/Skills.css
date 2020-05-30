@@ -1,4 +1,9 @@
-
+.skillsContainer {
+  padding: 2rem 8rem 3rem 8rem;
+  margin: 5rem 0 0 0;
+  width: 100%;
+  
+}
 
 
 
@@ -66,3 +71,9 @@
   
 }
 
+/* Mobile size Media Query's */
+@media only screen and (max-width: 768px) {
+  .skillsContainer {
+    padding: 1rem;
+  }
+}

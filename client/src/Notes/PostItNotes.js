@@ -25,7 +25,7 @@ state = { notes: [], }
     return <h2>No Notes Yet...</h2>
     return (
       
-  <Grid stackable style={{marginTop: "25px"}}>
+  <Grid stackable style={{marginTop: "2rem"}}>
       <Grid.Row>
          <Grid.Column stackable= "true">
            <Card.Group className="corkboard">
@@ -52,7 +52,8 @@ state = { notes: [], }
               <Link to={`/notes/${note.id}/edit`}>
                <Button 
                  color='blue' 
-                 icon basic 
+                 icon 
+                 basic 
                  >
                 <Icon name='pencil' />
                </Button>
@@ -68,8 +69,6 @@ state = { notes: [], }
   )
 }
 
-
-    
     destroyNote = (id) => {
       axios.delete(`/api/notes/${id}`)
       .then(res => {
@@ -82,7 +81,7 @@ state = { notes: [], }
     render() {
       return(
         
-        <Container>
+        <Container style={{marginTop:'5rem'}}>
           <Link to="/notes/new">
            <Button color="black">
             <Icon name="add" />

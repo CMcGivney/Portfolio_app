@@ -5,7 +5,7 @@ import {faLinkedin, faTwitter, faInstagram, } from "@fortawesome/free-brands-svg
 export default function SocialFollow() {
   return (
     <div className="social-container">
-      <div className="contactHead">Let's Connect</div>
+      {/* <div className="contactHead">Let's Connect</div> */}
      
       <a
         href="https://www.linkedin.com/in/chris-mcgivney/"

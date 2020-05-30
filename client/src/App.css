@@ -1,28 +1,7 @@
-
-#root {
-  background: linear-gradient(rgb(68, 1, 68) 0%, rgb(243, 94, 94) 90%), 
-  linear-gradient(to right, rgb(68, 1, 68) 0%, rgb(100, 100, 66) 80%), 
-   url('./images/buckskinGultch.jpg');
-  background-repeat: no-repeat;
-  background-blend-mode: screen, difference, lighten;
-  /* background:
-  linear-gradient(red, transparent),
-  linear-gradient(to top left, lime, transparent),
-  linear-gradient(to top right, blue, transparent);
-  background-blend-mode: screen; */
-  background-size: cover, cover, cover;
-  width: 100%;
-  min-height: 100em;
-  /* resize: both; */
-  /* overflow: scroll; */
-  -webkit-background-size: cover, cover, cover;
-  -moz-background-size: cover, cover, cover;
-  -o-background-size: cover, cover, cover;
-
+body, html {
+  background-color: thistle;
+ 
 }
-
-
-
 p { 
   text-indent: 20px;
 }
@@ -42,9 +21,8 @@ ul {
 
 .headerBox {
   padding: .6em;
-  margin-top: 20px;
+  margin-top: 25px;
   border: 1px solid grey;
-  border-radius: 25px;
   background-color: rgb(52, 214, 214);
   text-align: center;
   color: black;
