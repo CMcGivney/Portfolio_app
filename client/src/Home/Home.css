@@ -1,6 +1,6 @@
 /* desktop view*/
 .homeBox {
-  background-color: rgb(134, 134, 235);
+  background-image: url("../images/ocean-wave-sunset.jpg");
   background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
@@ -8,7 +8,7 @@
   background-size: 100%;
   display: flex;
   width: 100%;
-  min-height: 30em;
+  min-height: 60vh;
   -webkit-background-size: 100%;
   -moz-background-size: 100%, ;
   -o-background-size: 100%,;
@@ -40,8 +40,7 @@
   text-align: center;
   background-color: rgba(173, 166, 166, 0.836);
   opacity: 0.9;
-  width: 100%;
-
+  width: auto;
 }
 
 .nameHead {

@@ -1,6 +1,6 @@
-#root {
+body, html {
   background-color: thistle;
-  background-size: cover;
+ 
 }
 p { 
   text-indent: 20px;
