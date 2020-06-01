@@ -7,6 +7,7 @@ import Contact from './Contact/ContactGrid'
 import NoMatch from './Devise/NoMatch'
 import Navbar from './components/Navbar'
 import NotesForm from './Notes/PostItNoteForm'
+import ScrollToTop from './components/scrollToTop'
 import { Switch, Route, } from 'react-router-dom'
 import { Container, } from "semantic-ui-react"
 // import Login from './Devise/Login'
@@ -20,6 +21,7 @@ const App = () => (
    <Navbar/>
     {/* <FetchUser> */}
      <Container fluid style={{ padding: "0px"}}>
+      <ScrollToTop />
       <Switch>
        <Route exact path='/' component={Home} />
        {/* <Route exact path="/login" component={Login} />

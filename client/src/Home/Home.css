@@ -1,40 +1,17 @@
 /* desktop view*/
 .homeBox {
-  background-image: url("../images/ocean-wave-sunset.jpg");
-  background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-size: 100%;
   display: flex;
   width: 100%;
-  min-height: 60vh;
-  -webkit-background-size: 100%;
-  -moz-background-size: 100%, ;
-  -o-background-size: 100%,;
-  /* -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0
-  filter: grayscale(90%); */
-
+  height: 100vh;
 }
-/* .home {
-  margin-top: 2em;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 2em 8em auto auto;
-  grid-template-areas: '.'
-                       'header' 
-                       'about'
-                       'success'
-                       'main';
-   grid-gap: .2em;
-   background-color: rgb(179, 159, 159); 
-  opacity: 0.9;
-  width: auto;
-  min-height: 100vh;
-} */
-
+.homeContainer {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+}
 .grid-header {
   padding: 10px;
   text-align: center;
@@ -44,108 +21,79 @@
 }
 
 .nameHead {
-  font-size: calc(2rem + ((1vw - 3.2px) * 1));
   font-family: 'Lobster Two', cursive;
-  padding: .5em;
+  margin-bottom: 0;
 }
 .homeHead{
- /* font-size: calc(.7rem + ((1vw - 3.2px) * 1)); */
  font-family: 'Roboto Slab', serif;
 }
-/* I can not seem to center this image content in the cell */
-.grid-img1 {
-  grid-area: img1;
-  padding-left: 60px;
-} 
 
-.alaskaImg {
-  width: 100%;
-  height: 250px;
-}
-
-.polaroid {
-  width: 80%;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  /* margin-bottom: 25px; */
-}
-/* the text container for the polaroid element*/
-.container {
-  text-align: left;
-  padding: 1px 20px;
-}
-/* ^^ I can not seem to center this image content in the cell */
 .contentHeaders {
   text-align: center;
-  font-size: calc(1rem + ((1vw - 3.2px) * 1));
   font-family: 'Calistoga', cursive;
   padding: 1rem;
 }
 
-.grid-main {
-  grid-area: main;
+.main {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  height: auto;
   background-color:rgba(219, 219, 64, 0.568);
   color: black;
   text-align: center;
-  padding: 2em 8em 2em 8em;
   font-family: 'Roboto Slab', serif;
+  padding: 2rem;
 }
 
 .mainTxt {
-  /* font-size: calc(.8rem + ((1vw - 3.2px) * 1)); */
   font-family: 'Roboto Slab', serif;
-  /* padding: 0 0 0 2em; */
   text-indent: 0;
 
 }
-.grid-about {
-  grid-area: about;
+.about {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-flow: column wrap;
   color: black;
   background: tan;
   text-align: justify;
-  padding: 2em 8em 2em 8em;
-  /* font-size: calc(.8rem + ((1vw - 3.2px) * 1)); */
   font-family: 'Roboto Slab', serif;
-  
+  padding: 2rem;
 }
 .successBlock {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-flow: column wrap;
   background-color:  rgb(199, 116, 68);
-  padding: 2em 8em 2em 8em;
+  padding: 2rem;
 }
-.grid-success {
-  grid-area: success;
-  display: grid;
+.success {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
   color: black;
   text-align: left;
-  /* margin: 1em; */
-  padding: 0;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows:  auto;
-  grid-template-areas: "head head" 
-                       "col-2 col-1";
-  grid-gap: 0;
-  /* font-size: calc(.8rem + ((1vw - 3.2px) * 1)); */
   font-family: 'Roboto Slab', serif;
 }
 .successHead {
-  grid-area: head;
   text-align: center;
   padding: 1em;
   margin: 0;
   text-decoration: underline;
-  /* font-size: calc(1rem + ((1vw - 3.2px) * 1)); */
   font-family: 'Calistoga', cursive;
 }
 
 .col-1 {
   grid-area: col-1;
-  /* align-self: end; */
-  padding: 1em;
-  display: inline-block;
 }
 .col-2 {
   grid-area: col-2;
-  padding: 1em;
 }
 
 .imgBackground {
@@ -154,163 +102,4 @@
   padding: 1px;
 }
 
-/* Mobile size Media Query's */
-@media only screen and (max-width: 768px) {
-  .homeBox {
-    background-color: rgb(134, 134, 235);
-    background-repeat: no-repeat;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-size: cover;
-    display: flex;
-    width: 100%;
-    min-height: 30em;
-    -webkit-background-size: cover;
-    -moz-background-size: cover, ;
-    -o-background-size: cover,;
-    /* -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0
-    filter: grayscale(90%); */
-  
-  }
-  /* .home {
-    margin-top: 2em;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 2em 8em auto auto;
-    grid-template-areas: '.'
-                         'header' 
-                         'about'
-                         'success'
-                         'main';
-     grid-gap: .2em;
-     background-color: rgb(179, 159, 159); 
-    opacity: 0.9;
-    width: auto;
-    min-height: 100vh;
-  } */
-  
-  .grid-header {
-    padding: 10px;
-    text-align: center;
-    background-color: rgba(173, 166, 166, 0.836);
-    opacity: 0.9;
-    width: 100%;
-  
-  }
-  
-  .nameHead {
-    font-size: calc(2rem + ((1vw - 3.2px) * 1));
-    font-family: 'Lobster Two', cursive;
-    padding: .5em;
-  }
-  .homeHead{
-   /* font-size: calc(.7rem + ((1vw - 3.2px) * 1)); */
-   font-family: 'Roboto Slab', serif;
-  }
-  /* I can not seem to center this image content in the cell */
-  .grid-img1 {
-    grid-area: img1;
-    padding-left: 60px;
-  } 
-  
-  .alaskaImg {
-    width: 100%;
-    height: 250px;
-  }
-  
-  .polaroid {
-    width: 80%;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    /* margin-bottom: 25px; */
-  }
-  /* the text container for the polaroid element*/
-  .container {
-    text-align: left;
-    padding: 1px 20px;
-  }
-  /* ^^ I can not seem to center this image content in the cell */
-  .contentHeaders {
-    text-align: center;
-    font-size: calc(1rem + ((1vw - 3.2px) * 1));
-    font-family: 'Calistoga', cursive;
-    padding: 1rem;
-  }
-  
-  .grid-main {
-    grid-area: main;
-    background-color:rgba(219, 219, 64, 0.568);
-    color: black;
-    text-align: center;
-    padding: 1em 1em 1em 1em;
-    font-family: 'Roboto Slab', serif;
-  }
-  
-  .mainTxt {
-    /* font-size: calc(.8rem + ((1vw - 3.2px) * 1)); */
-    font-family: 'Roboto Slab', serif;
-    /* padding: 0 0 0 2em; */
-    text-indent: 0;
-  
-  }
-  .grid-about {
-    grid-area: about;
-    color: black;
-    background: tan;
-    text-align: justify;
-    padding: 1em 1em 1em 1em;
-    /* font-size: calc(.8rem + ((1vw - 3.2px) * 1)); */
-    font-family: 'Roboto Slab', serif;
-    
-  }
-  .successBlock {
-    background-color:  rgb(199, 116, 68);
-    padding: 1em 1em 1em 1em;
-  }
-  .grid-success {
-    grid-area: success;
-    display: grid;
-    color: black;
-    text-align: left;
-    /* margin: 1em; */
-    padding: 0;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows:  auto;
-    grid-template-areas: "head head" 
-                         "col-2 col-1";
-    grid-gap: 0;
-    /* font-size: calc(.8rem + ((1vw - 3.2px) * 1)); */
-    font-family: 'Roboto Slab', serif;
-  }
-  .successHead {
-    grid-area: head;
-    text-align: center;
-    padding: 1em;
-    margin: 0;
-    text-decoration: underline;
-    /* font-size: calc(1rem + ((1vw - 3.2px) * 1)); */
-    font-family: 'Calistoga', cursive;
-  }
-  
-  .col-1 {
-    grid-area: col-1;
-    /* align-self: end; */
-    padding: 1em;
-    display: inline-block;
-  }
-  .col-2 {
-    grid-area: col-2;
-    padding: 1em;
-  }
-  
-  .imgBackground {
-    opacity: 0.5;
-    justify-content: center;
-    padding: 1px;
-  }
 
-
-}

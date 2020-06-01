@@ -9,7 +9,7 @@ const person = {
   name: "Chris McGivney",
   image: distantStare,
   imageAlt: "Snowboarder staring into the distance",
-  devMeta: "Devloper",
+  devMeta: "Aspiring Developer",
   description: "When I'm not glued to my keyboard studying and coding, I'm outdoors, either running, mountain biking, snowboarding, or just walking the dog and kiddo.",
   strong:"Come join me!",
   email:"CmMcGivney84@gmail.com",
@@ -17,10 +17,9 @@ const person = {
 }
 
 const Contact = () => (
-  <>
 <div className="contact-container">
-  <div className="contact_text">
-    <Card raised color="red">
+  <div className="card">
+    <Card fluid raised>
       <Card.Content>
         <Image
            className="imgBox "
@@ -39,13 +38,12 @@ const Contact = () => (
         <Card.Content className="emailBox">
            <a className="email" href={person.emailHref}>{person.email}</a>
        </Card.Content>
-    </Card>
+     </Card>
+    </div> 
+    <div className="notes">
+     <Notes/> 
+    </div>
   </div>
-  <div className="notes">
-    <Notes/> 
-  </div>
-</div>
-</>
 )
 
 export default Contact

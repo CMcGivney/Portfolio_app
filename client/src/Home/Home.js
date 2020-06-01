@@ -1,21 +1,43 @@
 import React from 'react'
-// import Alaska from '../images/Alaska.jpg'
 import './Home.css'
 import {Header, } from 'semantic-ui-react'
+import Waves from "../images/buckskinGultch.jpg"
+import { Parallax,} from 'react-parallax';
 
+const insideStyles = {
+  background: "#A8D6EB",
+  padding: 20,
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%,-50%)",
+  borderRadius: "50%",
+  height: '20rem',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center'
+};
 
 const Home = () => (
 <>
-  <div className="homeBox">
-    <div className="grid-header">
-      <Header.Content className="nameHead">Chris McGivney</Header.Content>
-      <Header.Content className="homeHead"> Aspiring Full Stack Developer </Header.Content>
-      <Header.Content className="homeHead"> Ruby on Rails || PostgreSql || JavaScript || React  </Header.Content>
-     </div>
-  </div>
+   <Parallax
+      bgImage={Waves}
+      style={{height:'100vh', width:'100%',}}
+      bgImageAlt="SLC Mountains covered in snow"
+      strength={-100}
+       >
+       <div className="homeBox">
+        <div className="grid-header">
+         <Header.Content as="h1" className="nameHead">Chris McGivney</Header.Content>
+         <Header.Content className="homeHead"> Aspiring Full Stack Developer </Header.Content>
+         <Header.Content className="homeHead"> Ruby on Rails || PostgreSql || JavaScript || React  </Header.Content>
+        </div>
+       </div>
    
-   <div className="grid-about">  
-    <Header.Content className="contentHeaders">Welcome</Header.Content>
+    </Parallax>
+  <div className="homeContainer"></div>
+   <div className="about">  
+    <Header.Content as="h1" className="contentHeaders">Welcome</Header.Content>
         <Header.Content>
           <p>
             I live in Park City, Utah and have called Utah home for the past 15 years. I grew up in
@@ -34,21 +56,9 @@ const Home = () => (
           </p>
         </Header.Content>
    </div>
-  {/* I cant seem to move the content Image to the center of the cell!?!?! */}
-  {/* <div className="grid-img1">
-   <div className="polaroid">
-      <img
-       src={Alaska}
-       alt="Chris in Alaska"
-       className="alaskaImg"
-       />
-      <div className="polaroidText">
-        <p>Lisa, my wife & I biking across Alaska</p>
-      </div>
-    </div>
-  </div> */}
-  <div className="grid-main">
-    <h3 className="contentHeaders">"The Dream Job"</h3>
+
+   <div className="main">
+    <Header.Content as="h1" className="contentHeaders">"The Dream Job"</Header.Content>
           <p className="mainTxt">Work at a company where I believe in the product, culture and community impact.</p>
           <p className="mainTxt">A position that challenges and teaches me every day, where I am a part of a team and am making a positive contribution to the mission of the company.</p>
           <p className="mainTxt">A position I can grow in and with, through hard work and thoughtful collaboration.</p>
@@ -56,8 +66,8 @@ const Home = () => (
     </div>
 
     <div className="successBlock">
-     <h3 className="contentHeaders">My Strategy For Success</h3>
-      <div className="grid-success">
+     <Header.Content as="h1" className="contentHeaders">My Strategy For Success</Header.Content>
+      <div className="success">
        <ul className="col-1">
            <p><li>Work on a personal project everyday</li></p>
            <p><li>Choose a new tool to learn each week/month</li></p>

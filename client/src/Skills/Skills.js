@@ -1,5 +1,5 @@
 import React from 'react'
-import {Grid, Image, Icon, Container} from 'semantic-ui-react'
+import {Grid, Image, Icon,} from 'semantic-ui-react'
 import styled from 'styled-components'
 import CSS3 from '../images/CSS3.png'
 import ES6 from '../images/ES6.png'
@@ -90,17 +90,17 @@ skillsArr.push(github)
 const Skills = () => (
   <div className="skillsContainer">
    <Grid className="" stackable>
-    { skillsArr.map( skill => 
-      <Grid.Column key={skill.id} width={4}>
-         <div className="panel">
-           <div className="front">
-            <Image key={skill.id} src={skill.image} alt={skill.image_alt} width="150px" height="150px"/>
+    { skillsArr.map( (skill, index) => 
+      <Grid.Column key={index} width={4}>
+         <div key={index} className="panel">
+           <div key={index} className="front">
+            <Image src={skill.image} alt={skill.image_alt} width="150px" height="150px"/>
            </div>
-            <div className="back" key={skill.id}> 
-             <div  key={skill.id}>
-               <p className="pad" key={skill.id}>{skill.comment}</p> 
+            <div className="back"> 
+             <div>
+               <p className="pad">{skill.comment}</p> 
           
-              <div key={skill.id}>
+              <div>
                 { function() {
                   let stars = [];
                   for (let i=0; i < skill.star_count; i++) {
