@@ -4,26 +4,13 @@ import {Header, } from 'semantic-ui-react'
 import Waves from "../images/buckskinGultch.jpg"
 import { Parallax,} from 'react-parallax';
 
-const insideStyles = {
-  background: "#A8D6EB",
-  padding: 20,
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%,-50%)",
-  borderRadius: "50%",
-  height: '20rem',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center'
-};
 
 const Home = () => (
 <>
    <Parallax
       bgImage={Waves}
       style={{height:'100vh', width:'100%',}}
-      bgImageAlt="SLC Mountains covered in snow"
+      bgImageAlt="Buckskin Gultch slot canyon, with two hikers"
       strength={-100}
        >
        <div className="homeBox">

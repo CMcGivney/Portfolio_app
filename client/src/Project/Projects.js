@@ -64,7 +64,6 @@ const Projects = () => (
     </Item.Group>
    </Container>
 )
-console.log(projectData)
 
 
 export default Projects;

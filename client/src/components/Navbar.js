@@ -1,8 +1,14 @@
 import React from 'react'
 import { AuthConsumer, } from "../providers/AuthProvider";
-import { Menu, } from 'semantic-ui-react'
+import { Menu, Image } from 'semantic-ui-react'
 import { Link, withRouter, } from 'react-router-dom'
 import DropDownMenu from './DropDownMenu.js'
+import Logo from '../images/1984Logo.png'
+
+const navStyles = {
+  padding: '1rem',
+  
+}
 
 
 class Navbar extends React.Component {
@@ -37,6 +43,19 @@ class Navbar extends React.Component {
     return (
       <div>
         <Menu style={{backgroundColor: "lightskyblue",}} pointing secondary fixed="top">
+        <Link to='/'>
+            <Menu.Item
+              name='Home'
+              id='home'
+             >
+              <Image
+              style={{width: "3rem", height: "3rem"}}
+              src={Logo} 
+              alt="1984 Creations Logo"
+             />
+            </Menu.Item>
+          </Link>
+          <Menu.Menu position="right" style={navStyles}>
           <Link to='/'>
             <Menu.Item
               name='home'
@@ -65,6 +84,7 @@ class Navbar extends React.Component {
               active={this.props.location.pathname === '/contact'}
             />
           </Link>
+          </Menu.Menu>
         </Menu>
       </div>
       )

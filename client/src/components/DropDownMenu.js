@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link, withRouter} from 'react-router-dom'
 import {Menu, Dropdown, Image, Container} from 'semantic-ui-react'
-import Logo from '../images/ocean-wave-sunset.jpg'
+import Logo from '../images/1984Logo.png'
 
 
 class DropDownMenu extends React.Component {
@@ -22,9 +22,8 @@ class DropDownMenu extends React.Component {
             style={{padding: ".5rem" }} 
             >
             <Image 
-              size='tiny' 
               src={Logo} 
-              style={{ padding: '0', margin: ".5em" }} />
+              style={{ padding: '0', margin: ".5em", width: "4rem", height: "4rem"}} />
              </Menu.Item>
              </Link>
               <Dropdown 
