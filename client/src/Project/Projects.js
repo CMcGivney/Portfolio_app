@@ -48,8 +48,8 @@ const Projects = () => (
          href={project.link}
          src={project.image}
          alt={project.image_alt}
-         rel="noopener noreferrer"
-         target="_blank"
+         rel= "noopener noreferrer"
+         target= "_blank"
          className="imageProduct"
          size="medium"
         />
