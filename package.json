@@ -23,5 +23,6 @@
   "bugs": {
     "url": "https://github.com/CMcGivney/Portfolio_app/issues"
   },
-  "homepage": "https://github.com/CMcGivney/Portfolio_app#readme"
+  "homepage": "https://github.com/CMcGivney/Portfolio_app#readme",
+  "dependencies": {}
 }
