@@ -44,18 +44,18 @@ state = { notes: [], }
              <Card.Content extra>
               <Button 
                 color='red' 
-                icon basic 
-                onClick={() => this.destroyNote(note.id)}
+                icon="trash" 
+                basic 
+                onClick={() => this.destroyNote(note.id)
+                }
                 >
-                <Icon name='trash' /> 
               </Button>
               <Link to={`/notes/${note.id}/edit`}>
                <Button 
                  color='blue' 
-                 icon 
+                 icon="pencil"
                  basic 
                  >
-                <Icon name='pencil' />
                </Button>
               </Link>
              </Card.Content>

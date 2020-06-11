@@ -48,7 +48,7 @@ handleSubmit = (e) => {
         <Form onSubmit={this.handleSubmit}>
         <Form.Input
         name="body"
-        placeholder="example: I think this website is great!..."
+        placeholder="example: I think this website looks great!..."
         value={body}
         onChange={this.handleChange}
         required

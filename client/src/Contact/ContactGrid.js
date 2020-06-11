@@ -2,7 +2,7 @@ import React from 'react'
 import SocialFollow from './SocialFollow'
 import distantStare from '../images/distantStare.jpg'
 import Notes from '../Notes/PostItNotes'
-import {Image, Card, } from 'semantic-ui-react'
+import {Image, Card, Icon} from 'semantic-ui-react'
 import './Contact.css'
 
 const person = {
@@ -30,13 +30,21 @@ const Contact = () => (
            />
         <Card.Header>{person.name}</Card.Header>
         <Card.Meta>{person.devMeta}</Card.Meta>
-        <Card.Description>{person.description}<strong>{person.strong}</strong></Card.Description>
+        <Card.Description>{person.description}</Card.Description>
+        <Card.Description>{person.strong}</Card.Description>
       </Card.Content>
        <Card.Content className="socialFollows">
         <SocialFollow/>
        </Card.Content>
         <Card.Content className="emailBox">
-           <a className="email" href={person.emailHref}>{person.email}</a>
+           <Icon name="mail"/>
+           <a 
+              rel= "noopener noreferrer"
+              target= "_blank"
+              className="email" 
+              href={person.emailHref}>
+              {person.email}
+           </a>
        </Card.Content>
      </Card>
     </div> 

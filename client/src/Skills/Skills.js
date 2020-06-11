@@ -89,11 +89,11 @@ skillsArr.push(github)
   
 const Skills = () => (
   <div className="skillsContainer">
-   <Grid className="" stackable>
+   <Grid stackable>
     { skillsArr.map( (skill, index) => 
-      <Grid.Column key={index} width={4}>
+      <Grid.Column width={4}>
          <div key={index} className="panel">
-           <div key={index} className="front">
+           <div className="front">
             <Image src={skill.image} alt={skill.image_alt} width="150px" height="150px"/>
            </div>
             <div className="back"> 

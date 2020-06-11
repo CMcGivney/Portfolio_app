@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Grid, Image} from 'semantic-ui-react'
+import { Header, Grid, Image, Icon} from 'semantic-ui-react'
 import SocialFollow from './SocialFollow'
 import pcPano from '../images/pcPano.jpg'
 import distantStare from '../images/distantStare.jpg'
@@ -34,7 +34,7 @@ const Contact = () => (
       </Grid.Column>
         <Grid.Column className="aboutMe">
             <Header as="h3" textAlign="center">Drop Me A Email</Header>
-            <a href="mailto:cmmcgivney84@gmail.com">CmMcGivney84@gmail.com</a>
+            <Icon name="mail"/><a href="mailto:cmmcgivney84@gmail.com">CmMcGivney84@gmail.com</a>
          </Grid.Column>
         <Grid.Column>
         <Image 
