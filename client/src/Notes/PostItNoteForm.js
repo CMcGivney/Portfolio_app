@@ -42,7 +42,7 @@ handleSubmit = (e) => {
     const { match: {params: {id, } } } = this.props
     const { body, name,  } = this.state
     return (
-      <Container>
+      <Container style={{marginTop:'3rem'}}>
       <Header style={{textDecoration: "underline"}}> {id ? 'Edit Your' : 'Add A'} Note </Header>
       <Header as="h4" style={{textAlign: "left"}}>Note:</Header>
         <Form onSubmit={this.handleSubmit}>
