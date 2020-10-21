@@ -1,11 +1,18 @@
 .skillsContainer {
-  padding: 2rem 8rem 3rem 8rem;
-  margin: 5rem 0 0 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   width: 100%;
-  
+  height: 100vh; 
+  margin: 2.5rem 0 0 0 
 }
-
-
+.skillsColumn {
+ justify-self: center;
+ padding: 1rem 1rem;
+ 
+}
 
 /* this is the styles and animation for the tile flip */
 
@@ -18,6 +25,7 @@
   perspective: 600px;
   border-radius: 50px;
   flex-wrap: wrap;
+  
 }
 
 .pad {
@@ -39,6 +47,7 @@
   -webkit-backface-visibility: hidden;
   transition: all .4s ease-in-out;
   border-radius: 50px;
+  align-self: center;
 }
 
 .panel:hover .front {
@@ -74,6 +83,14 @@
 /* Mobile size Media Query's */
 @media only screen and (max-width: 768px) {
   .skillsContainer {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1rem;
+    margin: 4.5rem 0 0 0 
+  }
+  .skillsColumn {
+    display: flex;
+    flex-flow: row wrap;
     padding: 1rem;
   }
 }

@@ -20,7 +20,7 @@ const App = () => (
   <>
    <Navbar/>
     {/* <FetchUser> */}
-     <Container fluid style={{ padding: "0px"}}>
+     <Container fluid style={{ padding: "0px",}}>
       <ScrollToTop />
       <Switch>
        <Route exact path='/' component={Home} />
