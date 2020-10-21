@@ -9,7 +9,7 @@ const Home = () => (
     bgImage={Waves}
     style={{ height: "100vh", width: "100%" }}
     bgImageAlt="Buckskin Gultch slot canyon, with two hikers"
-    strength={-100}
+    // strength={-100}
   >
     <div className="homeBox">
       <div className="grid-header">
