@@ -19,7 +19,7 @@ import BootsReact from '../images/BootstrapReact.png'
 import Semantic from '../images/Semantic.png'
 import './Skills.css'
 import '../App.css'
-
+//can you build this so the squares can  move around
 class Skill { 
   constructor(image, image_alt, comment, star_count, darkstar_count) {
    this.image = image;
