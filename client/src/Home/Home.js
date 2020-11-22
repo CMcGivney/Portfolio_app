@@ -18,7 +18,7 @@ const Home = () => (
         </Header.Content>
         <Header.Content className="homeHead">
           {" "}
-          Aspiring Full Stack Developer{" "}
+          Full Stack Developer{" "}
         </Header.Content>
         <Header.Content className="homeHead">
           {" "}

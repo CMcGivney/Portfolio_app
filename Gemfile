@@ -8,7 +8,7 @@ gem 'rails', '~> 5.2.3'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
-gem "puma", ">= 3.12.2"
+gem "puma", ">= 5.0.4"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -21,7 +21,7 @@ gem "puma", ">= 3.12.2"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem "nokogiri", ">= 1.10.8"
+gem "nokogiri", ">= 1.10.9"
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 gem "devise_token_auth", "~> 1.1.2"
