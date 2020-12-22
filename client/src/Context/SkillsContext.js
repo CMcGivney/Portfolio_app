@@ -15,6 +15,12 @@ import Sqlectron from "../images/sqlectron.png";
 import BootStrap from "../images/BootStrap.png";
 import BootsReact from "../images/BootstrapReact.png";
 import Semantic from "../images/Semantic.png";
+import MongoDB from "../images/mongodb.svg";
+import GraphQL from "../images/graphql.svg";
+import Tailwind from "../images/tailwind.png";
+import Apollo from "../images/apollo-icon.png";
+
+
 const SkillsContext = createContext();
 
 const SkillsProvider = ({children}) => {
@@ -44,7 +50,11 @@ const SkillsProvider = ({children}) => {
     esc6,
     sqlectron,
     bootstrap,
-    github;
+    github,
+    mongoDb,
+    graphQL,
+    tailwind,
+    apollo;
   
   //create instance of skill (image, image_alt, comment, star_count, darkstar_count) and push to array
   html = new Skill(HTML5, "HTML5 Logo", "Feel Confident", 3, 2);
@@ -142,6 +152,44 @@ const SkillsProvider = ({children}) => {
     2
   );
   skillsArr.push(github);
+
+  mongoDb = new Skill(
+    MongoDB,
+    "MongoDB logo",
+    "Exploring Different Databases",
+    2,
+    3
+  );
+  skillsArr.push(mongoDb);
+
+  graphQL = new Skill(
+    GraphQL,
+    " GraphQL Logo",
+    "Language Agnostic Database Querying",
+    2,
+    3
+  );
+  skillsArr.push(graphQL);
+
+  tailwind = new Skill(
+    Tailwind,
+    " Tailwind Logo",
+    "Love learning this new CCS library",
+    3,
+    2
+  );
+  skillsArr.push(tailwind);
+
+  apollo = new Skill(
+    Apollo,
+    "Apollo Logo",
+    "Learning, excited to use in my projects",
+    2,
+    3
+  );
+  skillsArr.push(apollo);
+
+
   return (
     <SkillsContext.Provider value={skillsArr}>{children}</SkillsContext.Provider>
   )

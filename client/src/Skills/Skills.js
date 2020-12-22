@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import { SimpleImg } from "react-simple-img";
-import { Icon } from "semantic-ui-react";
+import { Icon, } from "semantic-ui-react";
 import styled from "styled-components";
 import { SkillsContext, SkillsProvider } from "../Context/SkillsContext";
 import "./Skills.css";
@@ -11,10 +11,11 @@ const SkillsComponent = () => {
 const skillsArr = useContext(SkillsContext)
 
 return (
+  
   <div className="skillsContainer">
     
       {skillsArr.map((skill, index) => (
-        <div className="skillsColumn">
+        <div className="skillsColumn" key={index} >
           <div key={index} className="panel">
             <div className="front">
               <SimpleImg
@@ -61,6 +62,7 @@ return (
       ))}
     
   </div>
+  
  );
 }
 const Skills = () => {
