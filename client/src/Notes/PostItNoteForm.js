@@ -1,18 +1,20 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { Form, Container, Button, Header,  } from 'semantic-ui-react'
 import axios from 'axios';
 import {Link, } from 'react-router-dom'
+import { AuthContext } from "../providers/auth"
 
 class PostItNoteForm extends React.Component {
-state = { body: '', name: '', }
+  state = { body: '', username: "", }
+  const { user } = useContext(AuthContext);
 
  componentDidMount() {
    const { match: {params: {id, } } } = this.props
    if (id)
    axios.get(`/api/notes/${id}`)
    .then(res => {
-     const{body, name,} = res.data
-    this.setState({body, name, })
+     const{body, username,} = res.data
+    this.setState({body, username, })
    })
    .catch(err => {
      console.log(err.response)
@@ -40,7 +42,7 @@ handleSubmit = (e) => {
 
   render() {
     const { match: {params: {id, } } } = this.props
-    const { body, name,  } = this.state
+    const { body, username,  } = this.state
     return (
       <Container style={{marginTop:'3rem'}}>
       <Header style={{textDecoration: "underline"}}> {id ? 'Edit Your' : 'Add A'} Note </Header>
@@ -55,9 +57,9 @@ handleSubmit = (e) => {
         />
         <Header as="h4" style={{textAlign: "left"}}>Name:</Header>
         <Form.Input
-        name="name"
-        placeholder="example: Love, Mom"
-        value={name}
+        name="Username"
+        placeholder={username}
+        value={username}
         onChange={this.handleChange}
         required
         />

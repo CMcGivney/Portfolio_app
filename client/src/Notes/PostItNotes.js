@@ -1,26 +1,26 @@
-import React from "react"
+import React, {useContext, useState, useEffect} from "react"
 import axios from 'axios'
 import {Link, } from "react-router-dom"
 import {Card, Grid, Button, Icon, Container, } from "semantic-ui-react"
-// import { AuthConsumer, } from "../providers/AuthProvider"
+import NotesForm from "./PostItNoteForm.js"
+import { AuthContext } from "../providers/auth"
 
-class PostItNotes extends React.Component {
+function PostItNotes(props) {
+  const { user } = useContext(AuthContext);
+  console.log(user)
+  const [notes, setNotes]= useState([])
+
   
-state = { notes: [], }
+    useEffect(() => {
+      const fetchData = async () => {
+        const result = await axios.get("/api/notes");
+        setNotes(result.data);
+      };
+   
+      fetchData();
+    }, []);
 
-  componentDidMount() {
-    axios.get("/api/notes")
-      .then( res => { 
-        this.setState({ notes: res.data })
-     })
-     .catch( err => {
-       console.log(err.response)
-     })
-  }
-
-
-  allNotes = () => {
-    const {notes} = this.state
+  const allNotes = () => {
     if (notes.length <= 0)
     return <h2>No Notes Yet...</h2>
     return (
@@ -36,17 +36,21 @@ state = { notes: [], }
                     {note.body}
                   </Card.Header>
                    <Card.Meta>
-                    {note.name}
+                    {note.username}
+                   </Card.Meta>
+                   <Card.Meta>
+                    {note.created_at}
                    </Card.Meta>
                 </Card.Content>
                 
             
+             {user && (
              <Card.Content extra>
               <Button 
                 color='red' 
                 icon="trash" 
                 basic 
-                onClick={() => this.destroyNote(note.id)
+                onClick={() => destroyNote(note.id)
                 }
                 >
               </Button>
@@ -58,7 +62,9 @@ state = { notes: [], }
                  >
                </Button>
               </Link>
+
              </Card.Content>
+             )}
        </Card>
          )
         }
@@ -69,31 +75,43 @@ state = { notes: [], }
   )
 }
 
-    destroyNote = (id) => {
+   const destroyNote = (id) => {
       axios.delete(`/api/notes/${id}`)
       .then(res => {
         const {notes, } = this.state
-        this.setState({notes: notes.filter(q => q.id !== id), })
+        setNotes({notes: notes.filter(q => q.id !== id), })
       })
     }
+     const userPresent = () => {
+       if (user) {
+        return <Link to="/notes/new">
+          <Button color="black">
+           <Icon name="add" />
+             Leave me a Note!
+           </Button>
+         </Link>
+       } else {
+         return <Link to="/login">
+          <Button color="black">
+           <Icon name="add" />
+             Leave me a Note!
+           </Button>
+         </Link>
+       }
+       
+     }
     
     
-    render() {
       return(
-        
+    
         <Container style={{marginTop:'5rem'}}>
-          <Link to="/notes/new">
-           <Button color="black">
-            <Icon name="add" />
-              Leave me a Note!
-            </Button>
-          </Link>
-        {this.allNotes()}
+        {userPresent()}
+        {allNotes()}
       </Container>
       
       )
     }
-  }
   
+ 
   export default PostItNotes
   

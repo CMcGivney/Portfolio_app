@@ -9,8 +9,8 @@ const person = {
   name: "Chris McGivney",
   image: distantStare,
   imageAlt: "Snowboarder staring into the distance",
-  devMeta: "Aspiring Developer",
-  description: "When I'm not glued to my keyboard studying and coding, I'm outdoors, either running, mountain biking, snowboarding, or just walking the dog and kiddo.",
+  devMeta: "Full Stack Developer",
+  description: "When I'm not glued to my keyboard coding or reading Docs, I'm outdoors either running, mountain biking, snowboarding, or just walking the dog and kiddo.",
   strong:"Come join me!",
   email:"CmMcGivney84@gmail.com",
   emailHref: "mailto:cmmcgivney84@gmail.com?Subject=Hello%20Chris"

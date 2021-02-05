@@ -9,7 +9,7 @@ const Home = () => (
     bgImage={Waves}
     style={{ height: "100vh", width: "100%" }}
     bgImageAlt="Buckskin Gultch slot canyon, with two hikers"
-    // strength={-100}
+    strength={-100}
   >
     <div className="homeBox">
       <div className="grid-header">
@@ -22,7 +22,7 @@ const Home = () => (
         </Header.Content>
         <Header.Content className="homeHead">
           {" "}
-          Ruby on Rails || PostgreSql || JavaScript || React{" "}
+          GraphQL || Node || JavaScript || React{" "}
         </Header.Content>
       </div>
     </div>
