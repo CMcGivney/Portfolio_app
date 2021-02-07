@@ -1,77 +1,89 @@
-import React, {useContext} from 'react'
-import { Form, Container, Button, Header,  } from 'semantic-ui-react'
-import axios from 'axios';
-import {Link, } from 'react-router-dom'
-import { AuthContext } from "../providers/auth"
+import React, { useContext, useState, useEffect } from "react";
+import { Form, Container, Button, Header } from "semantic-ui-react";
+import axios from "axios";
+import { Link, useParams, useHistory } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProvider";
+import { useForm } from "../util/hooks";
 
-class PostItNoteForm extends React.Component {
-  state = { body: '', username: "", }
+function PostItNoteForm() {
+  const { values, onChange } = useForm({
+    body: "",
+    username: "",
+  });
+
+  const { push } = useHistory();
+  const { id } = useParams();
   const { user } = useContext(AuthContext);
+  const {edit, setEdit} = useState()
 
- componentDidMount() {
-   const { match: {params: {id, } } } = this.props
-   if (id)
-   axios.get(`/api/notes/${id}`)
-   .then(res => {
-     const{body, username,} = res.data
-    this.setState({body, username, })
-   })
-   .catch(err => {
-     console.log(err.response)
-   })
- }
+  useEffect(() => {
+    const fetchData = async () => {
+      axios
+        .get(`/api/user/${user.id}/notes/${id}`)
+        .then((res) => {
+          const { username, body } = res.data;
+          setEdit(username, body);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+  }, []);
 
- handleChange = (e) => {
-  const { target: { name, value } } = e
-  this.setState({ [name]: value })
-}
+  const { body, username } = { values };
 
-handleSubmit = (e) => {
-  e.preventDefault()
-  const notes = { ...this.state }
-  const { match: { params: { id } }, history: { push } } = this.props
-  if (id) {
-    axios.put(`/api/notes/${id}`, notes)
-      .then(res => push("/contact"))
-  } else {
-    axios.post(`/api/notes`, notes)
-      .then(res => push("/contact"))
-  }
-}
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (id) {
+      axios
+        .put(`/api/user/${user.id}/notes/${id}`, values)
+        .then((res) => push("/contact"));
+    } else {
+      axios
+        .post(`/api/user/${user.id}/notes`, values)
+        .then((res) => push("/contact"));
+    }
+  };
 
-
-  render() {
-    const { match: {params: {id, } } } = this.props
-    const { body, username,  } = this.state
-    return (
-      <Container style={{marginTop:'3rem'}}>
-      <Header style={{textDecoration: "underline"}}> {id ? 'Edit Your' : 'Add A'} Note </Header>
-      <Header as="h4" style={{textAlign: "left"}}>Note:</Header>
-        <Form onSubmit={this.handleSubmit}>
+  return (
+    <Container style={{ marginTop: "5rem" }}>
+      <Header style={{ textDecoration: "underline" }}>
+        {" "}
+        {id ? "Edit Your" : "Add A"} Note{" "}
+      </Header>
+      <Header as="h4" style={{ textAlign: "left" }}>
+        Note:
+      </Header>
+      <Form onSubmit={handleSubmit}>
         <Form.Input
-        name="body"
-        placeholder="example: I think this website looks great!..."
-        value={body}
-        onChange={this.handleChange}
-        required
+          name="body"
+          placeholder="example: I think this website looks great!..."
+          value={body}
+          onChange={onChange}
+          required
         />
-        <Header as="h4" style={{textAlign: "left"}}>Name:</Header>
+        <Header as="h4" style={{ textAlign: "left" }}>
+          Name:
+        </Header>
         <Form.Input
-        name="Username"
-        placeholder={username}
-        value={username}
-        onChange={this.handleChange}
-        required
+          name="username"
+          placeholder="Username"
+          value={username}
+          onChange={onChange}
+          required
         />
-      
-        <Button color="green" inverted>Submit</Button>
+
+        <Button color="green" inverted>
+          Submit
+        </Button>
         <Link to="/contact">
-        <Button color="blue" inverted>Back</Button>
+          <Button color="blue" inverted>
+            Back
+          </Button>
         </Link>
-        </Form>
-      </Container>
-    )
-  }
+      </Form>
+    </Container>
+  );
 }
 
-export default PostItNoteForm
+export default PostItNoteForm;

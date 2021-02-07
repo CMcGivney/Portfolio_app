@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/NavBar";
 import Home from "./Home/Home";
 import Projects from "./Project/Projects";
 import Skills from "./Skills/Skills";
@@ -30,10 +30,10 @@ const App = () => (
           <Route exact path="/skills" component={Skills} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/notes/new" component={NotesForm} />
-          <Route exact path="/notes/:id/edit" component={NotesForm} />
+          <Route exact path="/user/:user_id/notes/:id" component={NotesForm} />
           <Route
             exact
-            path="/notes/:id/edit"
+            path="/user/:user_id/notes/:id/edit"
             render={(props) => <NotesForm edit {...props} />}
           />
           <Route exact path="/blog" component={Blog} />

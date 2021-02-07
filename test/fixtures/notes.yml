@@ -2,8 +2,10 @@
 
 one:
   body: MyString
-  name: MyString
+  username: MyString
+  user: one
 
 two:
   body: MyString
-  name: MyString
+  username: MyString
+  user: two
