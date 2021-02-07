@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./components/NavBar";
+import Navbar from "./components/Navbar";
 import Home from "./Home/Home";
 import Projects from "./Project/Projects";
 import Skills from "./Skills/Skills";
