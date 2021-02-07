@@ -3,15 +3,15 @@ import { AuthConsumer, } from "../providers/AuthProvider";
 import { Button, Form, Segment, Header, } from 'semantic-ui-react';
 
 class Register extends React.Component {
-  state = {username: '', email: '', password: '', passwordConfirmation: '', };
+  state = {name: '', email: '', password: '', passwordConfirmation: '', };
   
   handleSubmit = (e) => {
     e.preventDefault();
-    const {username, email, password, passwordConfirmation } = this.state;
+    const {name, email, password, passwordConfirmation } = this.state;
     const { auth: { handleRegister, }, history, } = this.props;
 
     if (password === passwordConfirmation)
-      handleRegister({username, email, password, passwordConfirmation, }, history);
+      handleRegister({name, email, password, passwordConfirmation, }, history);
     else
       alert('Passwords Do Not Match!')
   }
@@ -22,7 +22,7 @@ class Register extends React.Component {
   }
   
   render() {
-    const {username, email, admin, password, passwordConfirmation, } = this.state;
+    const {name, email, admin, password, passwordConfirmation, } = this.state;
    
     return (
       <Segment basic style={{marginTop: '5rem'}}>
@@ -33,14 +33,13 @@ class Register extends React.Component {
             required
             autoFocus
             name='name'
-            value={username}
-            placeholder='Username?'
+            value={name}
+            placeholder='Username'
             onChange={this.handleChange}
           />
           <Form.Input
             label="Email"
             required
-            autoFocus
             name='email'
             value={email}
             placeholder='Email'
