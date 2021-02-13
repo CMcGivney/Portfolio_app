@@ -14,8 +14,21 @@ export class AuthProvider extends React.Component {
         console.log(res.data.data)
         history.push("/notes/new");
       })
-    .catch( res => {
-      console.log(res);
+    .catch(function (error) {
+      if(error.response) {
+      console.log("error", error.response.status);
+      console.log(error.response.headers);
+      console.log(error.response.data);
+      } else if (error.request) {
+        // The request was made but no response was received
+        // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+        // http.ClientRequest in node.js
+        console.log(error.request);
+      } else {
+        // Something happened in setting up the request that triggered an Error
+        console.log('Error', error.message);
+      }
+      console.log(error.config);
     })
   }
   
@@ -23,7 +36,7 @@ export class AuthProvider extends React.Component {
     axios.post("/api/auth/sign_in", user)
       .then( res => {
         this.setState({ user: res.data.data, });
-        history.push("/notes/new");
+        history.push("/contact");
       })
       .catch( res => {
         console.log(res);

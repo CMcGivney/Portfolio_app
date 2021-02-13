@@ -4,52 +4,49 @@ import axios from "axios";
 import { Link, useParams, useHistory } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import { useForm } from "../util/hooks";
+import {useFormInput, } from "../util/useFormInput"
 
 function PostItNoteForm() {
-  const { values, onChange } = useForm({
-    body: "",
-    username: "",
-  });
+const body = useFormInput("")
+const username = useFormInput("")
 
   const { push } = useHistory();
-  const { id } = useParams();
+  const {params, id } = useParams();
   const { user } = useContext(AuthContext);
   const {edit, setEdit} = useState()
 
-  useEffect(() => {
+ 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (id) {
+      axios
+        .put(`/api/user/${user.id}/notes/${id}`, {notes: username.value, body: body.value, })
+        .then((res) => push("/contact"));
+    } else {
+      axios
+        .post(`/api/user/${user.id}/notes`, {notes: username.value, body: body.value, })
+        .then((res) => push("/contact"));
+    }
+  };
+ useEffect(() => {
     const fetchData = async () => {
       axios
         .get(`/api/user/${user.id}/notes/${id}`)
         .then((res) => {
-          const { username, body } = res.data;
-          setEdit(username, body);
+          setEdit(res.data);
         })
         .catch((err) => {
           console.log(err);
         });
     };
-  }, []);
-
-  const { body, username } = { values };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (id) {
-      axios
-        .put(`/api/user/${user.id}/notes/${id}`, values)
-        .then((res) => push("/contact"));
-    } else {
-      axios
-        .post(`/api/user/${user.id}/notes`, values)
-        .then((res) => push("/contact"));
-    }
-  };
-
+    fetchData();
+  }, );
   return (
     <Container style={{ marginTop: "5rem" }}>
       <Header style={{ textDecoration: "underline" }}>
         {" "}
         {id ? "Edit Your" : "Add A"} Note{" "}
+        <p>{id}</p>
       </Header>
       <Header as="h4" style={{ textAlign: "left" }}>
         Note:
@@ -59,8 +56,9 @@ function PostItNoteForm() {
           name="body"
           placeholder="example: I think this website looks great!..."
           value={body}
-          onChange={onChange}
+          // onChange={onChange}
           required
+          {...body}
         />
         <Header as="h4" style={{ textAlign: "left" }}>
           Name:
@@ -69,8 +67,9 @@ function PostItNoteForm() {
           name="username"
           placeholder="Username"
           value={username}
-          onChange={onChange}
+          // onChange={onChange}
           required
+          {...username}
         />
 
         <Button color="green" inverted>
