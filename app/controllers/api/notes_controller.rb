@@ -19,8 +19,7 @@ class Api::NotesController < ApplicationController
   end
 
   def update
-    note = current_user.note.update(note_params)
-    if note.save
+    if @note.update(note_params)
       render json: @note
     else
       render json: @note.errors, status: 422
@@ -38,8 +37,9 @@ class Api::NotesController < ApplicationController
   end
   def set_user
     @user = User.find(params[:id])
+    current_user = @user
   end
   def note_params
-    params.require(:note).permit(:name, :body, :user_id )
+    params.require(:note).permit(:username, :body, :user_id )
   end
 end

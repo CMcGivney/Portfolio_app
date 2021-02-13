@@ -25,7 +25,7 @@ return (
                 height="150px"
               />
             </div>
-            <div className="back">
+            <div className="back" ket={index}>
               <div>
                 <p className="pad">{skill.comment}</p>
 

@@ -6,14 +6,14 @@ import Skills from "./Skills/Skills";
 import Contact from "./Contact/ContactGrid";
 import Blog from "./components/Blog";
 import NoMatch from "./Devise/NoMatch";
-import NotesForm from "./Notes/PostItNoteForm";
+import NotesForm from "./Notes/NoteForm";
 import ScrollToTop from "./components/scrollToTop";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Container } from "semantic-ui-react";
 import Login from "./Devise/Login";
 import Register from "./Devise/Register";
 import FetchUser from "./Devise/FetchUser";
-import ProtectedRoute from "./Devise/ProtectedRoute";
+// import ProtectedRoute from "./Devise/ProtectedRoute";
 
 const App = () => (
   <>

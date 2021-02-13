@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { Card, Grid, Button, Icon, Container } from "semantic-ui-react";
+import { Card, Button, Icon, Container } from "semantic-ui-react";
 import moment from 'moment'
 
 import { AuthContext } from "../providers/AuthProvider";
@@ -9,6 +9,7 @@ import { AuthContext } from "../providers/AuthProvider";
 function PostItNotes(props) {
   const { user } = useContext(AuthContext);
   const [notes, setNotes] = useState([]);
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,15 +23,14 @@ function PostItNotes(props) {
   const allNotes = () => {
     if (notes.length <= 0) return <h2>No Notes Yet...</h2>;
     return (
-      <Grid stackable style={{ marginTop: "2rem" }}>
-        <Grid.Row>
-          <Grid.Column stackable="true">
-            <Card.Group className="corkboard">
+    
+            
+            <Card.Group stackable doubling className="corkboard">
               {notes.map((note) => (
-                <Card className="postIts" key={note.id}>
+                <Card raised  key={note.id}>
                   <Card.Content>
                     <Card.Header>{note.body}</Card.Header>
-                    <Card.Meta>{note.username}</Card.Meta>
+                    <Card.Meta>{user ? user.name : note.username}</Card.Meta>
                     <Card.Meta>{moment(note.created_at).format("MMM Do YYYY, h:mm:ss a")}</Card.Meta>
                   </Card.Content>
                   {user ? (
@@ -50,10 +50,9 @@ function PostItNotes(props) {
                   ) : null}
                 </Card>
               ))}
-            </Card.Group>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
+              </Card.Group>
+            
+         
     );
   };
 
@@ -83,6 +82,7 @@ function PostItNotes(props) {
   return (
     <Container style={{ marginTop: "5rem" }}>
       {userPresent()}
+      <hr/>
       {allNotes()}
     </Container>
   );

@@ -56,6 +56,12 @@ class Login extends React.Component {
             <Button primary type="submit">
               Submit
             </Button>
+            <Link to="/contact">
+              {" "}
+              <Button primary type="back">
+                Back
+              </Button>
+            </Link>
           </Segment>
         </Form>
       </Segment>
