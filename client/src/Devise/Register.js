@@ -32,8 +32,8 @@ class Register extends React.Component {
         <Header as="h1" textAlign="center">
           Register
         </Header>
-        <Form onSubmit={this.handleSubmit}>
-          <Form.Input
+        <Form style={{margin: '0 4rem'}} onSubmit={this.handleSubmit}>
+          {/* <Form.Input
             label="Username"
             required
             autoFocus
@@ -42,7 +42,7 @@ class Register extends React.Component {
             placeholder="Username"
             onChange={this.handleChange}
             type="text"
-          />
+          /> */}
           <Form.Input
             label="Email"
             required

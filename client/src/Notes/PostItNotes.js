@@ -30,7 +30,7 @@ function PostItNotes(props) {
                 <Card raised  key={note.id}>
                   <Card.Content>
                     <Card.Header>{note.body}</Card.Header>
-                    <Card.Meta>{user ? user.name : note.username}</Card.Meta>
+                    <Card.Meta>{note.username}</Card.Meta>
                     <Card.Meta>{moment(note.created_at).format("MMM Do YYYY, h:mm:ss a")}</Card.Meta>
                   </Card.Content>
                   {user ? (

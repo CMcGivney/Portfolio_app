@@ -35,7 +35,7 @@ const App = () => (
             exact
             path="/user/:user_id/notes/:id/edit"
             render={(props) => <NotesForm edit {...props} />}
-          />
+            />
           <Route exact path="/blog" component={Blog} />
         </Container>
       </Router>

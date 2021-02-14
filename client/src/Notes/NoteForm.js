@@ -1,22 +1,20 @@
 import React, { useContext, useState, useEffect } from "react";
-import axios from 'axios'
+import axios from "axios";
 import { Link, useParams, useHistory } from "react-router-dom";
 import { Form, Container, Button, Header } from "semantic-ui-react";
 
-
 import { AuthContext } from "../providers/AuthProvider";
 
-
 const PostItNoteForm = () => {
-  const [values, setValues] = useState({})
+  const [values, setValues] = useState({});
   const { push } = useHistory();
   const { id } = useParams();
-  const {user} = useContext(AuthContext)
+  const { user } = useContext(AuthContext);
 
-    // fetching users data to edit
-    useEffect(() => {
-      const fetchNoteData = async () => {
-        if (id) {
+  // fetching users data to edit
+  useEffect(() => {
+    const fetchNoteData = async () => {
+      if (id) {
         await axios
           .get(`/api/user/${user.id}/notes/${id}`)
           .then((res) => {
@@ -26,12 +24,13 @@ const PostItNoteForm = () => {
           .catch((error) => {
             console.log(error.response);
           });
-        } else {
-         return ""
-        }
-      };
-      fetchNoteData()
-    }, [id, user.id]);
+      } else {
+        alert`Thank you for leaving a note`;
+        //I would like to push the user.name to the username on notes but ow well, next time
+      }
+    };
+    fetchNoteData();
+  }, [id, user.id]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -41,37 +40,35 @@ const PostItNoteForm = () => {
     });
   };
 
-  const handleSubmit = () => { 
+  const handleSubmit = () => {
     if (id) {
       axios
         .put(`/api/user/${user.id}/notes/${id}`, values)
         .then((res) => push("/contact"))
-        .catch(function (error){
-           if (error.response) {
-             alert `Error, ${error.response} please try again`
-             console.log(error.response)
-             console.log(id)
-           }
-        })
-
+        .catch(function (error) {
+          if (error.response) {
+            alert`Error, ${error.response} please try again`;
+            console.log(error.response);
+          }
+        });
     } else {
-      
       axios
         .post(`/api/user/${user.id}/notes`, values)
         .then((res) => push("/contact"));
     }
-  }
+  };
   return (
     <Container style={{ marginTop: "5rem" }}>
       <Header style={{ textDecoration: "underline" }}>
         {" "}
         {id ? "Edit Your" : "Add A"} Note
       </Header>
+
       <Header as="h4" style={{ textAlign: "left" }}>
         Note:
       </Header>
+
       <Form onSubmit={handleSubmit}>
-      
         <Form.Input
           name="body"
           placeholder="example: I think this website looks great!..."
@@ -80,22 +77,19 @@ const PostItNoteForm = () => {
           required
           type="text"
         />
-       {user.id && id ? (
-         <>
+
         <Header as="h4" style={{ textAlign: "left" }}>
           Name:
         </Header>
         <Form.Input
           name="username"
           placeholder="Username"
-          value={id ? user.name : values.username}
+          value={values.username}
           onChange={handleChange}
           required
           type="text"
         />
-        </>)
-       : null}
-       
+
         <Button color="green" inverted>
           Submit
         </Button>
@@ -108,6 +102,5 @@ const PostItNoteForm = () => {
     </Container>
   );
 };
-
 
 export default PostItNoteForm;

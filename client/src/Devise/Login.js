@@ -31,8 +31,9 @@ class Login extends React.Component {
             {" "}
             here{" "}
           </Link>
-        </h4>
-        <Form onSubmit={this.handleSubmit}>
+        </h4> 
+        <Form style={{margin: '0 4rem'}} onSubmit={this.handleSubmit}>
+        
           <Form.Input
             label="Email"
             autoFocus
@@ -51,7 +52,7 @@ class Login extends React.Component {
             type="password"
             onChange={this.handleChange}
           />
-
+        
           <Segment textAlign="center" basic>
             <Button primary type="submit">
               Submit
