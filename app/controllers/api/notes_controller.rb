@@ -40,6 +40,6 @@ class Api::NotesController < ApplicationController
     current_user = @user
   end
   def note_params
-    params.require(:note).permit(:username, :body, :user_id )
+    params.require(:note).permit(:username, :body, :user_id, :id, :created_at, :updated_at )
   end
 end
