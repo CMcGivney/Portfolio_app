@@ -21,7 +21,7 @@ class Login extends React.Component {
     const { email, password } = this.state;
 
     return (
-      <Segment basic style={{ marginTop: "5rem" }}>
+      <Segment basic style={{ marginTop: "6rem" }}>
         <Header as="h1" textAlign="center">
           Please login to leave a note...
         </Header>

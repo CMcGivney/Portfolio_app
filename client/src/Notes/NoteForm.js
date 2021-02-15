@@ -26,7 +26,7 @@ const PostItNoteForm = () => {
           });
       } else {
         alert`Thank you for leaving a note`;
-        //I would like to push the user.name to the username on notes but ow well, next time
+        //I would like to push the user.name to the notes.username on notes but ow well, next time
       }
     };
     fetchNoteData();
@@ -58,10 +58,10 @@ const PostItNoteForm = () => {
     }
   };
   return (
-    <Container style={{ marginTop: "5rem" }}>
+    <Container style={{ marginTop: "6.5rem" }}>
       <Header style={{ textDecoration: "underline" }}>
         {" "}
-        {id ? "Edit Your" : "Add A"} Note
+        {id ? "Edit Your" : "Create A"} Note
       </Header>
 
       <Header as="h4" style={{ textAlign: "left" }}>

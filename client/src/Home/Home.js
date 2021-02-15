@@ -1,15 +1,15 @@
 import React from "react";
 import "./Home.css";
 import { Header } from "semantic-ui-react";
-import Waves from "../images/buckskinGultch.jpg";
+import BuckSkin from "../images/buckskinGultch.jpg";
 import { Parallax } from "react-parallax";
 
 const Home = () => (
   <Parallax
-    bgImage={Waves}
+    bgImage={BuckSkin}
     style={{ height: "100vh", width: "100%" }}
     bgImageAlt="Buckskin Gultch slot canyon, with two hikers"
-    strength={-100}
+    // strength={-100}
   >
     <div className="homeBox">
       <div className="grid-header">
@@ -22,7 +22,7 @@ const Home = () => (
         </Header.Content>
         <Header.Content className="homeHead">
           {" "}
-          GraphQL || Node || JavaScript || React{" "}
+          GraphQL || Ruby || JavaScript || React{" "}
         </Header.Content>
       </div>
     </div>

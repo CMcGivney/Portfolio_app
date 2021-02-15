@@ -28,7 +28,7 @@ class Register extends React.Component {
     const { name, email, password, passwordConfirmation } = this.state;
 
     return (
-      <Segment basic style={{ marginTop: "5rem" }}>
+      <Segment basic style={{ marginTop: "6rem" }}>
         <Header as="h1" textAlign="center">
           Register
         </Header>

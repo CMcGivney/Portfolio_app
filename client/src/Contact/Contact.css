@@ -1,7 +1,7 @@
 /*For Desktop viewing*/
 
 .contact-container {
-  margin-top: 1em;
+  margin-top: 2em;
   display: flex;
   text-align: center; 
   font-family: 'Roboto Slab', serif; 
@@ -12,7 +12,7 @@
 }
 .card {
   margin-top: 5rem;
-  max-width: 30rem;
+  max-width: 25rem;
 }
 .notes {
   width: 100%;

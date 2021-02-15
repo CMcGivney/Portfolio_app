@@ -12,9 +12,9 @@ const navStyles = {
 
 const Navbar = ({ location, history }) => {
   const size = useWindowSize();
-  const isMobile = size <= 500;
+  const isMobile = size.width <= 500;
   const { user, handleLogout } = useContext(AuthContext);
-
+  
   return (
     <>
       {isMobile ? (
