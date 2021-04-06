@@ -23,7 +23,6 @@ a {
  .projectCards {
   display: flex;
   align-items: center;
-  background-color: #696969
 
  }
  .cardHead {
@@ -33,6 +32,9 @@ a {
  .cardMeta {
    justify-content: center;
    padding: 1rem;
+   background-color: #f1eeee;
+   opacity: 0.9;
+   
  }
 
 

@@ -20,10 +20,9 @@ import GraphQL from "../images/graphql.svg";
 import Tailwind from "../images/tailwind.png";
 import Apollo from "../images/apollo-icon.png";
 
-
 const SkillsContext = createContext();
 
-const SkillsProvider = ({children}) => {
+const SkillsProvider = ({ children }) => {
   class Skill {
     constructor(image, image_alt, comment, star_count, darkstar_count) {
       this.image = image;
@@ -33,7 +32,7 @@ const SkillsProvider = ({children}) => {
       this.darkstar_count = darkstar_count;
     }
   }
-  
+
   let skillsArr = [];
   let html,
     css,
@@ -55,26 +54,26 @@ const SkillsProvider = ({children}) => {
     graphQL,
     tailwind,
     apollo;
-  
+
   //create instance of skill (image, image_alt, comment, star_count, darkstar_count) and push to array
   html = new Skill(HTML5, "HTML5 Logo", "Feel Confident", 3, 2);
   skillsArr.push(html);
-  
+
   css = new Skill(CSS3, "CSS3 Logo", "Need to develop a designers eye.", 2, 3);
   skillsArr.push(css);
-  
+
   js = new Skill(JS, "JavaScript Logo", "Some good days, some bad.", 3, 2);
   skillsArr.push(js);
-  
+
   react = new Skill(ReactIcon, "React Logo", "Work with React daily.", 3, 2);
   skillsArr.push(react);
-  
-  ruby = new Skill(Ruby, "Ruby Logo", "Sound foundation.", 2, 3);
+
+  ruby = new Skill(Ruby, "Ruby Logo", "Sound foundation.", 4, 1);
   skillsArr.push(ruby);
-  
-  rails = new Skill(Rails, "", "Pretty, pretty good.", 2, 3);
+
+  rails = new Skill(Rails, "", "Pretty, pretty good.", 3, 2);
   skillsArr.push(rails);
-  
+
   styledComp = new Skill(
     StyledComp,
     "Styled Component Logo",
@@ -83,7 +82,7 @@ const SkillsProvider = ({children}) => {
     4
   );
   skillsArr.push(styledComp);
-  
+
   postgresql = new Skill(
     Postgresql,
     "Postgreql Logo",
@@ -92,10 +91,10 @@ const SkillsProvider = ({children}) => {
     3
   );
   skillsArr.push(postgresql);
-  
+
   sql = new Skill(SQL, "SQL Logo", "I ❤️ SQL", 2, 3);
   skillsArr.push(sql);
-  
+
   semanticR = new Skill(
     SemanticR,
     "React Semantic Logo",
@@ -104,10 +103,16 @@ const SkillsProvider = ({children}) => {
     2
   );
   skillsArr.push(semanticR);
-  
-  semantic = new Skill(Semantic, "Semantic Logo", "Framework tool library", 3, 2);
+
+  semantic = new Skill(
+    Semantic,
+    "Semantic Logo",
+    "Framework tool library",
+    3,
+    2
+  );
   skillsArr.push(semantic);
-  
+
   bootsReact = new Skill(
     BootsReact,
     "BootsReact Logo",
@@ -116,7 +121,7 @@ const SkillsProvider = ({children}) => {
     2
   );
   skillsArr.push(bootsReact);
-  
+
   esc6 = new Skill(
     ES6,
     "ecmaScript6 Logo",
@@ -125,7 +130,7 @@ const SkillsProvider = ({children}) => {
     3
   );
   skillsArr.push(esc6);
-  
+
   sqlectron = new Skill(
     Sqlectron,
     "Sqlectron Logo",
@@ -134,7 +139,7 @@ const SkillsProvider = ({children}) => {
     3
   );
   skillsArr.push(sqlectron);
-  
+
   bootstrap = new Skill(
     BootStrap,
     " BootStrap Logo",
@@ -143,7 +148,7 @@ const SkillsProvider = ({children}) => {
     3
   );
   skillsArr.push(bootstrap);
-  
+
   github = new Skill(
     GitHub,
     " BootStrap Logo",
@@ -189,9 +194,10 @@ const SkillsProvider = ({children}) => {
   );
   skillsArr.push(apollo);
 
-
   return (
-    <SkillsContext.Provider value={skillsArr}>{children}</SkillsContext.Provider>
-  )
-}
-export {SkillsContext, SkillsProvider}
+    <SkillsContext.Provider value={skillsArr}>
+      {children}
+    </SkillsContext.Provider>
+  );
+};
+export { SkillsContext, SkillsProvider };

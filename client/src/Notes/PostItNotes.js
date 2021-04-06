@@ -23,11 +23,9 @@ function PostItNotes(props) {
   const allNotes = () => {
     if (notes.length <= 0) return <h2>No Notes Yet...</h2>;
     return (
-    
-            
-            <Card.Group stackable doubling className="corkboard">
+            <Card.Group stackable doubling className="corkboard" >
               {notes.map((note) => (
-                <Card raised  key={note.id}>
+                <Card raised style={{backgroundColor: '#FEE600'}} key={note.id}>
                   <Card.Content>
                     <Card.Header>{note.body}</Card.Header>
                     <Card.Meta>{note.username}</Card.Meta>
@@ -82,7 +80,6 @@ function PostItNotes(props) {
   return (
     <Container style={{ marginTop: "5rem" }}>
       {userPresent()}
-      <hr/>
       {allNotes()}
     </Container>
   );

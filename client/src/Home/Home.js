@@ -1,16 +1,11 @@
 import React from "react";
 import "./Home.css";
 import { Header } from "semantic-ui-react";
-import BuckSkin from "../images/buckskinGultch.jpg";
-import { Parallax } from "react-parallax";
+import Navbar from "../components/Navbar";
 
 const Home = () => (
-  <Parallax
-    bgImage={BuckSkin}
-    style={{ height: "100vh", width: "100%" }}
-    bgImageAlt="Buckskin Gultch slot canyon, with two hikers"
-    // strength={-100}
-  >
+  <>
+
     <div className="homeBox">
       <div className="grid-header">
         <Header.Content as="h1" className="nameHead">
@@ -26,7 +21,7 @@ const Home = () => (
         </Header.Content>
       </div>
     </div>
-  </Parallax>
+</>
 );
 
 export default Home;

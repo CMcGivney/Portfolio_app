@@ -6,18 +6,50 @@
   display: flex;
   width: 100%;
   height: 100vh;
+  background-image: url("../images/retroPatternWhite.jpg");
+  background-size: cover;
 }
 .homeContainer {
   display: flex;
   flex-flow: column wrap;
   width: 100%;
 }
+/* The animation code */
+@keyframes example {
+  from {
+    transform : scale(1);
+    opacity   : 1;
+}
+50% {
+    transform : scale(0.75);
+    opacity   : 0.25;
+}
+to {
+    transform : scale(1);
+    opacity   : 1;
+}
+}
+@-webkit-keyframes example {
+  0%   { -webkit-transform: scale(1)   ; opacity: 1;    }
+  50%  { -webkit-transform: scale(0.75); opacity: 0.25; }
+  100% { -webkit-transform: scale(1)   ; opacity: 1;    }
+}
 .grid-header {
   padding: 10px;
   text-align: center;
-  background-color: rgba(173, 166, 166, 0.836);
-  opacity: 0.9;
-  width: auto;
+  background-color: #46D6FF;
+  border-radius: 50%;
+  min-width: 35vw;
+  min-height: 35vh;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
 }
 
 .nameHead {
@@ -67,7 +99,7 @@
   width: 100%;
   height: auto;
   flex-flow: column wrap;
-  background-color:  rgb(199, 116, 68);
+  background-color:  #c77444;
   padding: 2rem;
 }
 .success {

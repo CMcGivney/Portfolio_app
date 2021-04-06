@@ -19,7 +19,7 @@ const person = {
 const Contact = () => (
 <div className="contact-container">
   <div className="card">
-    <Card fluid raised>
+    <Card fluid raised style={{backgroundColor:"#46D6FF"}}>
       <Card.Content>
         <Image
            className="imgBox "

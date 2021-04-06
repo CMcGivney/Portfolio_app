@@ -79,15 +79,4 @@ color: black;
 a.google {
 color: green;
 }
-/*style for Posted notes */
-.corkboard {
-background-color: tan;
-border: 10px solid  rgba(75, 47, 47, 0.911);
-border-radius: 10px;
-box-shadow: 2px 2px 5px black;
-display: flex;
-flex-flow: row wrap;
-justify-content: center;
-padding: 1rem 1rem;
-}
 

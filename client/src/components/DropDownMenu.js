@@ -10,7 +10,7 @@ const DropDownMenu = ({ location, history }) => {
   return (
     <>
       <Menu
-        style={{ backgroundColor: "lightskyblue" }}
+        style={{ backgroundColor: "#46d6ff" }}
         borderless
         fixed="top"
       >

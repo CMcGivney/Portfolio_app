@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+import {Container} from 'semantic-ui-react';
 import Navbar from "./components/Navbar";
 import Home from "./Home/Home";
 import Projects from "./Project/Projects";
@@ -18,8 +19,8 @@ const App = () => (
   <>
     <ScrollToTop />
     <FetchUser>
-      <Navbar />
-      <Router>
+     
+  
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
@@ -37,7 +38,7 @@ const App = () => (
           <Route exact path="/blog" component={Blog} />
           <Route component={NoMatch} />
         </Switch>
-      </Router>
+      
     </FetchUser>
   </>
 );

@@ -55,7 +55,6 @@
 }
 
 .panel .back {
-  border-radius: 75px;
   text-align: center;
   text-indent: 0;
   padding: 2em 1em;
@@ -69,6 +68,7 @@
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transition: all 0.4s ease-in-out;
+  background-color: #46D6FF;
 }
 
 .panel:hover .back {
