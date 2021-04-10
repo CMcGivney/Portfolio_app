@@ -1,137 +1,43 @@
 /* desktop view*/
 .homeBox {
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
   text-align: center;
   display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
   width: 100%;
   height: 100vh;
   background-image: url("../images/retroPatternWhite.jpg");
   background-size: cover;
+  
 }
 .homeContainer {
   display: flex;
   flex-flow: column wrap;
+  justify-content: center;
+  text-align: center;
   width: 100%;
+  height: 100vh;
+  
 }
-/* The animation code */
-@keyframes example {
+.App-logo {
+  height: 15vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin 1 20s linear;
+  }
+}
+@keyframes App-logo-spin {
   from {
-    transform : scale(1);
-    opacity   : 1;
-}
-50% {
-    transform : scale(0.75);
-    opacity   : 0.25;
-}
-to {
-    transform : scale(1);
-    opacity   : 1;
-}
-}
-@-webkit-keyframes example {
-  0%   { -webkit-transform: scale(1)   ; opacity: 1;    }
-  50%  { -webkit-transform: scale(0.75); opacity: 0.25; }
-  100% { -webkit-transform: scale(1)   ; opacity: 1;    }
-}
-.grid-header {
-  padding: 10px;
-  text-align: center;
-  background-color: #46D6FF;
-  border-radius: 50%;
-  min-width: 35vw;
-  min-height: 35vh;
-  position: relative;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  animation-name: example;
-  animation-duration: 4s;
-  animation-delay: 1s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in-out;
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.nameHead {
-  font-family: 'Lobster Two', cursive;
-  margin-bottom: 0;
-}
-.homeHead{
- font-family: 'Roboto Slab', serif;
-}
-
-.contentHeaders {
-  text-align: center;
-  font-family: 'Calistoga', cursive;
-  padding: 1rem;
-}
-
-.main {
-  display: flex;
-  flex-flow: column wrap;
-  width: 100%;
-  height: auto;
-  background-color:rgba(219, 219, 64, 0.568);
-  color: black;
-  text-align: center;
-  font-family: 'Roboto Slab', serif;
-  padding: 2rem;
-}
-
-.mainTxt {
-  font-family: 'Roboto Slab', serif;
-  text-indent: 0;
-
-}
-.about {
-  display: flex;
-  width: 100%;
-  height: auto;
-  flex-flow: column wrap;
-  color: black;
-  background: tan;
-  text-align: justify;
-  font-family: 'Roboto Slab', serif;
-  padding: 2rem;
-}
-.successBlock {
-  display: flex;
-  width: 100%;
-  height: auto;
-  flex-flow: column wrap;
-  background-color:  #c77444;
-  padding: 2rem;
-}
-.success {
-  display: flex;
-  width: 100%;
-  height: auto;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-content: center;
-  color: black;
-  text-align: left;
-  font-family: 'Roboto Slab', serif;
-}
-.successHead {
-  text-align: center;
-  padding: 1em;
-  margin: 0;
-  text-decoration: underline;
-  font-family: 'Calistoga', cursive;
-}
-
-.col-1 {
-  grid-area: col-1;
-}
-.col-2 {
-  grid-area: col-2;
-}
-
-.imgBackground {
-  opacity: 0.5;
-  justify-content: center;
-  padding: 1px;
-}
 
 

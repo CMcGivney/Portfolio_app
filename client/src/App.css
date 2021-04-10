@@ -50,6 +50,7 @@ ul {
   /*DropDown Menu Styles*/
 .menu-container {
   position: relative;
+ 
 }
 .dropdown_menu {
   background: #ffffff;
@@ -101,6 +102,7 @@ ul {
   border: none;
   vertical-align: middle;
   transition: box-shadow 0.4s ease;
+  
 }
 
 .dropdown_menu-trigger:hover {

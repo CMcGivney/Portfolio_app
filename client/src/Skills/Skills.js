@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import Navbar from "../components/Navbar";
+
 import { SimpleImg } from "react-simple-img";
 import { Icon, } from "semantic-ui-react";
 import styled from "styled-components";
@@ -12,8 +12,7 @@ const SkillsComponent = () => {
 const skillsArr = useContext(SkillsContext)
 
 return (
-  <div>
-    <Navbar/>
+ 
   
   <div className="skillsContainer">
     
@@ -65,7 +64,7 @@ return (
       ))}
     
   </div>
-  </div>
+  
  );
 }
 const Skills = () => {

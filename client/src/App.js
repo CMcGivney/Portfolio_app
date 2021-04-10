@@ -1,7 +1,7 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
+import React, { useLayoutEffect } from "react";
+import { Route, Switch, withRouter } from "react-router-dom";
 import {Container} from 'semantic-ui-react';
-import Navbar from "./components/Navbar";
+import NavbarSwitch from "./components/NavbarSwitch";
 import Home from "./Home/Home";
 import Projects from "./Project/Projects";
 import Skills from "./Skills/Skills";
@@ -9,18 +9,25 @@ import Contact from "./Contact/ContactGrid";
 import Blog from "./components/Blog";
 import NoMatch from "./Devise/NoMatch";
 import NotesForm from "./Notes/NoteForm";
-import ScrollToTop from "./components/scrollToTop";
 import Login from "./Devise/Login";
 import Register from "./Devise/Register";
 import FetchUser from "./Devise/FetchUser";
 // import ProtectedRoute from "./Devise/ProtectedRoute";
 
+const ScrollToTop = withRouter(({ children, location: { pathname } }) => {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
+  return children || null
+})
+
 const App = () => (
   <>
-    <ScrollToTop />
+   
     <FetchUser>
-     
-  
+     <NavbarSwitch/>
+      <ScrollToTop>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
@@ -38,7 +45,7 @@ const App = () => (
           <Route exact path="/blog" component={Blog} />
           <Route component={NoMatch} />
         </Switch>
-      
+        </ScrollToTop>
     </FetchUser>
   </>
 );

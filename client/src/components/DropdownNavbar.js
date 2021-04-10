@@ -1,6 +1,8 @@
-import React, { useRef } from "react";
+import React, { useRef} from "react";
 import { NavLink, withRouter } from "react-router-dom";
+
 import { useDetectOutsideClick } from "../Hooks/useDetectOutsideClick.js";
+
 import Logo from "../images/84CreationsWhite.png";
 
 const DropDownMenu = () => {
@@ -8,8 +10,10 @@ const DropDownMenu = () => {
   const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
   const onClick = () => setIsActive(!isActive);
 
+
+ 
   return (
-    <header style={navStyles}>
+    <>
       <NavLink to="/" alt="Link to Home Page">
         <img
           height="60"
@@ -37,35 +41,23 @@ const DropDownMenu = () => {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/Contact">Contact</a>
+              <a href="/skills">Skills</a>
             </li>
             <li>
-              <a href="/Services">Services</a>
+              <a href="/projects">Projects</a>
             </li>
             <li>
-              <a href="/Gallery">Gallery</a>
+              <a href="/contact">Contact</a>
             </li>
-            {/* <li>
-              <a href="/Partners">Partners</a>
-            </li> */}
-            <li>
-              <a href="/FAQ">FAQs</a>
-            </li>
+  
+
           </ul>
         </nav>
       </div>
-    </header>
+    </>
   );
 };
-const navStyles = {
-  backgroundColor: "black",
-  margin: "auto",
-  padding: ".5rem",
-  display: "flex",
-  flexFlow: "row nowrap",
-  alignItems: "center",
-  justifyContent: "space-between",
-};
+
 
 
 export default withRouter(DropDownMenu);
