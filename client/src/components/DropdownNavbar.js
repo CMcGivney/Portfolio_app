@@ -1,6 +1,7 @@
-import React, { useRef} from "react";
-import { NavLink, withRouter } from "react-router-dom";
+import React, { useRef, useContext} from "react";
+import { NavLink, withRouter, useHistory } from "react-router-dom";
 
+import { AuthContext } from "../providers/AuthProvider";
 import { useDetectOutsideClick } from "../Hooks/useDetectOutsideClick.js";
 
 import Logo from "../images/84CreationsWhite.png";
@@ -9,8 +10,8 @@ const DropDownMenu = () => {
   const dropdownRef = useRef(null);
   const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
   const onClick = () => setIsActive(!isActive);
-
-
+  const { user, handleLogout } = useContext(AuthContext);
+  let history = useHistory()
  
   return (
     <>
@@ -48,6 +49,11 @@ const DropDownMenu = () => {
             </li>
             <li>
               <a href="/contact">Contact</a>
+            </li>
+            <li>
+            {user ? (
+              <a href="/" onClick={() => handleLogout(history)}>LogOut</a>
+            ) : null}
             </li>
   
 

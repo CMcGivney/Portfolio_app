@@ -1,6 +1,5 @@
 import React, { useLayoutEffect } from "react";
 import { Route, Switch, withRouter } from "react-router-dom";
-import {Container} from 'semantic-ui-react';
 import NavbarSwitch from "./components/NavbarSwitch";
 import Home from "./Home/Home1.js";
 import Projects from "./Project/Projects";

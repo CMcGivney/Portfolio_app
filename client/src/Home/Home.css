@@ -6,6 +6,9 @@ section {
   justify-content: center;
   display: flex;
   flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 .bg {
   position: absolute;
@@ -25,4 +28,6 @@ h1 {
   z-index: 1;
   font-size: 3em;
   font-weight: 400;
+  text-align: center;
+
 }

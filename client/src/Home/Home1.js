@@ -8,12 +8,14 @@ import distantStare from "../images/distantStare.jpg";
 
 const Home = () => {
   gsap.registerPlugin(ScrollTrigger);
+  
   useEffect(() => {
+   
     gsap.utils.toArray("section").forEach((section, i) => {
       section.bg = section.querySelector(".bg");
 
       // Give the backgrounds some random images
-      section.bg.style.backgroundImage = `url(https://picsum.photos/${window.innerWidth}/${window.innerHeight}?random=${i})`;
+       section.bg.style.backgroundImage = `url(https://picsum.photos/${window.innerWidth}/${window.innerHeight}?random=${i})`;
 
       // Do the parallax effect on each section
       if (i) {
@@ -47,14 +49,14 @@ const Home = () => {
         });
       }
     });
-  });
+  }, []);
 
   return (
     <>
       <section>
-        <div class="bg"></div>
+        <div className="bg"></div>
         <Image
-          className="imgBox "
+          className="imgBox"
           floated="left"
           src={distantStare}
           alt="website author distant stare"
@@ -69,25 +71,25 @@ const Home = () => {
         ></img>
       </section>
       <section>
-        <div class="bg"></div>
+        <div className="bg"></div>
         <h1>I have been working hard to hone my skills</h1>
       </section>
       <section>
-        <div class="bg"></div>
+        <div className="bg"></div>
         <h1>From the Frontend UI to Backend databases</h1>
         <h1>and everything in-between</h1>
       </section>
       <section>
-        <div class="bg"></div>
+        <div className="bg"></div>
         <h1>
           This is a life long pursuit that I only wish I had started earlier...
         </h1>
-        <h1>but I will succeed.</h1>
+        <h1> I will succeed.</h1>
       </section>
       <section>
-        <div class="bg"></div>
+        <div className="bg"></div>
         <h1>“The more I learn, the more I realize how much I don't know.”</h1>
-        <h1>~ Albert Einstein ~</h1>
+        <h1>Albert Einstein</h1>
       </section>
     </>
   );
