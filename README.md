@@ -1,7 +1,7 @@
 # README
 
 My portfolio site, built with Ruby on Rails, PostgreSQL, Semantic-UI, Styled-Components, Devise, and ReactJS.
-The further away I get from this project the more mistakes I see, design, layout, backend implementations. I enjoy looking back and jumping into the code to tweak things. 
+The further away I get from this project the more mistakes I see, design, layout, backend implementations. I enjoy looking back and jumping into the code to tweak things. Man-O-man the file layout is a mess, why did I think this was a good way to do it, every page view has its own folder w/ its own css file. 
 
 I highly doubt anyone wants to run this on their computer so I'll leave that info out. 
 
