@@ -9,6 +9,9 @@
   justify-content: center;
   flex-flow: column wrap;
   color:black;
+  background-image: url(../images/buckskinGultch.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .card {
   margin-top: 5rem;

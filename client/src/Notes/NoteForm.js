@@ -59,10 +59,10 @@ const PostItNoteForm = () => {
   };
   return (
     <Container style={{ marginTop: "6.5rem" }}>
-      <Header style={{ textDecoration: "underline" }}>
+      <h1 >
         {" "}
         {id ? "Edit Your" : "Create A"} Note
-      </Header>
+      </h1>
 
       <Header as="h4" style={{ textAlign: "left" }}>
         Note:

@@ -25,7 +25,7 @@ function PostItNotes(props) {
     return (
             <Card.Group stackable doubling className="corkboard" >
               {notes.map((note) => (
-                <Card raised style={{backgroundColor: '#FEE600'}} key={note.id}>
+                <Card raised key={note.id}>
                   <Card.Content>
                     <Card.Header>{note.body}</Card.Header>
                     <Card.Meta>{note.username}</Card.Meta>
