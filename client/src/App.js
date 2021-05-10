@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from "react";
 import { Route, Switch, withRouter } from "react-router-dom";
 import NavbarSwitch from "./components/NavbarSwitch";
-import Home from "./Home/Home1.js";
+import Home from "./Home/ParallaxHome.js";
 import Projects from "./Project/Projects";
 import Skills from "./Skills/Skills";
 import Contact from "./Contact/ContactGrid";

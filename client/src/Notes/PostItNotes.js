@@ -72,7 +72,7 @@ function PostItNotes(props) {
       <Link to="/login">
         <Button color="black">
           <Icon name="add" />
-          Login to Edit/New Note
+          Login to Edit/Create Note
         </Button>
       </Link>
     );

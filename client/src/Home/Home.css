@@ -4,11 +4,8 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+  flex-flow: column wrap;
+  
 }
 .bg {
   position: absolute;
@@ -21,8 +18,16 @@ section {
   background-position: center;
   background-repeat: no-repeat;
 }
+section p {
+  color: white;
+  text-shadow: 1px 1px 3px black;
+  z-index: 1;
+  font-size: 1em;
+  font-weight: 400;
+  text-align: center;
+}
 
-h1 {
+ section h1 {
   color: white;
   text-shadow: 1px 1px 3px black;
   z-index: 1;

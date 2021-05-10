@@ -19,7 +19,7 @@ const person = {
 const Contact = () => (
 <div className="contact-container">
   <div className="card">
-    <Card fluid raised >
+    <Card raised >
       <Card.Content>
         <Image
            className="imgBox "

@@ -25,7 +25,7 @@ const DropDownMenu = () => {
         />
       </NavLink>
       <div className="menu-container">
-        <button onClick={onClick} className="menu-trigger">
+        <button onClick={onClick} className="dropdown_menu-trigger">
           <img
             src="//s.svgbox.net/hero-solid.svg?fill=805ad5&ic=menu"
             alt="menu bars"
@@ -52,7 +52,7 @@ const DropDownMenu = () => {
             </li>
             <li>
             {user ? (
-              <a href="/" onClick={() => handleLogout(history)}>LogOut</a>
+              <a href="/" onClick={() => handleLogout(history)}>Logout</a>
             ) : null}
             </li>
   
