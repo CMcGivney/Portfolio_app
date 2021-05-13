@@ -58,12 +58,12 @@ const Home = () => {
       <section ref={addToBgRefs}>
         <div className="bg"></div>
         <h1>Welcome</h1>
-        <Image
+        {/* <Image
           className="imgBox"
           src={distantStare}
           alt="website author distant stare"
           size="tiny"
-        />
+        /> */}
         <h1>I'm Chris McGivney</h1>
         <p>(Please refresh the page if this image doesn't suit you)</p>
         <img

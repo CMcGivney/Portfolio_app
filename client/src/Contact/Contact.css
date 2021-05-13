@@ -1,7 +1,6 @@
 /*For Desktop viewing*/
 
 .contact-container {
-  margin-top: 2em;
   display: flex;
   text-align: center; 
   font-family: 'Roboto Slab', serif; 
@@ -13,6 +12,7 @@
   background-image: url(../images/buckskinGultch.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 .card {
   margin-top: 5rem;

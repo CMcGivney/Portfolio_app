@@ -21,18 +21,18 @@ class Login extends React.Component {
     const { email, password } = this.state;
 
     return (
-      <Segment basic style={{ marginTop: "6rem" }}>
-        <Header as="h1" textAlign="center">
-          Please login to leave a note...
+      <Segment basic style={formStyles}>
+        <Header as="h2" >
+          Please login to leave a note
         </Header>
-        <h4 style={{textAlign:"center"}}>
-          or register
-          <Link as="h4" to="/register">
+        <Header as="p">
+          register
+          <Link as="a" to="/register">
             {" "}
             here{" "}
           </Link>
-        </h4> 
-        <Form style={{margin: '0 4rem'}} onSubmit={this.handleSubmit}>
+        </Header> 
+        <Form onSubmit={this.handleSubmit}>
         
           <Form.Input
             label="Email"
@@ -53,7 +53,7 @@ class Login extends React.Component {
             onChange={this.handleChange}
           />
         
-          <Segment textAlign="center" basic>
+          <Segment basic>
             <Button primary type="submit">
               Submit
             </Button>
@@ -68,6 +68,15 @@ class Login extends React.Component {
       </Segment>
     );
   }
+}
+
+const formStyles = {
+  marginTop: "6rem",
+  display: "flex",
+  flexFlow: "column nowrap",
+  justifyContent: "center",
+  alignItems: "center",
+  
 }
 
 export default class ConnectedLogin extends React.Component {

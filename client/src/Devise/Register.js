@@ -28,11 +28,11 @@ class Register extends React.Component {
     const { name, email, password, passwordConfirmation } = this.state;
 
     return (
-      <Segment basic style={{ marginTop: "6rem" }}>
-        <Header as="h1" textAlign="center">
+      <Segment basic style={formStyles}>
+        <Header as="h1">
           Register
         </Header>
-        <Form style={{margin: '0 4rem'}} onSubmit={this.handleSubmit}>
+        <Form onSubmit={this.handleSubmit}>
           {/* <Form.Input
             label="Username"
             required
@@ -71,7 +71,7 @@ class Register extends React.Component {
             type="password"
             onChange={this.handleChange}
           />
-          <Segment textAlign="center" basic>
+          <Segment basic>
             <Button primary type="submit">
               Submit
             </Button>
@@ -88,7 +88,14 @@ class Register extends React.Component {
     );
   }
 }
-
+const formStyles = {
+  marginTop: "6rem",
+  display: "flex",
+  flexFlow: "column nowrap",
+  justifyContent: "center",
+  alignItems: "center",
+  // textAlign: "center"
+}
 export default class ConnectedRegister extends React.Component {
   render() {
     return (
