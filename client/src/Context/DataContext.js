@@ -5,6 +5,7 @@ import CPA from "../images/CPA.jpg";
 import Elysian from "../images/elysianCatering.jpg";
 import ABSSite from "../images/ABS_Products.png";
 import SipNStir from "../images/sipNstir.png";
+import GraphqlApollo from "../images/graphql.png";
 
 const DataContext = createContext();
 
@@ -20,10 +21,19 @@ const DataProvider = ({ children }) => {
   }
   // Created project array & named objects to push to array
   let projectData = [];
-  let dash, rpsGame, cpaSite, cateringSite, absSite, sipNStir;
+  let dash, rpsGame, cpaSite, cateringSite, absSite, sipNStir, graphQL;
 
   // example = new ProjectsData({this.image}, "{this.image_alt", "{this.type}", "{this.description","{this.link}")
   //projectData.push(example)
+
+  graphQL = new ProjectsData(
+    GraphqlApollo,
+    "A flashcard app to help with studying",
+    "A flashcard app to help me study",
+    "I have been wanting to dive into the world of graphQL and with this side project I finally did. Backend is build with Javascript, Node, GraphQL, MongoDB and, Apollo server with Mongoose. Frontend is build with React, Semantic.Ui and Apollo Provider with GraphQl. I deployed the server with Heroku and the frontend with Netlify to mix it up",
+    "https://festive-panini-e3fba3.netlify.app/"
+  );
+  projectData.push(graphQL);
 
   sipNStir = new ProjectsData(
     SipNStir,

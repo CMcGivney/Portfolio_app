@@ -3,8 +3,8 @@ import "./Home.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import { Image } from "semantic-ui-react";
-import distantStare from "../images/distantStare.jpg";
+// import { Image } from "semantic-ui-react";
+// import distantStare from "../images/distantStare.jpg";
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
