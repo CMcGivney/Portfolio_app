@@ -1,5 +1,5 @@
 import React, { useLayoutEffect } from "react";
-import { Route, Switch, withRouter } from "react-router-dom";
+import { Route, Switch, withRouter, useHistory } from "react-router-dom";
 import TagManager from "react-gtm-module";
 import ReactGA from "react-ga";
 
@@ -28,7 +28,7 @@ const App = () => {
   ReactGA.initialize("G-S524CLSM64");
 
   const tagManagerArgs = {
-    gtmId: "GTM-57K34K9",
+    gtmId: "GTM-MPJMMFW",
   };
 
   TagManager.initialize(tagManagerArgs);
