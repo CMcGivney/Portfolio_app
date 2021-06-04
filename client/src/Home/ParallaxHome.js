@@ -101,7 +101,7 @@ const Home = () => {
       <section ref={addToBgRefs}>
         <div className="bg"></div>
         <h1>
-          It will take determination, countless hours of hard work with late
+          It will continue to take determination, countless hours of hard work with late
           nights, lots of coffee and perhaps a bit of luck{" "}
           <span aria-label="emoji" role="img" alt="four leaf clover">
             🍀
@@ -110,7 +110,7 @@ const Home = () => {
       </section>
       <section ref={addToBgRefs}>
         <div className="bg"></div>
-        <h1>All will be worth it to be part of this community of beautiful ideas</h1>
+        <h1>All will be worth it to be part of this community of beautiful ideas.</h1>
       </section>
     </>
   );
